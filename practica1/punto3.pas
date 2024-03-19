@@ -87,20 +87,18 @@ procedure menu(var arc_emp:empleado);
 var
     opMenu:integer;
 begin
-    while(true)do begin
+    opMenu:=4;
+    while(opMenu<>0)do begin
       writeln('Ingrese la opcion que desea');
       writeln('1 --> Buscar empleado por nombre o apellido.');
       writeln('2 --> Mostrar todos los empleados.');
       writeln('3 --> Mostrar los empleados mayores de 70 años.');
-      writeln('4 --> Salir.');
+      writeln('Cualquier otro --> Salir.');
       read(opMenu);
       case opMenu of
         1:buscar(arc_emp);
         2:mostrarTodo(arc_emp);
         3:mayoresSetenta(arc_emp);
-        4:break;
-      else
-        WriteLn('Opcion incorrecta, ingrese otro numero.');
       end;
     end;
 end;
