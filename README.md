@@ -12,4 +12,8 @@
 >
 >Acceder al [Programa de la materia](https://drive.google.com/file/d/1CWfIPLexkWvUpQfEQZ3nvp7VMXNf4F-k/view?usp=sharing).
 
+<br>
+<br>
+<br>
+
 <p><img align="center" src="https://github.com/Marimari2342/Marimari2342/blob/main/firmagith.png" alt="marigit"/></p>
