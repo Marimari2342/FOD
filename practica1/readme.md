@@ -273,7 +273,11 @@ end;
 <br>
 <br>
 
-* Descargar la [práctica](https://drive.google.com/file/d/1oVU2CYF7ZRFz3GPg8pN85K9uvSB5Cjsv/view?usp=sharing).
+
+>[!TIP]
+>
+> Descargar la <code>[práctica]</code>(https://drive.google.com/file/d/1oVU2CYF7ZRFz3GPg8pN85K9uvSB5Cjsv/view?usp=sharing).
+
 
 <br>
 <br>
