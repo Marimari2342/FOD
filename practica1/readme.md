@@ -45,10 +45,7 @@ end.
 
 ## 🟡 Punto 2
 
-***Realizar un algoritmo, que utilizando el archivo de números enteros no ordenados
-creado en el ejercicio 1, informe por pantalla cantidad de números menores a 1500 y el
-promedio de los números ingresados. El nombre del archivo a procesar debe ser proporcionado por el usuario una única vez. Además, el algoritmo deberá listar el
-contenido del archivo en pantalla.***
+***Realizar un algoritmo, que utilizando el archivo de números enteros no ordenados creado en el ejercicio 1, informe por pantalla cantidad de números menores a 1500 y el promedio de los números ingresados. El nombre del archivo a procesar debe ser proporcionado por el usuario una única vez. Además, el algoritmo deberá listar el contenido del archivo en pantalla.***
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
@@ -103,10 +100,7 @@ end.
 
 ***Realizar un programa que presente un menú con opciones para:***
 
-* ***Crear un archivo de registros no ordenados de empleados y completarlo con
-datos ingresados desde teclado. De cada empleado se registra: número de
-empleado, apellido, nombre, edad y DNI. Algunos empleados se ingresan con
-DNI 00. La carga finaliza cuando se ingresa el String ‘fin’ como apellido.***
+* ***Crear un archivo de registros no ordenados de empleados y completarlo con datos ingresados desde teclado. De cada empleado se registra: número de empleado, apellido, nombre, edad y DNI. Algunos empleados se ingresan con DNI 00. La carga finaliza cuando se ingresa el String ‘fin’ como apellido.***
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
@@ -161,8 +155,7 @@ end.
 
 * ***Abrir el archivo anteriormente generado y***
 
-1. ***Listar en pantalla los datos de empleados que tengan un nombre o apellido
-determinado, el cual se proporciona desde el teclado.***
+1. ***Listar en pantalla los datos de empleados que tengan un nombre o apellido determinado, el cual se proporciona desde el teclado.***
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
@@ -273,39 +266,64 @@ end;
 
 ***Agregar al menú del programa del ejercicio 3, opciones para:***
 
-* ***Añadir uno o más empleados al final del archivo con sus datos ingresados por
-teclado. Tener en cuenta que no se debe agregar al archivo un empleado con
-un número de empleado ya registrado (control de unicidad).***
+* ***Añadir uno o más empleados al final del archivo con sus datos ingresados por teclado. Tener en cuenta que no se debe agregar al archivo un empleado con un número de empleado ya registrado (control de unicidad).***
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+Debo agregar la opcion de carga en el menu (opción = 4). Luego modificar el procedimiento para cargar nuevos empleados preguntando si el número de empleado ya existe, y sino no lo cargo.
+Además agrego la función para verificar si el empleado existe (que va a devolver un boolean). Función a continuación:
+
 ~~~
+{PUNTO4 --> verificar si el empleado a agregar existe o no}
+function existe(arc_emp:empleado;integer: nro):boolean;
+var
+    aux:boolean;
+    emp:empleR;
+begin
+    reset(arc_emp);
+    aux:=false;
+    while(not eof(arc_emp) and (aux=false)) do begin
+      Read(arc_emp,emp);
+      if(emp.nro = nro) then
+        aux:=true;
+    end;
+    return := aux;
+end;
 ~~~
+
 </details>
 
 * ***Modificar la edad de un empleado dado.***
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
+
 ~~~
+
 ~~~
+
 </details>
 
-* ***Exportar el contenido del archivo a un archivo de texto llamado
-“todos_empleados.txt”.***
+* ***Exportar el contenido del archivo a un archivo de texto llamado “todos_empleados.txt”.***
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
+
 ~~~
+
 ~~~
+
 </details>
 
-* ***Exportar a un archivo de texto llamado: “faltaDNIEmpleado.txt”, los empleados
-que no tengan cargado el DNI (DNI en 00).***
+* ***Exportar a un archivo de texto llamado: “faltaDNIEmpleado.txt”, los empleados que no tengan cargado el DNI (DNI en 00).***
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
+
 ~~~
+
 ~~~
+
 </details>
 
-***NOTA: Las búsquedas deben realizarse por número de empleado.***
+***Las búsquedas deben realizarse por número de empleado.***
 
 >[!NOTE]
 >

@@ -17,6 +17,21 @@ begin
     readln(nombre);
     Assign(arc_emp,nombre);
 end;
+{PUNTO4 --> verificar si el empleado a agregar existe o no}
+function existe(arc_emp:empleado;integer: nro):boolean;
+var
+    aux:boolean;
+    emp:empleR;
+begin
+    reset(arc_emp);
+    aux:=false;
+    while(not eof(arc_emp) and (aux=false)) do begin
+      Read(arc_emp,emp);
+      if(emp.nro = nro) then
+        aux:=true;
+    end;
+    return := aux;
+end;
 {cargar empleados hasta ingresar el ape "fin"}
 procedure carga(var arc_emp: empleado);
 var
@@ -30,7 +45,10 @@ begin
       ReadLn(emp.edad);
       ReadLn(emp.dni);
       ReadLn(emp.nomb);
-      write(arc_emp,emp);
+      if (existe(arc_emp,emp.nro)) then {PUNTO4 --> acá pregunto si el nuevo empleado existe}
+        WriteLn('El empleado ya se encuentra registrado.')
+      else
+        write(arc_emp,emp);  
       ReadLn(emp.apell);
     end;
     Close(arc_emp);
@@ -82,6 +100,7 @@ begin
     end;
     Close(arc_emp);
 end;
+
 {menu}
 procedure menu(var arc_emp:empleado);
 var
@@ -93,12 +112,14 @@ begin
       writeln('1 --> Buscar empleado por nombre o apellido.');
       writeln('2 --> Mostrar todos los empleados.');
       writeln('3 --> Mostrar los empleados mayores de 70 años.');
+      writeln('4 --> Agregar un nuevo empleado al final de la lista.'); {PUNTO4}
       writeln('Cualquier otro --> Salir.');
       read(opMenu);
       case opMenu of
         1:buscar(arc_emp);
         2:mostrarTodo(arc_emp);
         3:mayoresSetenta(arc_emp);
+        4:carga(arc_emp); {PUNTO4 --> cargo uno o más empleados nuevos}
       end;
     end;
 end;
