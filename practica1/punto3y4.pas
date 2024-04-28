@@ -1,4 +1,4 @@
-Program punto3;
+Program punto3y4;
 type
     empleR = record
         nro:integer;
@@ -128,6 +128,30 @@ begin
     Close(arc_emp);
 end;
 
+{PUNTO4 --> exportar a archivo de texto}
+procedure exportar(var arc_emp:empleado);
+var
+    txt: Text;
+    emp:empleR;
+begin 
+    Assign(txt, 'todos_empleados.txt');
+    reset(arc_emp);
+    Rewrite(txt);
+    while (not eof(arc_emp)) do 
+        begin 
+            read(arc_emp, emp);
+            writeln(txt,
+            ' ',emp.nro,
+            ' ',emp.edad,
+            ' ',emp.dni,
+            ' ',emp.apell,
+            ' ',emp.nomb
+            );
+        end;
+    close(arc_emp);
+    close(txt);
+end;
+
 {menu}
 procedure menu(var arc_emp:empleado);
 var
@@ -140,7 +164,8 @@ begin
       writeln('2 --> Mostrar todos los empleados.');
       writeln('3 --> Mostrar los empleados mayores de 70 años.');
       writeln('4 --> Agregar un nuevo empleado al final de la lista.'); {PUNTO4}
-      writeln('4 --> Cambiar la edad de un empleado'); {PUNTO4}
+      writeln('5 --> Cambiar la edad de un empleado'); {PUNTO4}
+      writeln('6 --> Exportar archivo a un archivo de texto “todos_empleados.txt”.'); {PUNTO4}
       writeln('Cualquier otro --> Salir.');
       read(opMenu);
       case opMenu of
@@ -149,6 +174,7 @@ begin
         3:mayoresSetenta(arc_emp);
         4:carga(arc_emp); {PUNTO4 --> cargo uno o más empleados nuevos}
         5:cambioEdad(arc_emp); {PUNTO4 --> cambio la edad de un empleado}
+        6:exportar(arc_emp); {PUNTO04 --> exportar a un archivo de texto}
       end;
     end;
 end;

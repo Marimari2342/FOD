@@ -335,8 +335,32 @@ end;
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
-~~~
+Agrego la opcion para exportar al menu (opción = 6) y luego el procedimiento para exportar el archivo a un archivo de texto.
 
+~~~
+{PUNTO4 --> exportar a archivo de texto}
+procedure exportar(var arc_emp:empleado);
+var
+    txt: Text;
+    emp:empleR;
+begin 
+    Assign(txt, 'todos_empleados.txt');
+    reset(arc_emp);
+    Rewrite(txt);
+    while (not eof(arc_emp)) do 
+        begin 
+            read(arc_emp, emp);
+            writeln(txt,
+            ' ',emp.nro,
+            ' ',emp.edad,
+            ' ',emp.dni,
+            ' ',emp.apell,
+            ' ',emp.nomb
+            );
+        end;
+    close(arc_emp);
+    close(txt);
+end;
 ~~~
 
 </details>
