@@ -367,6 +367,8 @@ end;
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
+Agrego la opcion para exportar al menu los datos de los empleados que no tienen el dni cargado (opción = 7) y luego el procedimiento para exportar el archivo a un archivo de texto.
+
 ~~~
 {PUNTO4 --> exportar a archivo de texto los empleados sin DNI cargado}
 procedure exportarSinDNI(var arc_emp:empleado);
