@@ -206,7 +206,7 @@ begin
     Reset(arc_emp);
     while(not eof(arc_emp))do begin
         Read(arc_emp,emp);
-        mostrarEmpl(emp); //codigo subido en el inciso anterior
+        mostrarEmpl(emp); {codigo subido en el inciso anterior}
     end;
     Close(arc_emp);
 end;
@@ -228,7 +228,7 @@ begin
     while (not eof(arc_emp)) do begin
         Read(arc_emp,emp);
         if(emp.edad>70)then
-          mostrarEmpl(emp);
+          mostrarEmpl(emp); {codigo subido en el inciso anterior}
     end;
     Close(arc_emp);
 end;
