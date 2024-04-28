@@ -269,6 +269,45 @@ end;
 >
 > Punto 3 --> Para verlo completo ir a [*punto3y4.pas*](/practica1/punto3y4.pas).
 
+## 🟡 Punto 4
+
+***Agregar al menú del programa del ejercicio 3, opciones para:***
+
+* ***Añadir uno o más empleados al final del archivo con sus datos ingresados por
+teclado. Tener en cuenta que no se debe agregar al archivo un empleado con
+un número de empleado ya registrado (control de unicidad).***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+~~~
+~~~
+</details>
+
+* ***Modificar la edad de un empleado dado.***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+~~~
+~~~
+</details>
+
+* ***Exportar el contenido del archivo a un archivo de texto llamado
+“todos_empleados.txt”.***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+~~~
+~~~
+</details>
+
+* ***Exportar a un archivo de texto llamado: “faltaDNIEmpleado.txt”, los empleados
+que no tengan cargado el DNI (DNI en 00).***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+~~~
+~~~
+</details>
+
+***NOTA: Las búsquedas deben realizarse por número de empleado.***
+
+
 <br>
 <br>
 <br>
