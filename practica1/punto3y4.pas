@@ -128,6 +128,29 @@ begin
     Close(arc_emp);
 end;
 
+{PUNTO4 --> exportar a archivo de texto los empleados sin DNI cargado}
+procedure exportarSinDNI(var arc_emp:empleado);
+var
+    txt: Text;
+    emp:empleR;
+begin 
+    Assign(txt, 'faltaDNIEmpleado.txt');
+    reset(arc_emp);
+    Rewrite(txt);
+    while (not eof(arc_emp)) do begin 
+        read(arc_emp, emp);
+        if(emp.dni=0)then
+            writeln(txt,
+            ' ',emp.nro,
+            ' ',emp.edad,
+            ' ',emp.dni,
+            ' ',emp.apell,
+            ' ',emp.nomb);
+    end;
+    close(arc_emp);
+    close(txt);
+end;
+
 {PUNTO4 --> exportar a archivo de texto}
 procedure exportar(var arc_emp:empleado);
 var
@@ -137,17 +160,15 @@ begin
     Assign(txt, 'todos_empleados.txt');
     reset(arc_emp);
     Rewrite(txt);
-    while (not eof(arc_emp)) do 
-        begin 
-            read(arc_emp, emp);
-            writeln(txt,
-            ' ',emp.nro,
-            ' ',emp.edad,
-            ' ',emp.dni,
-            ' ',emp.apell,
-            ' ',emp.nomb
-            );
-        end;
+    while (not eof(arc_emp)) do begin 
+        read(arc_emp, emp);
+        writeln(txt,
+        ' ',emp.nro,
+        ' ',emp.edad,
+        ' ',emp.dni,
+        ' ',emp.apell,
+        ' ',emp.nomb);
+    end;
     close(arc_emp);
     close(txt);
 end;
@@ -166,6 +187,7 @@ begin
       writeln('4 --> Agregar un nuevo empleado al final de la lista.'); {PUNTO4}
       writeln('5 --> Cambiar la edad de un empleado'); {PUNTO4}
       writeln('6 --> Exportar archivo a un archivo de texto “todos_empleados.txt”.'); {PUNTO4}
+      writeln('7 --> Exportar a un archivo empleados que no tengan cargado el DNI.'); {PUNTO4}
       writeln('Cualquier otro --> Salir.');
       read(opMenu);
       case opMenu of
@@ -175,6 +197,7 @@ begin
         4:carga(arc_emp); {PUNTO4 --> cargo uno o más empleados nuevos}
         5:cambioEdad(arc_emp); {PUNTO4 --> cambio la edad de un empleado}
         6:exportar(arc_emp); {PUNTO04 --> exportar a un archivo de texto}
+        7:exportarSinDNI(arc_emp); {PUNTO04 --> exportar a un archivo de texto personas sin DNI}
       end;
     end;
 end;

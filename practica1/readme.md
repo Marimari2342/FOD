@@ -347,17 +347,15 @@ begin
     Assign(txt, 'todos_empleados.txt');
     reset(arc_emp);
     Rewrite(txt);
-    while (not eof(arc_emp)) do 
-        begin 
-            read(arc_emp, emp);
-            writeln(txt,
-            ' ',emp.nro,
-            ' ',emp.edad,
-            ' ',emp.dni,
-            ' ',emp.apell,
-            ' ',emp.nomb
-            );
-        end;
+    while (not eof(arc_emp)) do begin 
+        read(arc_emp, emp);
+        writeln(txt,
+        ' ',emp.nro,
+        ' ',emp.edad,
+        ' ',emp.dni,
+        ' ',emp.apell,
+        ' ',emp.nomb);
+    end;
     close(arc_emp);
     close(txt);
 end;
@@ -370,7 +368,28 @@ end;
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
 ~~~
-
+{PUNTO4 --> exportar a archivo de texto los empleados sin DNI cargado}
+procedure exportarSinDNI(var arc_emp:empleado);
+var
+    txt: Text;
+    emp:empleR;
+begin 
+    Assign(txt, 'faltaDNIEmpleado.txt');
+    reset(arc_emp);
+    Rewrite(txt);
+    while (not eof(arc_emp)) do begin 
+        read(arc_emp, emp);
+        if(emp.dni=0)then
+            writeln(txt,
+            ' ',emp.nro,
+            ' ',emp.edad,
+            ' ',emp.dni,
+            ' ',emp.apell,
+            ' ',emp.nomb);
+    end;
+    close(arc_emp);
+    close(txt);
+end;
 ~~~
 
 </details>
