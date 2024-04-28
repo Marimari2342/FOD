@@ -297,8 +297,36 @@ end;
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
-~~~
+Debo agregar la opcion de modificacion de la edad de un empleado en el menu (opción = 5). Luego agrego la función para modificar la edad del empleado a continuación:
 
+~~~
+{PUNTO4 --> modificar la edad de un empleado dado}
+procedure cambioEdad(var arc_emp:empleado);
+var
+    numEmp,edad:integer;
+    emp:empleR;
+    aux:Boolean;
+begin
+    aux:=false;
+    WriteLn('Ingrese numero de empleado: ');
+    ReadLn(numEmp);
+    Reset(arc_emp);
+    while(not eof(arc_emp) and aux=false) do begin
+      Read(arc_emp,emp);
+      if (emp.num=numEmp) then 
+        aux:=true;
+    end;
+    if (aux) then begin
+        WriteLn('Ingrese nueva edad de empleado: ');
+        ReadLn(edad);
+        seek(arc_emp,FilePos(arc_emp)-1);
+        emp.edad:=edad;
+        Write(arc_emp,emp);
+    end
+    else 
+        WriteLn('El numero ingresado no coincide con ningún empleado registrado.');
+    Close(arc_emp);
+end;
 ~~~
 
 </details>

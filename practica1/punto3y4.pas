@@ -38,7 +38,7 @@ var
     emp:empleR;
 begin
     Rewrite(arc_emp);
-    WriteLn('Ingrese apellido, numero, edad, dni y nombre: ');
+    writeLn('Ingrese apellido, numero, edad, dni y nombre: ');
     ReadLn(emp.apell);
     while(emp.apell<>'fin')do begin
       ReadLn(emp.nro);
@@ -46,7 +46,7 @@ begin
       ReadLn(emp.dni);
       ReadLn(emp.nomb);
       if (existe(arc_emp,emp.nro)) then {PUNTO4 --> acá pregunto si el nuevo empleado existe}
-        WriteLn('El empleado ya se encuentra registrado.')
+        writeLn('El empleado ya se encuentra registrado.')
       else
         write(arc_emp,emp);  
       ReadLn(emp.apell);
@@ -100,6 +100,33 @@ begin
     end;
     Close(arc_emp);
 end;
+{PUNTO4 --> modificar la edad de un empleado dado}
+procedure cambioEdad(var arc_emp:empleado);
+var
+    numEmp,edad:integer;
+    emp:empleR;
+    aux:Boolean;
+begin
+    aux:=false;
+    WriteLn('Ingrese numero de empleado: ');
+    ReadLn(numEmp);
+    Reset(arc_emp);
+    while(not eof(arc_emp) and aux=false) do begin
+      Read(arc_emp,emp);
+      if (emp.num=numEmp) then 
+        aux:=true;
+    end;
+    if (aux) then begin
+        WriteLn('Ingrese nueva edad de empleado: ');
+        ReadLn(edad);
+        seek(arc_emp,FilePos(arc_emp)-1);
+        emp.edad:=edad;
+        Write(arc_emp,emp);
+    end
+    else 
+        WriteLn('El numero ingresado no coincide con ningún empleado registrado.');
+    Close(arc_emp);
+end;
 
 {menu}
 procedure menu(var arc_emp:empleado);
@@ -113,6 +140,7 @@ begin
       writeln('2 --> Mostrar todos los empleados.');
       writeln('3 --> Mostrar los empleados mayores de 70 años.');
       writeln('4 --> Agregar un nuevo empleado al final de la lista.'); {PUNTO4}
+      writeln('4 --> Cambiar la edad de un empleado'); {PUNTO4}
       writeln('Cualquier otro --> Salir.');
       read(opMenu);
       case opMenu of
@@ -120,6 +148,7 @@ begin
         2:mostrarTodo(arc_emp);
         3:mayoresSetenta(arc_emp);
         4:carga(arc_emp); {PUNTO4 --> cargo uno o más empleados nuevos}
+        5:cambioEdad(arc_emp); {PUNTO4 --> cambio la edad de un empleado}
       end;
     end;
 end;
