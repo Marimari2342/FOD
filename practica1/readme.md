@@ -307,6 +307,9 @@ que no tengan cargado el DNI (DNI en 00).***
 
 ***NOTA: Las búsquedas deben realizarse por número de empleado.***
 
+>[!NOTE]
+>
+> Punto 4 --> Para verlo completo (junto al Punto3) ir a [*punto3y4.pas*](/practica1/punto3y4.pas).
 
 <br>
 <br>
