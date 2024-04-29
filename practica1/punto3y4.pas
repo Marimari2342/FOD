@@ -178,8 +178,8 @@ procedure menu(var arc_emp:empleado);
 var
     opMenu:integer;
 begin
-    opMenu:=4;
-    while(opMenu<>0)do begin
+    opMenu:=1;
+    while(opMenu > 0 and opMenu <=7 )do begin
       writeln('Ingrese la opcion que desea');
       writeln('1 --> Buscar empleado por nombre o apellido.');
       writeln('2 --> Mostrar todos los empleados.');
