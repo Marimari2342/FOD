@@ -628,7 +628,33 @@ end;
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
 ~~~
-
+{PUNTO6: Modificar el stock de un celular dado.}
+procedure modificarStock(var arc_cel:celulares);
+var
+    c:celR;
+    aux:string[15];
+    encontre:Boolean;
+begin
+    Reset(arc_cel);
+    encontre:=false;
+    {Pedir que ingrese el nombre del celular}
+    WriteLn('Ingrese el nombre del celular que busca: ');
+    ReadLn(aux);
+    {Recorrer el archivo de celulares para buscar el celular}
+    while (not Eof(arc_cel) and (not encontre)) do begin
+      read(arc_cel,c);
+      if(c.nombre=aux) then
+        encontre:=true;
+    end;
+    if(encontre)then begin {Si encuentro el celular}
+      WriteLn ('Ingrese nuevo stock'); {Cambio el stock}
+      ReadLn(c.stockDisp);
+      Write(arc_cel,c); 
+    end
+    else {si no lo encuentro}
+      WriteLn('El celular no se encuentra en el archivo.'); {aviso que no lo encontre}
+    Close(arc_cel);
+end;
 ~~~
 
 </details>
