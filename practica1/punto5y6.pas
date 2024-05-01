@@ -20,6 +20,7 @@ begin
     readln(nombre);
     Assign(arc_cel,nombre);
 end;
+
 {carga de registros de celulares (no ordenados) desde un archivo de texto}
 procedure carga(var arc_cel:celulares);
 var
@@ -122,6 +123,7 @@ begin
     Close(txt);
 end;
 
+{PUNTO6}
 procedure leerCel(var c:celR);
 begin
     WriteLn('Ingrese codigo, precio, marca, stock disponible, stock minimo, descripcion y nombre');
@@ -155,6 +157,34 @@ begin
     Close(arc_cel);
 end;
 
+{PUNTO6: Modificar el stock de un celular dado.}
+procedure modificarStock(var arc_cel:celulares);
+var
+    c:celR;
+    aux:string[15];
+    encontre:Boolean;
+begin
+    Reset(arc_cel);
+    encontre:=false;
+    {Pedir que ingrese el nombre del celular}
+    WriteLn('Ingrese el nombre del celular que busca: ');
+    ReadLn(aux);
+    {Recorrer el archivo de celulares para buscar el celular}
+    while (not Eof(arc_cel) and (not encontre)) do begin
+      read(arc_cel,c);
+      if(c.nombre=aux) then
+        encontre:=true;
+    end;
+    if(encontre)then begin {Si encuentro el celular}
+      WriteLn ('Ingrese nuevo stock'); {Cambio el stock}
+      ReadLn(c.stockDisp);
+      Write(arc_cel,c); 
+    end
+    else {si no lo encuentro}
+      WriteLn('El celular no se encuentra en el archivo.'); {aviso que no lo encontre}
+    Close(arc_cel);
+end;
+
 {menu}
 procedure menu(var arc_cel: celulares);
 var
@@ -167,6 +197,7 @@ begin
       writeln('2 --> Listar en pantalla celulares que coincidan con descripción ingresada.');
       writeln('3 --> Exportar al archivo “celulares.txt”.');
       writeln('4 --> Añadir celulares al archivo.');
+      writeLn('5 --> Modificar el stock de un celular dado.');
       writeln('Cualquier otro --> Salir.');
       read(opMenu);
       case opMenu of
@@ -174,6 +205,7 @@ begin
         2:buscarDesc(arc_cel);
         3:exportar(arc_cel);
         4:añadir(arc_cel);
+        5:modificarStock(arc_cel);
       end;
     end;
 end;
@@ -181,5 +213,6 @@ end;
 var
     arc_cel:celulares;
 begin
-    carga(arc_cel);  
+    carga(arc_cel);
+    menu(arc_cel);
 end.
