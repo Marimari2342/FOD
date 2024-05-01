@@ -41,8 +41,11 @@ begin
 end;
 
 procedure imprCel(c:celR);
-var
 begin
+    WriteLn('Codigo: '+ c.cod + ', Nombre: ' + c.nombre +
+    ', Descripción: '+ c.descr + ', Marca: ' + c.marca + 
+    ', Precio: ' + c.precio + ', Stock Minimo: ' + c.stockMin + 
+    ', Stock Disponible: ' + c.stockDisp);
 end;
 
 {Listar en pantalla celulares con un stock menor al stock mínimo.}
@@ -69,6 +72,7 @@ begin
       WriteLn('No se encontraron celulares con un stock menor al mínimo.');
     Close(arc_cel);
 end;
+
 {menu}
 procedure menu(var arc_cel: celulares);
 var
