@@ -664,7 +664,29 @@ end;
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
 ~~~
-
+{Exportar al archivo "SinStock.txt" los celulares con stock = 0}
+procedure exportarSinStock(var arc_cel:celulares)
+var
+    txt:Text;
+    c:celR;
+begin
+    Reset(arc_cel);
+    {Crear archivo "SinStock.txt"}
+    Assign(txt,'SinStock.txt');
+    Rewrite(txt);
+    {Recorrer el archivo de celulares y fijarme los que tienen stock = 0}
+    while (not Eof(arc_cel)) do begin
+      Read(arc_cel,c);
+      {Si hay algun stock = 0 lo guardo en el archivo nuevo}
+      if(c.stockDisp = 0) then begin
+        WriteLn(txt,c.cod,' ',c.precio,' ',c.marca); {NOTA 2 --> Linea1: código, precio y marca}
+        WriteLn(txt,c.stockDisp,' ', c.stockMin, ' ', c.descr); {NOTA 2 --> Linea2: stock disponible, stock mínimo y descripción}
+        WriteLn(txt,c.nombre,' '); {NOTA 2 --> Linea3: nombre}
+      end;
+    end;
+    Close(arc_cel);
+    Close(txt);
+end;
 ~~~
 
 </details>
