@@ -510,7 +510,31 @@ end;
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
 ~~~
-
+{Listar en pantalla celulares cuya descripción tenga cadena de caracteres dada por el usuario.}
+procedure buscarDesc(var arc_cel:celulares);
+var
+    des: string[50];
+    aux: Boolean;
+    c: celR;
+begin
+    Reset(arc_cel);
+    aux:=false;
+    WriteLn('Ingrese descripción: ');
+    ReadLn(aux);
+    while (not Eof(arc_cel)) do begin
+      Read(arc_cel,c);
+      if(aux = c.descr) then begin
+        if(not aux) then begin
+            aux:=true;
+            WriteLn('Lista de celulares que coinciden con la descripción ingresada: ');
+        end;
+      end;
+      imprCel(c);
+    end;
+    if(not aux)then 
+        WriteLn('No se encontraron coincidencias.');
+    Close(arc_cel);
+end;
 ~~~
 
 </details>
