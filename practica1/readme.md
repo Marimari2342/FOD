@@ -544,7 +544,28 @@ end;
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
 ~~~
-
+{Exportar el archivo creado en a) al archivo de texto: “celulares.txt”, respetando el formato dado en la NOTA 2.}
+procedure exportar(var arc_cel: celulares);
+var
+    txt: Text;
+    c: celR;
+begin
+    {abro el archivo creado en a)}
+    Reset(arc_cel);
+    {creo y abro el archivo “celulares.txt”}
+    Assign(txt,'celulares.txt');
+    Rewrite(txt);
+    {voy leyendo y exportando los celulares uno a uno (NOTA2)}
+    while (not Eof(arc_cel)) do begin
+      Read(arc_cel,c);
+      WriteLn(txt,c.cod,' ',c.precio,' ',c.marca); {NOTA 2 --> Linea1: código, precio y marca}
+      WriteLn(txt,c.stockDisp,' ', c.stockMin, ' ', c.descr); {NOTA 2 --> Linea2: stock disponible, stock mínimo y descripción}
+      WriteLn(txt,c.nombre,' '); {NOTA 2 --> Linea3: nombre}
+    end;
+    {cierro ambos archivos}
+    Close(arc_cel);
+    Close(txt);
+end;
 ~~~
 
 </details>
