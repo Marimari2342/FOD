@@ -108,10 +108,12 @@ begin
     while(opMenu>0 and opMenu<=2)do begin
       writeln('Ingrese la opcion que desea');
       writeln('1 --> Listar en pantalla celulares con un stock menor al stock mínimo.');
+      writeln('2 --> Listar en pantalla celulares que coincidan con descripción ingresada.');
       writeln('Cualquier otro --> Salir.');
       read(opMenu);
       case opMenu of
         1:listarStkMenor(arc_cel);
+        2:buscarDesc(arc_cel);
       end;
     end;
 end;
