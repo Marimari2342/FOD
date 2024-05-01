@@ -587,7 +587,38 @@ end;
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
 ~~~
+procedure leerCel(var c:celR);
+begin
+    WriteLn('Ingrese codigo, precio, marca, stock disponible, stock minimo, descripcion y nombre');
+    readln(c.cod);
+    readln(c.precio);
+    readln(c.marca);
+    readln(c.stockDisp);
+    readln(c.stockMin);
+    readln(c.descr);
+    readln(c.nombre);
+end;
 
+{PUNTO6: Añadir uno o más celulares al final del archivo con datos ingresados por teclado.}
+procedure añadir(var arc_cel: celulares);
+var
+    c:celR;
+    opcion:Char;
+    ok:Boolean;
+begin
+    ok:=true;
+    Reset(arc_cel);
+    Seek(arc_cel,FileSize(arc_cel));
+    while (ok) do begin
+      leerCel(c);
+      WriteLn('Indique si quiere ingresar otro celular [s/n]');
+      ReadLn(opcion);
+      if(opcion='n')then
+        ok:=false;
+      Write(arc_cel,c);
+    end;
+    Close(arc_cel);
+end;
 ~~~
 
 </details>

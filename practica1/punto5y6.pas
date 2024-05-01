@@ -153,7 +153,6 @@ begin
       Write(arc_cel,c);
     end;
     Close(arc_cel);
-    {pregunto si quiere ingresar otro}
 end;
 
 {menu}
