@@ -574,7 +574,41 @@ end;
 
 ***NOTA 2: El archivo de carga debe editarse de manera que cada celular se especifique en tres líneas consecutivas. En la primera se especifica: código de celular, el precio y marca, en la segunda el stock disponible, stock mínimo y la descripción y en la tercera nombre en ese orden. Cada celular se carga leyendo tres líneas del archivo “celulares.txt”.***
 
+## 🟡 Punto 6
 
+***Agregar al menú del programa del ejercicio 5, opciones para:***
+
+* ***Añadir uno o más celulares al final del archivo con sus datos ingresados por teclado.***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+~~~
+
+~~~
+
+</details>
+
+* ***Modificar el stock de un celular dado.***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+~~~
+
+~~~
+
+</details>
+
+* ***Exportar el contenido del archivo binario a un archivo de texto denominado: "SinStock.txt", con aquellos celulares que tengan stock 0.***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+~~~
+
+~~~
+
+</details>
+
+***NOTA: Las búsquedas deben realizarse por nombre de celular.***
 
 <br>
 <br>
