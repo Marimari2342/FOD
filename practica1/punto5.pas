@@ -99,6 +99,29 @@ begin
     Close(arc_cel);
 end;
 
+{Exportar el archivo creado en a) al archivo de texto: “celulares.txt”, respetando el formato dado en la NOTA 2.}
+procedure exportar(var arc_cel: celulares);
+var
+    txt: Text;
+    c: celR;
+begin
+    {abro el archivo creado en a)}
+    Reset(arc_cel);
+    {creo y abro el archivo “celulares.txt”}
+    Assign(txt,'celulares.txt');
+    Rewrite(txt);
+    {voy leyendo y exportando los celulares uno a uno (NOTA2)}
+    while (not Eof(arc_cel)) do begin
+      Read(arc_cel,c);
+      WriteLn(txt,c.cod,' ',c.precio,' ',c.marca); {NOTA 2 --> Linea1: código, precio y marca}
+      WriteLn(txt,c.stockDisp,' ', c.stockMin, ' ', c.descr); {NOTA 2 --> Linea2: stock disponible, stock mínimo y descripción}
+      WriteLn(txt,c.nombre,' '); {NOTA 2 --> Linea3: nombre}
+    end;
+    {cierro ambos archivos}
+    Close(arc_cel);
+    Close(txt);
+end;
+
 {menu}
 procedure menu(var arc_cel: celulares);
 var
@@ -109,11 +132,13 @@ begin
       writeln('Ingrese la opcion que desea');
       writeln('1 --> Listar en pantalla celulares con un stock menor al stock mínimo.');
       writeln('2 --> Listar en pantalla celulares que coincidan con descripción ingresada.');
+      writeln('3 --> Exportar al archivo “celulares.txt”.');
       writeln('Cualquier otro --> Salir.');
       read(opMenu);
       case opMenu of
         1:listarStkMenor(arc_cel);
         2:buscarDesc(arc_cel);
+        3:exportar(arc_cel);
       end;
     end;
 end;
