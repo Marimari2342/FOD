@@ -1,4 +1,4 @@
-Program punto5;
+Program punto5y6;
 type
     celR = record
         cod: integer;
@@ -122,6 +122,16 @@ begin
     Close(txt);
 end;
 
+{PUNTO6: Añadir uno o más celulares al final del archivo con datos ingresados por teclado.}
+procedure añadir(var arc_cel: celulares);
+var
+    c:celR;
+    opcion:Char;
+begin
+    {indico que ingrese los datos}
+    {pregunto si quiere ingresar otro}
+end;
+
 {menu}
 procedure menu(var arc_cel: celulares);
 var
@@ -133,12 +143,14 @@ begin
       writeln('1 --> Listar en pantalla celulares con un stock menor al stock mínimo.');
       writeln('2 --> Listar en pantalla celulares que coincidan con descripción ingresada.');
       writeln('3 --> Exportar al archivo “celulares.txt”.');
+      writeln('4 --> Añadir celulares al archivo.');
       writeln('Cualquier otro --> Salir.');
       read(opMenu);
       case opMenu of
         1:listarStkMenor(arc_cel);
         2:buscarDesc(arc_cel);
         3:exportar(arc_cel);
+        4:añadir(arc_cel);
       end;
     end;
 end;

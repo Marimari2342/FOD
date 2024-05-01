@@ -574,6 +574,10 @@ end;
 
 ***NOTA 2: El archivo de carga debe editarse de manera que cada celular se especifique en tres líneas consecutivas. En la primera se especifica: código de celular, el precio y marca, en la segunda el stock disponible, stock mínimo y la descripción y en la tercera nombre en ese orden. Cada celular se carga leyendo tres líneas del archivo “celulares.txt”.***
 
+>[!NOTE]
+>
+> Punto 5 --> Para verlo completo ir a [*punto5y6.pas*](/practica1/punto5y6.pas).
+
 ## 🟡 Punto 6
 
 ***Agregar al menú del programa del ejercicio 5, opciones para:***
@@ -609,6 +613,10 @@ end;
 </details>
 
 ***NOTA: Las búsquedas deben realizarse por nombre de celular.***
+
+>[!NOTE]
+>
+> Punto 6 --> Para verlo completo (junto al Punto5) ir a [*punto5y6.pas*](/practica1/punto5y6.pas).
 
 <br>
 <br>
