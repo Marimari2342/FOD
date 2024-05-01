@@ -31,8 +31,8 @@ begin
     Assignn(txt,'celulares.txt');
     Reset(txt); {Reabro archivo desde donde voy a leer}
     while(not Eof(txt)) do begin {siempre poner los string al final de la linea}
-        readln(txt,c.cod,c.precio,c.marca);
-        readln(txt,c.stockMin,c.stockDisp,c.descr);
+        readln(txt,c.cod,c.precio,c.marca); {carga especificada en NOTA2}
+        readln(txt,c.stockDisp,c.stockMin,c.descr);
         readln(txt,c.nombre);
         write(arc_cel, c);
     end;
@@ -70,6 +70,32 @@ begin
     end;
     if(not aux)then
       WriteLn('No se encontraron celulares con un stock menor al mínimo.');
+    Close(arc_cel);
+end;
+
+{Listar en pantalla celulares cuya descripción tenga cadena de caracteres dada por el usuario.}
+procedure buscarDesc(var arc_cel:celulares);
+var
+    des: string[50];
+    aux: Boolean;
+    c: celR;
+begin
+    Reset(arc_cel);
+    aux:=false;
+    WriteLn('Ingrese descripción: ');
+    ReadLn(aux);
+    while (not Eof(arc_cel)) do begin
+      Read(arc_cel,c);
+      if(aux = c.descr) then begin
+        if(not aux) then begin
+            aux:=true;
+            WriteLn('Lista de celulares que coinciden con la descripción ingresada: ');
+        end;
+      end;
+      imprCel(c);
+    end;
+    if(not aux)then 
+        WriteLn('No se encontraron coincidencias.');
     Close(arc_cel);
 end;
 
