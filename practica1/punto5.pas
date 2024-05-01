@@ -39,16 +39,35 @@ begin
     Close(arc_cel);
     Close(txt);
 end;
+
+procedure imprCel(c:celR);
+var
+begin
+end;
+
 {Listar en pantalla celulares con un stock menor al stock mínimo.}
 procedure listarStkMenor(var arc_cel:celulares);
 var
     c:celR;
+    aux:Boolean;
 begin
+    reset(arc_cel);
+    aux:=false;
     {Leo uno por uno los celulares del archivo de celulares}
-
-    {Comparo los stock}
-    
-    {Muestro en pantalla los que el stock es menor al minimo (PROCED)}
+    while (not Eof(arc_cel)) do begin
+      Read(arc_cel,c);
+      if(c.stockDisp<c.stockMin) then begin {Comparo los stock}
+        if(not aux) then begin
+          WriteLn('Celulares con un stock menor al stock minimo: ');
+          aux:=true;
+        end;
+        {Muestro en pantalla los que el stock es menor al minimo (PROCED)}
+        imprCel(c);
+      end;
+    end;
+    if(not aux)then
+      WriteLn('No se encontraron celulares con un stock menor al mínimo.');
+    Close(arc_cel);
 end;
 {menu}
 procedure menu(var arc_cel: celulares);
@@ -63,6 +82,7 @@ begin
       read(opMenu);
       case opMenu of
         1:listarStkMenor(arc_cel);
+      end;
     end;
 end;
 {programa pincipal}
