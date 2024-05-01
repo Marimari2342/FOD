@@ -466,6 +466,38 @@ end.
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 ~~~
+procedure imprCel(c:celR);
+begin
+    WriteLn('Codigo: '+ c.cod + ', Nombre: ' + c.nombre +
+    ', Descripción: '+ c.descr + ', Marca: ' + c.marca + 
+    ', Precio: ' + c.precio + ', Stock Minimo: ' + c.stockMin + 
+    ', Stock Disponible: ' + c.stockDisp);
+end;
+
+{Listar en pantalla celulares con un stock menor al stock mínimo.}
+procedure listarStkMenor(var arc_cel:celulares);
+var
+    c:celR;
+    aux:Boolean;
+begin
+    reset(arc_cel);
+    aux:=false;
+    {Leo uno por uno los celulares del archivo de celulares}
+    while (not Eof(arc_cel)) do begin
+      Read(arc_cel,c);
+      if(c.stockDisp < c.stockMin) then begin {Comparo los stock}
+        if(not aux) then begin
+          WriteLn('Celulares con un stock menor al stock minimo: ');
+          aux:=true;
+        end;
+        {Muestro en pantalla los que el stock es menor al minimo (PROCED)}
+        imprCel(c);
+      end;
+    end;
+    if(not aux)then
+      WriteLn('No se encontraron celulares con un stock menor al mínimo.');
+    Close(arc_cel);
+end;
 ~~~
 </details>
 
