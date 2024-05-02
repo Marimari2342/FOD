@@ -728,7 +728,7 @@ end;
 > Punto 7 --> Para verlo completo ir a [*punto7.pas*](/practica1/punto7.pas).
 
 <p align=center>🟡</p>
-<p align=center>🟡</p>
+<p align=center>🟡🟡</p>
 <p align=center>🟡</p>
 
 
