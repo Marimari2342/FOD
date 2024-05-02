@@ -41,18 +41,52 @@ begin
     Close()
 end;
 
-{agregar una novela}
+procedure leerNov(var n:novelaR);
+begin
+  WriteLn('Ingrese codigo, precio, genero y nombre en ese orden: ');
+  ReadLn(n.cod);
+  ReadLn(n.precio);
+  ReadLn(n.genero);
+  ReadLn(n.nombre);
+end;
+
+{agregar una novela --> No me indica como, voy a suponer que por teclado}
 procedure agregarNov(var arc_nov:novelas);
 var
-
+    n:novelaR;
 begin
+    Reset(arc_nov);
+    leerNov(n);
+    Seek(arc_nov,FileSize(arc_nov));
+    Write(arc_nov,n);
+    Close(arc_nov);
 end;
 
 {modificar una novela existente}
 procedure modificarNov(var arc_nov:novelas);
 var
-
+    n:novelaR;
+    cod:Integer;
+    encontre:Boolean;
 begin
+    Reset(arc_nov);
+    WriteLn('Ingrese codigo de novela que quiere modificar: ');
+    ReadLn(cod);
+    encontre:=false;
+    while (not Eof(arc_nov)and not encontre) do begin
+      Write(arc_nov,n);
+      if (n.cod = cod) then
+        encontre:=true;
+    end;
+    if (encontre) then begin
+      WriteLn('Ingrese nuevos datos de la novela: ');
+      leerNov(n);
+      Seek(arc_nov,FilePos(arc_nov)-1);
+      Write(arc_nov,n);
+    end
+    else
+      WriteLn('No se encontró la novela.');
+    Close(arc_nov);
 end;
 
 {menu}

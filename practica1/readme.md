@@ -764,7 +764,32 @@ end.
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
 ~~~
-
+{modificar una novela existente}
+procedure modificarNov(var arc_nov:novelas);
+var
+    n:novelaR;
+    cod:Integer;
+    encontre:Boolean;
+begin
+    Reset(arc_nov);
+    WriteLn('Ingrese codigo de novela que quiere modificar: ');
+    ReadLn(cod);
+    encontre:=false;
+    while (not Eof(arc_nov)and not encontre) do begin
+      Write(arc_nov,n);
+      if (n.cod = cod) then
+        encontre:=true;
+    end;
+    if (encontre) then begin
+      WriteLn('Ingrese nuevos datos de la novela: ');
+      leerNov(n);
+      Seek(arc_nov,FilePos(arc_nov)-1);
+      Write(arc_nov,n);
+    end
+    else
+      WriteLn('No se encontró la novela');
+    Close(arc_nov);
+end;
 ~~~
 
 </details>
