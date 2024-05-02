@@ -697,9 +697,40 @@ end;
 >
 > Punto 6 --> Para verlo completo (junto al Punto5) ir a [*punto5y6.pas*](/practica1/punto5y6.pas).
 
-<br>
-<br>
-<br>
+## 🟡 Punto 7
+
+***Realizar un programa que permita:***
+
+* ***Crear un archivo binario a partir de la información almacenada en un archivo de texto. El nombre del archivo de texto es: “novelas.txt”. La información en el archivo de texto consiste en: código de novela, nombre, género y precio de diferentes novelas argentinas. Los datos de cada novela se almacenan en dos líneas en el archivo de texto. La primera línea contendrá la siguiente información: código novela, precio y género, y la segunda línea almacenará el nombre de la novela.***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+~~~
+
+~~~
+
+</details>
+
+* ***Abrir el archivo binario y permitir la actualización del mismo. Se debe poder agregar una novela y modificar una existente. Las búsquedas se realizan por código de novela.***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+~~~
+
+~~~
+
+</details>
+
+***NOTA: El nombre del archivo binario es proporcionado por el usuario desde el teclado.***
+
+>[!NOTE]
+>
+> Punto 7 --> Para verlo completo ir a [*punto7.pas*](/practica1/punto7.pas).
+
+<p align=center>🟡</p>
+<p align=center>🟡</p>
+<p align=center>🟡</p>
+
 
 >[!TIP]
 >
