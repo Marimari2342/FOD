@@ -728,13 +728,13 @@ end;
 > Punto 7 --> Para verlo completo ir a [*punto7.pas*](/practica1/punto7.pas).
 
 <p align=center>🟡</p>
-<p align=center>🟡🟡🟡</p>
-<p align=center>🟡🟡🟡🟡🟡</p>
+<p align=center>🟡</p>
+<p align=center>🟡</p>
 
 
 >[!NOTE]
 >
-> * ***Para descargar la practica (del 2024) en PDF click [<code>AQUÍ</code>](https://drive.google.com/file/d/1oVU2CYF7ZRFz3GPg8pN85K9uvSB5Cjsv/view?usp=sharing).***
+> * ***Para descargar la practica (del 2024) en PDF, click [<code>AQUÍ</code>](https://drive.google.com/file/d/1oVU2CYF7ZRFz3GPg8pN85K9uvSB5Cjsv/view?usp=sharing).***
 
 
 <br>
