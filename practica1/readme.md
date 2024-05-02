@@ -258,7 +258,7 @@ end;
 
 </details>
 
->[!NOTE]
+>[!TIP]
 >
 > Punto 3 --> Para verlo completo ir a [*punto3y4.pas*](/practica1/punto3y4.pas).
 
@@ -398,7 +398,7 @@ end;
 
 ***NOTA: Las búsquedas deben realizarse por número de empleado.***
 
->[!NOTE]
+>[!TIP]
 >
 > Punto 4 --> Para verlo completo (junto al Punto3) ir a [*punto3y4.pas*](/practica1/punto3y4.pas).
 
@@ -574,7 +574,7 @@ end;
 
 ***NOTA 2: El archivo de carga debe editarse de manera que cada celular se especifique en tres líneas consecutivas. En la primera se especifica: código de celular, el precio y marca, en la segunda el stock disponible, stock mínimo y la descripción y en la tercera nombre en ese orden. Cada celular se carga leyendo tres líneas del archivo “celulares.txt”.***
 
->[!NOTE]
+>[!TIP]
 >
 > Punto 5 --> Para verlo completo ir a [*punto5y6.pas*](/practica1/punto5y6.pas).
 
@@ -693,7 +693,7 @@ end;
 
 ***NOTA: Las búsquedas deben realizarse por nombre de celular.***
 
->[!NOTE]
+>[!TIP]
 >
 > Punto 6 --> Para verlo completo (junto al Punto5) ir a [*punto5y6.pas*](/practica1/punto5y6.pas).
 
@@ -723,7 +723,7 @@ end;
 
 ***NOTA: El nombre del archivo binario es proporcionado por el usuario desde el teclado.***
 
->[!NOTE]
+>[!TIP]
 >
 > Punto 7 --> Para verlo completo ir a [*punto7.pas*](/practica1/punto7.pas).
 
@@ -732,9 +732,7 @@ end;
 <p align=center>🟡</p>
 
 
->[!TIP]
->
-> Para descargar la practica (del 2024) en PDF click [<code>AQUÍ</code>](https://drive.google.com/file/d/1oVU2CYF7ZRFz3GPg8pN85K9uvSB5Cjsv/view?usp=sharing).
+* ***Para descargar la practica (del 2024) en PDF click [<code>AQUÍ</code>](https://drive.google.com/file/d/1oVU2CYF7ZRFz3GPg8pN85K9uvSB5Cjsv/view?usp=sharing).***
 
 
 <br>
