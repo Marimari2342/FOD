@@ -732,7 +732,9 @@ end;
 <p align=center>🟡</p>
 
 
-* ***Para descargar la practica (del 2024) en PDF click [<code>AQUÍ</code>](https://drive.google.com/file/d/1oVU2CYF7ZRFz3GPg8pN85K9uvSB5Cjsv/view?usp=sharing).***
+>[!NOTE]
+>
+> * ***Para descargar la practica (del 2024) en PDF click [<code>AQUÍ</code>](https://drive.google.com/file/d/1oVU2CYF7ZRFz3GPg8pN85K9uvSB5Cjsv/view?usp=sharing).***
 
 
 <br>
