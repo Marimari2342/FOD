@@ -41,9 +41,43 @@ begin
     Close()
 end;
 
+{agregar una novela}
+procedure agregarNov(var arc_nov:novelas);
+var
+
+begin
+end;
+
+{modificar una novela existente}
+procedure modificarNov(var arc_nov:novelas);
+var
+
+begin
+end;
+
+{menu}
+procedure menu(var arc_nov:novelas);
+var
+    opMenu:integer;
+begin
+    opMenu:=1;
+    while(opMenu>0 and opMenu<=2)do begin
+      writeln('Ingrese la opcion que desea');
+      writeln('1 --> Agregar una novela.');
+      writeln('2 --> Modificar una novela existente.');
+      writeln('Cualquier otro --> Salir.');
+      read(opMenu);
+      case opMenu of
+        1:agregarNov(arc_nov);
+        2:modificarNov(arc_nov);
+      end;
+    end;
+end;
+
 {programa principal}
 var
     arc_nov = novelas;
 begin
     carga(arc_nov);
+    menu(arc_nov);
 end.

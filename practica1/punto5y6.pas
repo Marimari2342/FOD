@@ -215,7 +215,7 @@ var
     opMenu:Integer;
 begin
     opMenu:=1;
-    while(opMenu>0 and opMenu<=2)do begin
+    while(opMenu>0 and opMenu<=6)do begin
       writeln('Ingrese la opcion que desea');
       writeln('1 --> Listar en pantalla celulares con un stock menor al stock mínimo.');
       writeln('2 --> Listar en pantalla celulares que coincidan con descripción ingresada.');
