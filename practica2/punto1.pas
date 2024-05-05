@@ -18,13 +18,13 @@ begin
     {asignar a variable y crear archivo donde voy a guardar}
     Assign(arc_comp,'compactado.txt');
     Rewrite(arc_comp);
-    Read(comisiones,eLei.cod,eLei.nombre,eLei.monto);
+    Read(comisiones,eLei.cod,eLei.monto,eLei.nombre);
     while (not Eof(comisiones)) do begin
       eAcum.cod := eLei.cod;
       eAcum.monto := 0;
       while (not Eof(comisiones))and(eLei.cod = eAcum.cod) do begin
         eAcum.monto+=eLei.monto;
-        Read(comisiones,eLei.cod,eLei.nombre,eLei.monto);
+        Read(comisiones,eLei.cod,eLei.monto,eLei.nombre);
       end;
       WriteLn(arc_comp,eAcum.cod,' ',eAcum.monto:0:2,' ',eAcum.nombre);
     end;
