@@ -19,9 +19,8 @@ begin
 end;
 
 {cargar archivo binario a partir del archivo de texto}
-procedure carga(var arc_nov: novelas);
+procedure carga(var arc_nov: novelas; var txt: Text);
 var
-    txt: Text;
     n:novelaR;
 begin
     {asignar nombre a archivo binario y abrir}
@@ -110,8 +109,9 @@ end;
 
 {programa principal}
 var
-    arc_nov = novelas;
+    arc_nov : novelas;
+    txt : Text;
 begin
-    carga(arc_nov);
+    carga(arc_nov,txt);
     menu(arc_nov);
 end.
