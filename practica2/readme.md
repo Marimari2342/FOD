@@ -67,9 +67,9 @@ end.
 
 * ***Actualizar el archivo maestro de la siguiente manera:***
 
-***i.Si aprobó el final se incrementa en uno la cantidad de materias con final aprobado, y se decrementa en uno la cantidad de materias sin final aprobado.***
+***i. Si aprobó el final se incrementa en uno la cantidad de materias con final aprobado, y se decrementa en uno la cantidad de materias sin final aprobado.***
 
-***ii.Si aprobó la cursada se incrementa en uno la cantidad de materias aprobadas sin final.***
+***ii. Si aprobó la cursada se incrementa en uno la cantidad de materias aprobadas sin final.***
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
