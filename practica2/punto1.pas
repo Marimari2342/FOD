@@ -6,10 +6,8 @@ type
         monto:real;
     end;
 
-procedure Compactar();
+procedure Compactar(var comisiones, arc_comp:Text);
 var
-    comisiones:Text;
-    arc_comp:Text;
     eLei,eAcum:empR;
 begin
     {asignar a variable y abrir archivo que voy a leer}
@@ -34,6 +32,9 @@ begin
 end;
 
 {programa principal}
+var
+    comisiones:Text;
+    arc_comp:Text;
 begin
-    Compactar();
+    Compactar(comisiones,arc_comp);
 end.
