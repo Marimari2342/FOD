@@ -17,14 +17,37 @@ type
     ventas = file of ventaR;
 
 {crear los archivos maestro y detalle (vamos a suponer que se cargan desde un txt)}
+{como no me dice se dispone, supongo que los tengo que cargar???}
 procedure crearMaestro(var maestro:productos);
 var
+    p:productoR;
+    txt:Text;
 begin
+    Rewrite(maestro);
+    Assign(txt,'arc_maestro.txt');
+    Reset(txt);
+    while (not Eof(txt)) do begin
+      Read(txt,p.cod,p.precio,p.stockAct,p.stockMin,p.nombre);
+      Write(maestro,p);
+    end;
+    Close(maestro);
+    Close(txt);
 end;
 
 procedure crearDetalle(var detalle:ventas);
 var
+    v:ventaR;
+    txt:Text;
 begin
+    Rewrite(detalle);
+    Assign(txt,'arc_detalle.txt');
+    Reset(txt);
+    while (not Eof(txt)) do begin
+      Read(txt,v.cod,v.cant);
+      Write(detalle,v);
+    end;
+    Close(detalle);
+    Close(txt);
 end;
 
 {punto a) --> Actualizar el archivo maestro con el archivo detalle}
