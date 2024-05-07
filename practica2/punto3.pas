@@ -53,7 +53,15 @@ end;
 {punto a) --> Actualizar el archivo maestro con el archivo detalle}
 procedure actualizar(var maestro:productos; var detalle:ventas);
 var
+    v:ventaR;
+    p:productoR;
+    aux:integer;
 begin
+    Reset(maestro);
+    Reset(detalle);
+
+    Close(maestro);
+    Close(detalle);
 end;
 
 {punto b) --> Listar en txt los productos con stock actual por debajo del stock mínimo.}
