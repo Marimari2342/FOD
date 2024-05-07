@@ -18,8 +18,8 @@ type
 
     procedure asignarArcMyD(var maestro:alumnos;var detalle:materias);
     begin
-      Assign(maestro,'archivomaestro.txt');
-      Assign(detalle,'archivodetalle.txt');
+      Assign(maestro,'archivomaestro');
+      Assign(detalle,'archivodetalle');
     end;
 
     procedure asignar(var txt:Text);

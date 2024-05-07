@@ -18,6 +18,10 @@ type
 
 {programa principal}
 var
+    maestro:productos;
+    detalle:ventas;
+    txt:Text;
 begin
-  
+    Assign(maestro,'archivomaestro');
+    
 end.
