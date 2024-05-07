@@ -16,7 +16,13 @@ type
     productos = file of productoR;
     ventas = file of ventaR;
 
-procedure crearMaestroDetalle(var maestro:productos; var detalle:ventas);
+{crear los archivos maestro y detalle (vamos a suponer que se cargan desde un txt)}
+procedure crearMaestro(var maestro:productos);
+var
+begin
+end;
+
+procedure crearDetalle(var detalle:ventas);
 var
 begin
 end;
@@ -45,7 +51,10 @@ begin
       WriteLn('2 --> Actualizar el archivo maestro.');
       WriteLn('3 --> Listar en archivo de texto productos con stock actual por debajo del stock mínimo.');
       case opMenu of
-        1:crearMaestroDetalle(maestro,detalle);
+        1: begin
+            crearMaestro(maestro);
+            crearDetalle(detalle);
+        end;
         2:actualizar(maestro,detalle);
         3:listarStock(maestro,txt);
       end;
@@ -59,6 +68,7 @@ var
     txt:Text;
 begin
     Assign(maestro,'archivomaestro');
+    Assign(detalle,'archivodetalle');
     Assign(txt,'stock_minimo.txt');
     menu(maestro,detalle,txt); {realizar un programa con opciones para --> menu??}
 end.
