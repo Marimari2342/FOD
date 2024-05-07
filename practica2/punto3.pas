@@ -50,6 +50,14 @@ begin
     Close(txt);
 end;
 
+procedure Leer(var detalle:ventas; var v:ventaR);
+begin
+    if(not Eof(detalle)) then
+      read(detalle,v)
+    else 
+      v.cod := valorAlto;
+end;
+
 {punto a) --> Actualizar el archivo maestro con el archivo detalle}
 procedure actualizar(var maestro:productos; var detalle:ventas);
 var
@@ -59,7 +67,17 @@ var
 begin
     Reset(maestro);
     Reset(detalle);
-
+    Leer(detalle,v);
+    while (v.cod <> valorAlto) do begin
+      Read(maestro,p);
+      aux:=0;
+      while (v.cod = p.cod) do
+        aux+=v.cant;
+      p.stockAct-=aux;
+      Seek(maestro,FilePos(maestro)-1);
+      Write(maestro,p);
+      Leer(detalle,v);
+    end;
     Close(maestro);
     Close(detalle);
 end;
