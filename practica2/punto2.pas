@@ -22,7 +22,6 @@ type
       Assign(detalle,'archivodetalle.txt');
     end;
 
-    {En proceso....}
     procedure leer(var detalle:alumnos; var mat:materiaR);
     begin
       if (not Eof(detalle)) then 
@@ -47,8 +46,10 @@ type
           while (mat.cod = alu.cod) do begin
             if(mat.cursadaOfinal='c')then
               canC+=1;
-            if(mat.cursadaOfinal='f')then
+            if(mat.cursadaOfinal='f')then begin
               cantF+=1;
+              canC-=1;
+            end;
           end;
           alu.cantMatCursadas+=canC;
           alu.cantMatFinalApr+=canF;

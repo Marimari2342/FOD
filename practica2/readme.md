@@ -74,7 +74,44 @@ end.
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
 ~~~
+procedure leer(var detalle:alumnos; var mat:materiaR);
+begin
+  if (not Eof(detalle)) then 
+    read(detalle,mat)        
+  else
+    mat.cod := valorAlto;
+end;
 
+procedure actualizar(var maestro:alumnos;var detalle:materias);
+var
+    mat:materiaR;
+    alu:alumnosR;
+    canC,canF:integer;
+begin
+    Reset(maestro);
+    Reset(detalle);
+    Leer(detalle,mat); 
+    while (mat.cod<>valorAlto) do begin
+      Read(maestro,alu);
+      cantC:=0;
+      canF:=0;
+      while (mat.cod = alu.cod) do begin
+        if(mat.cursadaOfinal='c')then
+          canC+=1;
+        if(mat.cursadaOfinal='f')then begin
+          cantF+=1;
+          canC-=1;
+        end;
+      end;
+      alu.cantMatCursadas+=canC;
+      alu.cantMatFinalApr+=canF;
+      seek (maestro,filePos (maestro)-1);
+      write (maestro,alu);
+      Leer(detalle,mat); 
+    end;
+    Close(maestro);
+    Close(detalle);
+end;
 ~~~
 
 </details>
@@ -90,6 +127,10 @@ end.
 </details>
 
 ***NOTA: Para la actualización del inciso a) los archivos deben ser recorridos sólo una vez.***
+
+>[!TIP]
+>
+> Punto 2 --> Para ver el .pas completo ir a [*punto2.pas*](/practica2/punto2.pas).
 
 <br>
 <br>
