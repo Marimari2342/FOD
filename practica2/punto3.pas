@@ -16,6 +16,42 @@ type
     productos = file of productoR;
     ventas = file of ventaR;
 
+procedure crearMaestroDetalle(var maestro:productos; var detalle:ventas);
+var
+begin
+end;
+
+{punto a) --> Actualizar el archivo maestro con el archivo detalle}
+procedure actualizar(var maestro:productos; var detalle:ventas);
+var
+begin
+end;
+
+{punto b) --> Listar en txt los productos con stock actual por debajo del stock mínimo.}
+procedure listarStock(var maestro:productos; var txt:Text);
+var
+begin
+end;
+
+{menu de opciones}
+procedure menu(var maestro:productos; var detalle:ventas; var txt:Text);
+var
+    opMenu:integer;
+begin
+    opMenu:=1;
+    while (opMenu>0 and opMenu<=2) do begin
+      WriteLn('Ingrese la opción que desea: ');
+      WriteLn('1 --> Generar archivos binarios maestro y detalle.');
+      WriteLn('2 --> Actualizar el archivo maestro.');
+      WriteLn('3 --> Listar en archivo de texto productos con stock actual por debajo del stock mínimo.');
+      case opMenu of
+        1:crearMaestroDetalle(maestro,detalle);
+        2:actualizar(maestro,detalle);
+        3:listarStock(maestro,txt);
+      end;
+    end;
+end;
+
 {programa principal}
 var
     maestro:productos;
@@ -23,5 +59,6 @@ var
     txt:Text;
 begin
     Assign(maestro,'archivomaestro');
-    
+    Assign(txt,'stock_minimo.txt');
+    menu(maestro,detalle,txt); {realizar un programa con opciones para --> menu??}
 end.
