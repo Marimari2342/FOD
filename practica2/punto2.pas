@@ -22,6 +22,11 @@ type
       Assign(detalle,'archivodetalle.txt');
     end;
 
+    procedure asignar(var txt:Text);
+    begin
+      Assign(txt,'alumnosmasfinales.txt')
+    end;
+
     procedure leer(var detalle:alumnos; var mat:materiaR);
     begin
       if (not Eof(detalle)) then 
@@ -61,16 +66,33 @@ type
         Close(detalle);
     end;
 
-    procedure menu (var maestro:alumnos;var detalle:materias);
+    procedure listarAlu(var maestro:alumnos; var txt:Text);
+    var
+        alu:alumnosR;
+    begin
+        Reset(maestro);
+        Rewrite(txt);
+        while (not Eof(maestro)) do begin
+          Read(maestro,alu);
+          if(alu.cantMatFinalApr>alu.cantMatCursadas)then
+            WriteLn(txt,alu.cod,alu.cantMatCursadas,alu.cantMatFinalApr,alu.apellido,alu.nombre);
+        end;
+        Close(maestro);
+        Close(txt);
+    end;
+
+    procedure menu (var maestro:alumnos;var detalle:materias; var txt:Text);
     var
         opMenu:integer;
     begin
         opMenu:=1;
-        while (opMenu>0 and opMenu<=3) do begin
+        while (opMenu>0 and opMenu<=2) do begin
           WriteLn('Ingrese la opción que desea: ');
           WriteLn('1 --> Actualizar el archivo maestro.');
+          WriteLn('2 --> Listar en archivo de texto alumnos con más finales aprobados que finales sin aprobar.');
           case opMenu of
             1:actualizar(maestro,detalle);
+            2:listarAlu(maestro,txt);
           end;
         end;
     end;
@@ -79,7 +101,9 @@ type
 var
     detalle:materias;
     maestro:alumnos;
+    txt:Text;
 begin
     asignarArcMyD(maestro,detalle);
-    menu(maestro,detalle);
+    asignar(txt);
+    menu(maestro,detalle,txt);
 end.
