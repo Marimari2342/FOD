@@ -121,7 +121,20 @@ end;
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
 ~~~
-
+procedure listarAlu(var maestro:alumnos; var txt:Text);
+var
+    alu:alumnosR;
+begin
+    Reset(maestro);
+    Rewrite(txt);
+    while (not Eof(maestro)) do begin
+      Read(maestro,alu);
+      if(alu.cantMatFinalApr>alu.cantMatCursadas)then
+        WriteLn(txt,alu.cod,alu.cantMatCursadas,alu.cantMatFinalApr,alu.apellido,alu.nombre);
+    end;
+    Close(maestro);
+    Close(txt);
+end;
 ~~~
 
 </details>
