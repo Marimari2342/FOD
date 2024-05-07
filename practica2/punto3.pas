@@ -85,7 +85,13 @@ end;
 {punto b) --> Listar en txt los productos con stock actual por debajo del stock mínimo.}
 procedure listarStock(var maestro:productos; var txt:Text);
 var
+    p:productoR;
 begin
+    Rewrite(txt);
+    Reset(maestro);
+    //codigo
+    Close(txt);
+    Close(maestro);
 end;
 
 {menu de opciones}
