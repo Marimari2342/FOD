@@ -34,10 +34,24 @@ type
     procedure actualizar(var maestro:alumnos;var detalle:materias);
     var
         mat:materiaR;
+        alu:alumnosR;
+        canC,canF:integer;
     begin
         Reset(maestro);
         Reset(detalle);
-        Leer(detalle,mat);
+        Leer(detalle,mat); 
+        while (mat.cod<>valorAlto) do begin
+          Read(maestro,alu);
+          cantC:=0;
+          canF:=0;
+          while (mat.cod = alu.cod) do begin
+            if(mat.cursadaOfinal='c')then
+              canC+=1;
+            if(mat.cursadaOfinal='f')then
+              cantF+=1;
+            Leer(detalle,mat); 
+          end;
+        end;
         Close(maestro);
         Close(detalle);
     end;
