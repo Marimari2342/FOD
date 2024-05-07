@@ -206,6 +206,10 @@ end;
 
 </details>
 
+>[!TIP]
+>
+> Punto 3 --> Para ver el .pas completo ir a [*punto3.pas*](/practica2/punto3.pas).
+
 <br>
 <br>
 <br>
