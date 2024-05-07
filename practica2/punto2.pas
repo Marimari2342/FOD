@@ -49,8 +49,12 @@ type
               canC+=1;
             if(mat.cursadaOfinal='f')then
               cantF+=1;
-            Leer(detalle,mat); 
           end;
+          alu.cantMatCursadas+=canC;
+          alu.cantMatFinalApr+=canF;
+	      seek (maestro,filePos (maestro)-1);
+	      write (maestro,alu);
+          Leer(detalle,mat); 
         end;
         Close(maestro);
         Close(detalle);
