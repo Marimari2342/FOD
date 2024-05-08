@@ -89,7 +89,11 @@ var
 begin
     Rewrite(txt);
     Reset(maestro);
-    //codigo
+    while (not Eof(maestro)) do begin
+      Read(maestro,p);
+      if(p.stockAct<p.stockMin)then
+        WriteLn(txt,p.cod,p.precio,p.stockAct,p.stockMin,p.nombre);
+    end;
     Close(txt);
     Close(maestro);
 end;
