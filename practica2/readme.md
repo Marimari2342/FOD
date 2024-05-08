@@ -201,7 +201,21 @@ end;
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
 ~~~
-
+{punto b) --> Listar en txt los productos con stock actual por debajo del stock mínimo.}
+procedure listarStock(var maestro:productos; var txt:Text);
+var
+    p:productoR;
+begin
+    Rewrite(txt);
+    Reset(maestro);
+    while (not Eof(maestro)) do begin
+      Read(maestro,p);
+      if(p.stockAct<p.stockMin)then
+        WriteLn(txt,p.cod,p.precio,p.stockAct,p.stockMin,p.nombre);
+    end;
+    Close(txt);
+    Close(maestro);
+end;
 ~~~
 
 </details>

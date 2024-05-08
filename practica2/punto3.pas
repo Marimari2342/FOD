@@ -104,7 +104,7 @@ var
     opMenu:integer;
 begin
     opMenu:=1;
-    while (opMenu>0 and opMenu<=2) do begin
+    while (opMenu>0 and opMenu<=3) do begin
       WriteLn('Ingrese la opción que desea: ');
       WriteLn('1 --> Generar archivos binarios maestro y detalle.');
       WriteLn('2 --> Actualizar el archivo maestro.');
