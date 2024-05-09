@@ -57,7 +57,7 @@ begin
     Assign(maestro,'archivomaestro');
     Assign(detalle1,'archivodet1');
     Assign(detalle2,'archivodet2');
-    CargarDet1(detalle1);
-    CargarDet2(detalle2);
+    {CargarDet1(detalle1);
+    CargarDet2(detalle2);  --> tendré que cargar los archivos detalle desde un txt ??}
     ActualizarMaestro(maestro,detalle1,detalle2);
 end.
