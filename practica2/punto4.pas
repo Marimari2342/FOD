@@ -16,19 +16,19 @@ type
     provincia = file of provinciaR;
     agencia = file of agenciaR;
 
-{codigo}
-
-{cargar archivo detalle 1 desde un txt}
-
-{cargar archivo detalle 2 desde un txt}
-
-procedure Minimo(var a1,a2,min:agenciaR);
-var
+procedure Minimo(var a1,a2,min:agenciaR; var detalle1,detalle2:agencia);
 begin
+    if(a1.nombreProv <= a2.nombreProv)then begin
+      min := a1;
+      Leer(detalle1,a1);
+    end
+    else begin
+      min := a2;
+      Leer(detalle2,a2);
+    end;
 end;
 
 procedure Leer(var detalle:agencia;var a: agenciaR);
-var
 begin
     if(not Eof(detalle))then
       Read(detalle,a)
@@ -52,13 +52,15 @@ begin
     Minimo(a1,a2,min);
     while (min.nombre <> valorAlto) do begin
         Read(maestro,p);
-        while (p.nombre <> min.nombre) do begin
+        while (p.nombre <> min.nombre) do 
           Read(maestro,p);
         while (p.nombre = min.nombre) do begin
           p.cantALf += min.cantALf;
           p.cantEnc += min.cantEnc;
           Minimo(a1,a2,min);
         end;
+        Seek(maestro,FilePos(maestro)-1);
+        Write(maestro,p);
     end;
 
     {cerrar archivos}
