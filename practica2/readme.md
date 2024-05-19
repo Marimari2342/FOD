@@ -88,6 +88,8 @@ var
     alu:alumnosR;
     canC,canF:integer;
 begin
+    Assign(maestro,'maestro');
+    Assign(detalle,'detalle');
     Reset(maestro);
     Reset(detalle);
     Leer(detalle,mat); 
@@ -95,6 +97,8 @@ begin
       Read(maestro,alu);
       cantC:=0;
       canF:=0;
+      while (mat.cod<>alu.cod) do
+        Read(maestro,alu); {el alumno en detalle puede estar 0 veces}
       while (mat.cod = alu.cod) do begin
         if(mat.cursadaOfinal='c')then
           canC+=1;
@@ -102,12 +106,12 @@ begin
           cantF+=1;
           canC-=1;
         end;
+        Leer(detalle,mat);
       end;
       alu.cantMatCursadas+=canC;
       alu.cantMatFinalApr+=canF;
       seek (maestro,filePos (maestro)-1);
       write (maestro,alu);
-      Leer(detalle,mat); 
     end;
     Close(maestro);
     Close(detalle);
@@ -125,6 +129,7 @@ procedure listarAlu(var maestro:alumnos; var txt:Text);
 var
     alu:alumnosR;
 begin
+    Assign(txt,'alumnosmasfinales.txt');
     Reset(maestro);
     Rewrite(txt);
     while (not Eof(maestro)) do begin
@@ -176,18 +181,22 @@ var
     p:productoR;
     aux:integer;
 begin
+    Assign(maestro,'archivomaestro');
+    Assign(detalle,'archivodetalle');
     Reset(maestro);
     Reset(detalle);
     Leer(detalle,v);
     while (v.cod <> valorAlto) do begin
       Read(maestro,p);
+      while (v.cod <> p.cod) do
+        Read(maestro,p);
       aux:=0;
       while (v.cod = p.cod) do
         aux+=v.cant;
+        Leer(detalle,v);
       p.stockAct-=aux;
       Seek(maestro,FilePos(maestro)-1);
       Write(maestro,p);
-      Leer(detalle,v);
     end;
     Close(maestro);
     Close(detalle);
@@ -206,6 +215,7 @@ procedure listarStock(var maestro:productos; var txt:Text);
 var
     p:productoR;
 begin
+    Assign(txt,'stock_minimo.txt');
     Rewrite(txt);
     Reset(maestro);
     while (not Eof(maestro)) do begin
