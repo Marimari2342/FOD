@@ -1,6 +1,4 @@
 Program punto3;
-const
-    valorAlto=99999;
 type
     productoR = record
         cod:integer;
@@ -17,7 +15,7 @@ type
     ventas = file of ventaR;
 
 {crear los archivos maestro y detalle (vamos a suponer que se cargan desde un txt)}
-{como no me dice se dispone, supongo que los tengo que cargar???}
+{como no me dice se dispone, supongo que los tengo que cargar (no necesariamente de un txt)???}
 procedure crearMaestro(var maestro:productos);
 var
     p:productoR;

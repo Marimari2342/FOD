@@ -1,6 +1,9 @@
-Program punto2; {ACTULIZACION DE UN ARCHIVO MAESTRO CON UN ARCHIVO DETALLE}
+{ACTULIZACION DE UN ARCHIVO MAESTRO CON UN ARCHIVO DETALLE
+- 1 archivo detalle.
+- El alumno puede aparecer 0,1 o más veces --> necesito un valorAlto}
+Program punto2;
 const
-    valorAlto = 99999;
+    valorAlto = 9999;
 type
     alumnosR = record
         cod:integer;
@@ -16,17 +19,6 @@ type
     alumnos = file of alumnosR;
     materias = file of materiaR;
 
-    procedure asignarArcMyD(var maestro:alumnos;var detalle:materias);
-    begin
-      Assign(maestro,'archivomaestro');
-      Assign(detalle,'archivodetalle');
-    end;
-
-    procedure asignar(var txt:Text);
-    begin
-      Assign(txt,'alumnosmasfinales.txt')
-    end;
-
     procedure leer(var detalle:alumnos; var mat:materiaR);
     begin
       if (not Eof(detalle)) then 
@@ -41,6 +33,8 @@ type
         alu:alumnosR;
         canC,canF:integer;
     begin
+        Assign(maestro,'maestro');
+        Assign(detalle,'detalle');
         Reset(maestro);
         Reset(detalle);
         Leer(detalle,mat); 
@@ -48,6 +42,8 @@ type
           Read(maestro,alu);
           cantC:=0;
           canF:=0;
+          while (mat.cod<>alu.cod) do
+            Read(maestro,alu); {el alumno en detalle puede estar 0 veces}
           while (mat.cod = alu.cod) do begin
             if(mat.cursadaOfinal='c')then
               canC+=1;
@@ -55,12 +51,12 @@ type
               cantF+=1;
               canC-=1;
             end;
+            Leer(detalle,mat);
           end;
           alu.cantMatCursadas+=canC;
           alu.cantMatFinalApr+=canF;
-	      seek (maestro,filePos (maestro)-1);
-	      write (maestro,alu);
-          Leer(detalle,mat); 
+	        seek (maestro,filePos (maestro)-1);
+	        write (maestro,alu);
         end;
         Close(maestro);
         Close(detalle);
@@ -70,6 +66,7 @@ type
     var
         alu:alumnosR;
     begin
+        Assign(txt,'alumnosmasfinales.txt');
         Reset(maestro);
         Rewrite(txt);
         while (not Eof(maestro)) do begin
@@ -90,6 +87,7 @@ type
           WriteLn('Ingrese la opción que desea: ');
           WriteLn('1 --> Actualizar el archivo maestro.');
           WriteLn('2 --> Listar en archivo de texto alumnos con más finales aprobados que finales sin aprobar.');
+          WriteLn('Cualquier otro número para salir');
           case opMenu of
             1:actualizar(maestro,detalle);
             2:listarAlu(maestro,txt);
@@ -103,7 +101,5 @@ var
     maestro:alumnos;
     txt:Text;
 begin
-    asignarArcMyD(maestro,detalle);
-    asignar(txt);
     menu(maestro,detalle,txt);
 end.
