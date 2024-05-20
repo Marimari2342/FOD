@@ -1,6 +1,6 @@
 # Fundamentos de la Organización de Datos <br> PARCIALES DE ARCHIVOS
 
-## 🟣 Examen 1
+## 🟣 Examen 1 (2019 - 1F)
 
 ***Una empresa que comercializa fármacos recibe de cada una de sus 30 sucursales un resumen mensual de las ventas y desea analizar la información para la toma de futuras decisiones. El formato de los archivos que recibe la empresa es: cod_farmaco, nombre, fecha, cantidad_vendida, forma_pago (campo String indicando contado o tarjeta).***
 
@@ -24,7 +24,7 @@
 
 </details>
 
-## 🟣 Examen 2
+## 🟣 Examen 2 (2017 - 3F)
 
 ***En la facultad de Ciencias Jurídicas existe un sistema a través del cual los alumnos del posgrado tienen la posibilidad de pagar las carreras en RapiPago. Cuando el alumno se inscribe a una carrera, se le imprime una chequera con seis códigos de barra para que pague las seis cuotas correspondientes. Existe un archivo que guarda la siguiente información de los alumnos inscriptos: dni_alumno, codigo_carrera y monto_total_pagado.***
 
@@ -51,7 +51,7 @@
 
 </details>
 
-## 🟣 Examen 3
+## 🟣 Examen 3 (2017 - 2F)
 
 ***Defina en no más de 5 renglones los conceptos de baja lógica y baja física. Enumere las ventajas y desventajas de la utilización de bajas físicas.***
 
@@ -79,7 +79,7 @@
 
 </details>
 
-## 🟣 Examen 4
+## 🟣 Examen 4 (2017 - 1F)
 
 ***Suponga que usted es administrador de un servidor de correo electrónico. Los logs del mismo (información guardada acerca de los movimientos que ocurren en el server) se encuentran en la ruta: /var/log/logsmall.dat, donde se guarda la siguiente información: número de usuario, nombre de usuario, nombre, apellido y cantidad de mails enviados. Diariamente el servidor de correo genera un archivo con la siguiente información: número de usuario, cuenta destino y cuerpo del mensaje. Este archivo representa todos los correos enviados por los usuarios de un día determinado.***
 
