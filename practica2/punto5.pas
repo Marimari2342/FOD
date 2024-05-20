@@ -88,9 +88,7 @@ begin
     while (not Eof(m)) do begin
       read(m,p);
       if(p.stockDisp<p.stockMin)then
-        WriteLn(txt,p.nombre);
-        WriteLn(txt,p.desc);
-        WriteLn(txt,p.stockDisp,p.precio);
+        WriteLn(txt,'Nombre: ',p.nombre,', Descripcion: ',p.desc,', Stock Disponible: ',p.stockDisp,', Precio: ',p.precio);
     end;
     Close(m);
     Close(txt);
