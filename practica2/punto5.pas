@@ -44,9 +44,43 @@ begin
     read(d[minInd],p[minInd]);
 end;
 
-
+procedure actualizar(var m:maestro; var d:vecDet);
+var
+    min:prod_sucR;
+    i:integer;
+    v:vecProd;
+    prod:productoR;
+begin
+    {asignar, abrir y leer}
+    Assign(m,'maestro');
+    Reset(m);
+    for i := 1 to N do begin
+      Assign(d[i],'detalle',i);
+      Reset(d[i]);
+      leer(d[i],v[i]);
+    end;
+    minimo(d,v,min);
+    {codigo}
+    while(min.cod<>valorAlto)do begin
+      read(m,prod);
+      while(prod.cod<>min.cod)do {pueden haber 0 registros para este codigo}
+        read(m,prod);
+      while(prod.cod=min.cod)do begin
+        prod.stockDisp-=min.cantVend;
+        minimo(d,v,min);
+      end;
+      Seek(m,FilePos(m)-1);
+      Write(m,prod);
+    end;
+    {cerrar}
+    for i := N downTo 1 do
+      Close(d[i]);
+    Close(m); 
+end;
 {programa principal}
 var
+    m:maestro;
+    d:vecDet;
 begin
-  
+    actualizar(m,d);
 end.
