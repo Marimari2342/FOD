@@ -18,9 +18,7 @@
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
-~~~
-
-~~~
+Examen 1 --> Para verlo completo ir a [*examen1.pas*](/parciales/archivos/examen1.pas)
 
 </details>
 
