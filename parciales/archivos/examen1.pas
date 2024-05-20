@@ -43,6 +43,14 @@ begin
     read(d[minInd],v[minInd]);
 end;
 
+procedure inicializarVectorFecha(var v:vecFech);
+var
+    i:integer;
+begin
+    for i := 1 to subDia do
+        v[i] := 0;
+end;
+
 {Recibe los 30 archivos de ventas e informa por pantalla el fármaco con mayor 
 cantidad_vendida. --> corte de control}
 {Hago un corte de control farmaco por farmaco y me guardo el que tiene más ventas.}
@@ -86,8 +94,7 @@ var
     min:ventaR;
 begin
     {poner en cero el vector contador de ventas}
-    for i := 1 to subDia do
-        vF[i] := 0;
+    inicializarVectorFecha(vF);
     for i := 1 to N do begin
       Reset(d[i]);
       leer(d[i],v[i]);
@@ -105,16 +112,55 @@ begin
         maxDia := i;
       end;
     WriteLn('La fecha en la que se produjeron más ventas es: ',maxDia,' con ',maxCant,' ventas.');
+    for i := N downTo 1 do
+      Close(d[i]);
 end;
 
-{codigo del c}
+{Recibe los 30 archivos de ventas y guarda en un archivo de texto un resumen de ventas por
+fecha y fármaco con el siguiente formato: cod_farmaco, nombre, fecha, cantidad_total_vendida
+(el archivo de texto deberá estar organizado de manera tal que al tener que utilizarlo
+pueda recorrer el archivo realizando la menor cantidad de lecturas posibles).}
+procedure punto_c (var d:vecDet; var txt:Text);
+var
+  i:integer;
+  v:vecVent;
+  vF:vecFech;
+  min,act:ventaR;
+begin
+  Assign(txt,'archivo.txt');
+  Rewrite(txt);
+  for i := 1 to N do begin
+    Reset(d[i]);
+    leer(d[i],v[i]);
+  end;
+  inicializarVectorFecha(vF);
+  minimo(d,v,min);
+  while (min.cod_farmaco<>valorAlto) do begin
+    act.cod_farmaco:=min.cod_farmaco;
+    while(min.cod_farmaco=act.cod_farmaco)do begin
+        vF[min.fecha.dia]+=min.cantidad_vendida;
+        minimo(d,v,min);
+    end;
+    WriteLn(txt,act.cod_farmaco); {esto sera asi????}
+    WriteLn(txt,act.nombre);
+    for i := 1 to subDia do
+      WriteLn(txt,i,' ',act.fecha.mes,' ',vF[i]);
+    inicializarVectorFecha(vF); 
+  end;
+  for i := N downTo 1 do
+      Close(d[i]);
+  Close(txt);
+end;
 
 {programa principal}
 var
   i:integer;
   d:vecDet;
+  txt:Text;
 begin
   for i := 1 to N do
     Assign(d[i],'detalle',i); {preguntar si se concatenaba así o como}
   punto_a(d);
+  punto_b(d);
+  punto_c(d,txt);
 end.
