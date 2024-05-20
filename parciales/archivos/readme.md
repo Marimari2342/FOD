@@ -1,4 +1,5 @@
-# Fundamentos de la Organización de Datos  PARCIALES DE ARCHIVOS
+# Fundamentos de la Organización de Datos
+# PARCIALES DE ARCHIVOS
 
 ## 🟣 Examen 1
 
