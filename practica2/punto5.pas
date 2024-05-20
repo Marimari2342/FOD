@@ -77,10 +77,31 @@ begin
       Close(d[i]);
     Close(m); 
 end;
+
+procedure informarStock(var m:maestro; var txt:Text);
+var
+    p:productoR;
+begin
+    Assign(txt,'archivo.txt');
+    Rewrite(txt);
+    Reset(m);
+    while (not Eof(m)) do begin
+      read(m,p);
+      if(p.stockDisp<p.stockMin)then
+        WriteLn(txt,p.nombre);
+        WriteLn(txt,p.desc);
+        WriteLn(txt,p.stockDisp,p.precio);
+    end;
+    Close(m);
+    Close(txt);
+end;
+
 {programa principal}
 var
     m:maestro;
     d:vecDet;
+    txt:Text;
 begin
     actualizar(m,d);
+    informarStock(m,txt);
 end.
