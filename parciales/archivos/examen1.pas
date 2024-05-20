@@ -1,3 +1,4 @@
+{PREGUNTAR SI LOS PUNTOS a) b) c) TIENEN QUE SER PROCEDIMIENTOS INDEPENDIENTES}
 Program examen1;
 const
     valorAlto = '9999';
