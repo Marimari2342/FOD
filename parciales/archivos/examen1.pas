@@ -75,5 +75,5 @@ var
 begin
   for i := 1 to N do
     Assign(d[i],'detalle',i); {preguntar si se concatenaba así o como}
-    punto_a(d);
+  punto_a(d);
 end.
