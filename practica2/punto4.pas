@@ -1,7 +1,7 @@
 {actualizar un archivo maestro a partir de dos detalle
 ordenados por nombre de provincia
 0, 1 o más registros por provincia en los archivos detalle --> valorAlto}
-  Program punto4;
+Program punto4;
 const
     valorAlto = 'ZZZZ';
 type

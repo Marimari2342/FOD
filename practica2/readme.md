@@ -259,6 +259,14 @@ type
     provincia = file of provinciaR;
     agencia = file of agenciaR;
 
+procedure Leer(var detalle:agencia;var a: agenciaR);
+begin
+    if(not Eof(detalle))then
+      Read(detalle,a)
+    else
+      a.nombreProv:=valorAlto;
+end;
+
 procedure Minimo(var a1,a2,min:agenciaR; var detalle1,detalle2:agencia);
 begin
     if(a1.nombreProv <= a2.nombreProv)then begin
@@ -271,33 +279,29 @@ begin
     end;
 end;
 
-procedure Leer(var detalle:agencia;var a: agenciaR);
-begin
-    if(not Eof(detalle))then
-      Read(detalle,a)
-    else
-      a.nombreProv:=valorAlto;
-end;
-
 {actualizar archivo maestro desde los dos archivos detalle}
 procedure ActualizarMaestro(var maestro:provincia;var detalle1,detalle2: agencia);
 var
     min,a1,a2=agenciaR;
     p=provinciaR;
 begin
+    {asignar}
+    Assign(maestro,'archivomaestro');
+    Assign(detalle1,'archivodet1');
+    Assign(detalle2,'archivodet2');
     {abrir archivos}
     Reset(maestro);
     Reset(detalle1);
     Reset(detalle2);
-
+    {leer de cada archivo detalle para luego buscar el minimo entre ambos}
     Leer(detalle1,a1);
     Leer(detalle2,a2);
-    Minimo(a1,a2,min);
+    Minimo(a1,a2,min,detalle1,detalle2);
     while (min.nombre <> valorAlto) do begin
         Read(maestro,p);
-        while (p.nombre <> min.nombre) do 
+        while (p.nombre <> min.nombre) do {esto es porque el registro puede estar 0 veces}
           Read(maestro,p);
-        while (p.nombre = min.nombre) do begin
+        while (p.nombre = min.nombre) do begin {esto es porque puede estar más de una vez}
           p.cantALf += min.cantALf;
           p.cantEnc += min.cantEnc;
           Minimo(a1,a2,min);
@@ -305,7 +309,6 @@ begin
         Seek(maestro,FilePos(maestro)-1);
         Write(maestro,p);
     end;
-
     {cerrar archivos}
     Close(maestro);
     Close(detalle1);
@@ -317,11 +320,6 @@ var
     maestro:provincia;
     detalle1,detalle2:agencia;
 begin
-    Assign(maestro,'archivomaestro');
-    Assign(detalle1,'archivodet1');
-    Assign(detalle2,'archivodet2');
-    {CargarDet1(detalle1);
-    CargarDet2(detalle2);  --> tendré que cargar los archivos detalle desde un txt ??}
     ActualizarMaestro(maestro,detalle1,detalle2);
 end.
 ~~~
@@ -330,6 +328,10 @@ end.
 
 ***NOTA: Los archivos están ordenados por nombre de provincia y en los archivos detalle pueden venir 0, 1 ó más registros por cada provincia.***
 
+>[!TIP]
+>
+> Punto 4 --> Para ver el .pas completo ir a [*punto4.pas*](/practica2/punto4.pas).
+
 ## 🟣 Punto 5
 
 ***Se cuenta con un archivo de productos de una cadena de venta de alimentos congelados. De cada producto se almacena: código del producto, nombre, descripción, stock disponible, stock mínimo y precio del producto. Se recibe diariamente un archivo detalle de cada una de las 30 sucursales de la cadena. Se debe realizar el procedimiento que recibe los 30 detalles y actualiza el stock del archivo maestro. La información que se recibe en los detalles es: código de producto y cantidad vendida. Además, se deberá informar en un archivo de texto: nombre de producto, descripción, stock disponible y precio de aquellos productos que tengan stock disponible por debajo del stock mínimo. Pensar alternativas sobre realizar el informe en el mismo procedimiento de actualización, o realizarlo en un procedimiento separado (analizar ventajas/desventajas en cada caso).***
@@ -337,12 +339,117 @@ end.
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
 ~~~
+Program punto5;
+const
+    valorAlto = 9999;
+    N = 30;
+type
+    productoR = record
+        cod:Integer;
+        nombre:String[20];
+        desc:String[40];
+        stockDisp:integer;
+        stockMin:integer;
+        precio:real;
+    end;
+    prod_sucR = record
+        cod:Integer;
+        cantVend:Integer;
+    end;
+    maestro = file of productoR;
+    detalle = file of prod_sucR;
+    vecDet = array [1..N] of detalle;
+    vecProd = array [1..N] of prod_sucR;
+    
+procedure leer(var d: detalle; var p:prod_sucR);
+begin
+  if(not eof(d)) then
+    read(d,p)
+  else 
+    p.cod:=valorAlto;
+end;
 
+procedure minimo(var d:vecDet; var p:vecProd; var min:prod_sucR);
+var
+    i,minInd:integer;
+begin
+    min.cod:=valorAlto;
+    for i := 1 to N do
+      if (d[i].cod <= min.cod) then begin
+        min := d[i];
+        minInd := i;
+      end;
+    read(d[minInd],p[minInd]);
+end;
+
+procedure actualizar(var m:maestro; var d:vecDet);
+var
+    min:prod_sucR;
+    i:integer;
+    v:vecProd;
+    prod:productoR;
+begin
+    {asignar, abrir y leer}
+    Assign(m,'maestro');
+    Reset(m);
+    for i := 1 to N do begin
+      Assign(d[i],'detalle',i);
+      Reset(d[i]);
+      leer(d[i],v[i]);
+    end;
+    minimo(d,v,min);
+    {codigo}
+    while(min.cod<>valorAlto)do begin
+      read(m,prod);
+      while(prod.cod<>min.cod)do {pueden haber 0 registros para este codigo}
+        read(m,prod);
+      while(prod.cod=min.cod)do begin
+        prod.stockDisp-=min.cantVend;
+        minimo(d,v,min);
+      end;
+      Seek(m,FilePos(m)-1);
+      Write(m,prod);
+    end;
+    {cerrar}
+    for i := N downTo 1 do
+      Close(d[i]);
+    Close(m); 
+end;
+
+procedure informarStock(var m:maestro; var txt:Text);
+var
+    p:productoR;
+begin
+    Assign(txt,'archivo.txt');
+    Rewrite(txt);
+    Reset(m);
+    while (not Eof(m)) do begin
+      read(m,p);
+      if(p.stockDisp<p.stockMin)then
+        WriteLn(txt,'Nombre: ',p.nombre,', Descripcion: ',p.desc,', Stock Disponible: ',p.stockDisp,', Precio: ',p.precio);
+    end;
+    Close(m);
+    Close(txt);
+end;
+
+{programa principal}
+var
+    m:maestro;
+    d:vecDet;
+    txt:Text;
+begin
+    actualizar(m,d);
+    informarStock(m,txt);
+end.
 ~~~
 
 </details>
 
 ***Nota: todos los archivos se encuentran ordenados por código de productos. En cada detalle puede venir 0 o N registros de un determinado producto.***
+
+>[!TIP]
+>
+> Punto 5 --> Para ver el .pas completo ir a [*punto5.pas*](/practica2/punto5.pas).
 
 <br>
 <br>
