@@ -5,12 +5,12 @@ const
 type
     alumnoR = record
         dni_alumno:string[7];
-        codigo_carrera:string[4];
+        codigo_carrera:integer;
         monto_total_pagado:real;
     end;
     archiRapiR = record
         dni_alumno:string[7];
-        codigo_carrera:string[4];
+        codigo_carrera:integer;
         monto_cuota:real;
     end;
     maestro = file of alumnoR;
@@ -49,7 +49,7 @@ var
     min:archiRapiR;
     i:integer;
     alu:alumnoR;
-    carreraAct:string[4];
+    carreraAct:integer;
 begin
     Assign(m,'maestro');
     Reset(m);
@@ -66,7 +66,7 @@ begin
       while(m.dni_alumno=min.dni_alumno)do begin
         carreraAct:=min.codigo_carrera;
         while (carreraAct=min.codigo_carrera) do begin
-          m.monto_total_pagado+=min.monto_cuota;
+          alu.monto_total_pagado+=min.monto_cuota;
           minimo(d,v,min);
         end;
       end;
@@ -97,7 +97,7 @@ begin
         read(m,alu);
       end;
       if (moroso) then
-        WriteLn(txt,aluAct.dni_alumno,' ',aluAct.codigo_carrera,' alumno moroso.');
+        WriteLn(txt,aluAct.dni_alumno,aluAct.codigo_carrera,'alumno moroso.');
     end;
     Close(m);
     Close(txt);
