@@ -69,6 +69,7 @@ begin
           alu.monto_total_pagado+=min.monto_cuota;
           minimo(d,v,min);
         end;
+        Write(m,alu);
       end;
     end;
     for i := N downTo 1 do 

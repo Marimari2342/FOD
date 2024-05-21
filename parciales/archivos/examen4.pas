@@ -47,14 +47,17 @@ begin
         regM.cant+=1;
         leer(d,regD);
       end;
+      Write(m,regM);
     end;
     Close(d);
     Close(m);
 end;
 
 {realice un procedimiento que genere un archivo de texto}
+procedure punto_b (var d:detalle; var txt:Text);
 
-procedure menu (var m:maestro; var d:detalle);
+
+procedure menu (var m:maestro; var d:detalle; var txt:Text);
 var
     opMenu:integer;
 begin
@@ -62,12 +65,12 @@ begin
     while(opMenu>0 and opMenu<=2)do begin
       WriteLn('Ingrese la opción que desea:');
       WriteLn('1 --> Actualizar.');
-      WriteLn('2 --> ');
+      WriteLn('2 --> Crear archivo listado.txt');
       WriteLn('Cualquier otra opción para cerrar.');
       read(opMenu);
       case opMenu of
         1:punto_a(m,d);
-        2:punto_b(m,d);
+        2:punto_b(d,txt);
       end;
     end;
 end;
@@ -76,8 +79,10 @@ end;
 var
     m:maestro;
     d:detalle;
+    txt:Text;
 begin
     Assign(m,'/var/log/logsmall.dat');
     Assign(d,'6junio2017.dat');
-    menu(m,d);
+    Assign(txt,'listado.txt');
+    menu(m,d,txt);
 end.
