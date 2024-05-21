@@ -54,8 +54,29 @@ begin
 end;
 
 {realice un procedimiento que genere un archivo de texto}
-procedure punto_b (var d:detalle; var txt:Text);
-
+procedure punto_b (var m:maestro; var d:detalle; var txt:Text);
+var
+    regD:arc;
+    regM:log;
+    cant:integer;
+begin
+    Reset(m);
+    Reset(d);
+    Rewrite(txt);
+    leer(d,regD);
+    while(d.numUs<>valorAlto)do begin
+        Read(m,regM);
+        cant:=0;
+        while (regM.numUs=regD.numUs) do begin
+          cant+=1;
+          leer(d,regD);
+        end;
+        WriteLn(txt,regM.numUs,regM.nombre,cant);
+    end;
+    Close(txt);
+    Close(d);
+    Close(m);
+end;
 
 procedure menu (var m:maestro; var d:detalle; var txt:Text);
 var
@@ -70,7 +91,7 @@ begin
       read(opMenu);
       case opMenu of
         1:punto_a(m,d);
-        2:punto_b(d,txt);
+        2:punto_b(m,d,txt);
       end;
     end;
 end;
