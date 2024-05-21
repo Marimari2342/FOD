@@ -1,3 +1,4 @@
+{CORREGIDO}
 Program examen1;
 const
     valorAlto = 9999;
@@ -97,7 +98,7 @@ begin
         cantAct+=min.cantidad_vendida;
         minimo(d,v,min);
     end;
-    WriteLn(txt,act.cod_farmaco,act.fecha,cantAct,act.nombre); {esto sera asi????}
+    WriteLn(txt,act.cod_farmaco,act.fecha,cantAct,act.nombre);
   end;
   for i := N downTo 1 do
       Close(d[i]);
