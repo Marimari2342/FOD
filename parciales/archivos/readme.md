@@ -68,9 +68,7 @@ Examen 2 --> Para verlo completo ir a [*examen2.pas*](/parciales/archivos/examen
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
-~~~
 
-~~~
 
 </details>
 
@@ -96,8 +94,23 @@ nroUsuario nombreUsuario cantidadMensajesEnviados
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
-~~~
 
-~~~
+
+</details>
+
+## 🟣 Examen 5 (2023 - 1F)
+
+***Suponga que tiene un archivo con información referente a los empleados que trabajan en una multinacional. De cada empleado se conoce el dni (único), nombre, apellido, edad, domicilio y fecha de nacimiento. Se solicita hacer el mantenimiento de este archivo utilizando la técnica de reutilización de espacio llamada lista invertida. Declare las estructuras de datos necesarias e implemente los siguientes módulos:***
+
+* ***Agregar empleado: solicita al usuario que ingrese los datos del empleado y lo agrega al archivo sólo si el dni ingresado no existe. Suponga que existe una función llamada existeEmpleado que recibe un dni y un archivo y devuelve verdadero si el dni existe en el archivo o falso en caso contrario. La función existeEmpleado no debe implementarla. Si el empleado ya existe, debe informarlo en pantalla.***
+
+* ***Quitar empleado: solicita al usuario que ingrese un dni y lo elimina del archivo solo si este dni existe. Debe utilizar la función existeEmpleado. En caso de que el empleado no exista debe informarse en pantalla.***
+
+***Nota: Los módulos que debe implementar deberán guardar en memoria secundaria todo
+cambio que se produzca en el archivo.***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+
 
 </details>
