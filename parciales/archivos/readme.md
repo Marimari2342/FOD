@@ -66,7 +66,7 @@ Examen 2 --> Para verlo completo ir a [*examen2.pas*](/parciales/archivos/examen
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
-Examen 4 --> Para verlo completo ir a [*examen4.pas*](/parciales/archivos/examen4.pas)
+
 
 </details>
 
@@ -93,7 +93,7 @@ nroUsuario nombreUsuario cantidadMensajesEnviados
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
-
+Examen 4 --> Para verlo completo ir a [*examen4.pas*](/parciales/archivos/examen4.pas)
 
 </details>
 
