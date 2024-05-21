@@ -114,3 +114,36 @@ cambio que se produzca en el archivo.***
 
 
 </details>
+
+## 🟣 Examen 6 (AComAC - Tema1)
+
+***Se cuenta con un archivo que almacena información sobre los tipos de dinosaurios que habitaron durante la era mesozoica, de cada tipo se almacena: código, tipo de dinosaurio, altura y peso promedio, descripción y zona geográfica. El archivo no está ordenado por ningún criterio. Realice un programa que elimine tipos de dinosaurios que estuvieron en el periodo jurásico de la era mesozoica. Para ello se recibe por teclado los códigos de los tipos a eliminar.***
+
+***Las bajas se realizan apilando registros borrados y las altas reutilizando registros borrados. El registro 0 se usa como cabecera de la pila de registros borrados: el número 0 en el campo código implica que no hay registros borrados y -N indica que el próximo registro a reutilizar es el N, siendo éste un número relativo de registro válido. Dada la estructura planteada en el ejercicio, implemente los siguientes módulos: {Abre el archivo y agrega un tipo de dinosaurios, recibido como parámetro manteniendo la política descripta anteriormente}***
+
+* ***procedure agregarDinosaurios (var a: tArchDinos ; registro: recordDinos);***
+
+* ***Liste el contenido del archivo en un archivo de texto, omitiendo los tipos de dinosaurios eliminados. Modifique lo que considere necesario para obtener el listado.***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+
+
+</details>
+
+## 🟣 Examen 7 (AComAC - Tema2)
+
+***Se cuenta con un archivo que almacena información sobre los tipos de dinosaurios que habitaron durante la era mesozoica, de cada tipo se almacena: código, tipo de dinosaurio, altura y peso promedio, descripción y zona geográfica. El archivo no está ordenado por ningún criterio. Realice un programa que elimine tipos de dinosaurios que estuvieron en el periodo jurásico de la era mesozoica. Para ello se recibe por teclado los códigos de los tipos a eliminar.***
+
+***Las bajas se realizan apilando registros borrados y las altas reutilizando registros borrados. El registro 0 se usa como cabecera de la pila de registros borrados: el número 0 en el campo código implica que no hay registros borrados y -N indica que el próximo registro a reutilizar es el N, siendo éste un número relativo de registro válido. Dada la estructura planteada en el ejercicio, implemente los siguientes módulos: {Abre el archivo y elimina el tipo de dinosaurio recibido como parámetro manteniendo la política descripta anteriormente}***
+
+* ***procedure eliminarDinos (var a: tArchDinos ; tipoDinosaurio: String);***
+* ***Liste en un txt (archivo de texto) el contenido del archivo omitiendo los tipos de dinosaurios eliminados. Modifique lo que considere necesario para obtener el listado.***
+
+***Nota: Las bajas deben finalizar al recibir el código 100000***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+
+
+</details>
