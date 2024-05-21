@@ -79,6 +79,7 @@ Examen 2 --> Para verlo completo ir a [*examen2.pas*](/parciales/archivos/examen
 ***Ambos archivos están ordenados por número de usuario, se sabe que un usuario puede enviar cero, uno o mas mails por dia y los usuarios que aparecen en el archivo de envíos diarios seguro existen el logmail.dat.***
 
 * ***Dado el archivo 6junio2017.dat el cual contiene los movimientos del 6 de junio de 2017, realice el procedimiento necesario para actualizar la información del log.***
+
 * ***Dado un archivo detalle 6junio2017.dat del punto anterior, realice un procedimiento que genere un archivo de texto llamado listado.txt con la siguiente información:***
 
 ~~~
@@ -138,6 +139,7 @@ cambio que se produzca en el archivo.***
 ***Las bajas se realizan apilando registros borrados y las altas reutilizando registros borrados. El registro 0 se usa como cabecera de la pila de registros borrados: el número 0 en el campo código implica que no hay registros borrados y -N indica que el próximo registro a reutilizar es el N, siendo éste un número relativo de registro válido. Dada la estructura planteada en el ejercicio, implemente los siguientes módulos: {Abre el archivo y elimina el tipo de dinosaurio recibido como parámetro manteniendo la política descripta anteriormente}***
 
 * ***procedure eliminarDinos (var a: tArchDinos ; tipoDinosaurio: String);***
+
 * ***Liste en un txt (archivo de texto) el contenido del archivo omitiendo los tipos de dinosaurios eliminados. Modifique lo que considere necesario para obtener el listado.***
 
 ***Nota: Las bajas deben finalizar al recibir el código 100000***
