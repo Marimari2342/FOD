@@ -2,7 +2,6 @@
 Program examen1;
 const
     valorAlto = 9999;
-    valorAltoF = '99/99'
     N = 30;
 type
     ventaR = record
@@ -29,13 +28,11 @@ var
     i,minInd:integer;
 begin
     min.cod_farmaco:=valorAlto;
-    min.fecha:=valorAltoF;
     for i := 1 to N do begin
-      if (v[i].cod_farmaco<=min.cod_farmaco)then 
-        if (v[i].fecha<=min.fecha) then begin
-            min:=v[i];
-            minInd:=i;
-        end;
+      if (v[i].cod_farmaco<=min.cod_farmaco)or((v[i].cod_farmaco<=min.cod_farmaco)and(v[i].fecha<=min.fecha)) then begin
+        min:=v[i];
+        minInd:=i;
+      end;
     end;
     read(d[minInd],v[minInd]);
 end;
