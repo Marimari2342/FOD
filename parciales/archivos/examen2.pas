@@ -26,11 +26,18 @@ begin
     dato.dni_alumno:=valorAlto;
 end;
 
-procedure minimo (var d:detalle; var v:vecArcRap; var min:archiRapiR);
+procedure minimo (var d:vecDet; var v:vecArcRap; var min:archiRapiR);
 var
     i,minInd:integer;
 begin  
-    {codigo}
+    min.dni_alumno:=valorAlto;
+    for i := 1 to N do begin
+      if(d[i].dni_alumno<=min.dni_alumno)then begin
+        min:=d[i];
+        minInd:=i;
+      end;
+    end;
+    read(d[minInd],v[minInd]);
 end;
 
 {procedimiento a) Se debe realizar un procedimiento que dado el archivo con información
@@ -41,6 +48,8 @@ var
     aV:vecArcRap;
     min:archiRapiR;
     i:integer;
+    alu:alumnoR;
+    carreraAct:string[4];
 begin
     Assign(m,'maestro');
     Reset(m);
@@ -49,7 +58,22 @@ begin
       Reset(d[i]);
       leer(d[i],v[i]);
     end;
-    {codigo}
+    minimo(d,v,min);
+    while(min.dni_alumno<>valorAlto)do begin
+      read(m,alu);
+      while(m.dni_alumno<>min.dni_alumno)do {esto es porque pueden haber 0 registros en el archivo detalle}
+        read(m,alu);
+      while(m.dni_alumno=min.dni_alumno)do begin
+        carreraAct:=min.codigo_carrera;
+        while (carreraAct=min.codigo_carrera) do begin
+          m.monto_total_pagado+=min.monto_cuota;
+          minimo(d,v,min);
+        end;
+      end;
+    end;
+    for i := N downTo 1 do 
+        Close(d[i]);
+    Close(m);
 end;
 
 {procedimiento b)}
