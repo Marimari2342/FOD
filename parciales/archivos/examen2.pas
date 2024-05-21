@@ -76,12 +76,39 @@ begin
     Close(m);
 end;
 
-{procedimiento b)}
+{procedimiento b)Realice otro procedimiento que reciba el archivo con información de los
+alumnos inscriptos y genere un archivo de texto con los alumnos que aún no han pagado
+nada en las carreras que están inscriptos.}
+procedure morosos(var m:maestro; var txt:Text);
+var
+    alu,aluAct:alumnoR;
+    moroso:Boolean;
+begin
+    Assign(txt,'morosos.txt');
+    Rewrite(txt);
+    Reset(m);
+    while (not Eof(m)) do begin
+      read(m,alu);
+      aluAct.dni_alumno:=alu.dni_alumno;
+      moroso:=true;
+      while (aluAct.dni_alumno=alu.dni_alumno)and(moroso) do begin
+        if (alu.monto_total_pagado<>0) then
+          moroso:=false;
+        read(m,alu);
+      end;
+      if (moroso) then
+        WriteLn(txt,aluAct.dni_alumno,' ',aluAct.codigo_carrera,' alumno moroso.');
+    end;
+    Close(m);
+    Close(txt);
+end;
 
 {programa principal}
 var
     m:maestro;
     d:vecDet;
+    txt:Text;
 begin
     actualizar(m,d);
+    morosos(m,txt);
 end.
