@@ -34,7 +34,7 @@ begin
         minInd:=i;
       end;
     end;
-    read(d[minInd],v[minInd]);
+    leer(d[minInd],v[minInd]);
 end;
 
 {Recibe los 30 archivos de ventas e informa por pantalla el fármaco con mayor 

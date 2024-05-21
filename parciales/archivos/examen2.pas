@@ -37,7 +37,7 @@ begin
         minInd:=i;
       end;
     end;
-    read(d[minInd],v[minInd]);
+    leer(d[minInd],v[minInd]);
 end;
 
 {procedimiento a) Se debe realizar un procedimiento que dado el archivo con información
