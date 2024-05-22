@@ -148,7 +148,7 @@ cambio que se produzca en el archivo.***
 
 </details>
 
-## 🟣 Examen 8 (AComAC - Tema2)
+## 🟣 Examen 8 (2023 - 3F)
 
 ***Una empresa dedicada a la venta de golosinas posee un archivo que contiene información sobre los productos que tiene a la venta. De cada producto se registran los siguientes datos: código de producto, nombre comercial, precio de venta, stock actual y stock mínimo. La empresa cuenta con 20 sucursales. Diariamente se recibe un archivo detalle de cada una de las 20 sucursales de la empresa que indica las ventas diarias efectuadas por cada sucursal. De cada venta se registra código de producto y cantidad vendida. Se debe realizar un procedimiento que actualice el stock en el archivo maestro con la información disponible en los archivos detalles y que además informe en un archivo de texto aquellos productos cuyo monto total vendido en el día supere los $10000. En el archivo de texto a exportar, por cada producto incluido, se deben informar todos sus datos. Los datos de un producto se deben organizar en el archivo de texto para facilitar el uso eventual del mismo como un archivo de carga. El objetivo del ejercicio es escribir el procedimiento solicitado, junto con las estructuras de datos y módulos usados en el mismo.***
 
