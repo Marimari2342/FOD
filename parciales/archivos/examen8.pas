@@ -52,6 +52,9 @@ procedure actualizar_informar(var m: maestro; var d: vecDet; var txt:Text);
 var
     v:vecVent;
     i:integer;
+    min:ventaR;
+    regM:productoR;
+    gasto:real;
 begin
     Assign(txt,'archivo.txt');
     Rewrite(txt);
@@ -63,7 +66,19 @@ begin
       leer(d[i],v[i]);
     end;
     minimo(d,v,min);
-
+    while (min.cod<>valorAlto) do begin
+      Read(m,regM);
+      while (regM.cod<>min.cod) do
+        Read(m,regM);
+      gasto:=0;
+      while (regM.cod=min.cod) do begin
+        regM.stockAct-=min.cantVend;
+        gasto:=gasto+regM.precio*min.cantVend;
+        minimo(d,v,min);
+      end;
+      if(gasto>10000)then
+        WriteLn(txt,regM.cod,regM.precio,regM.stockAct,regM.stockMin,regM.nombre);
+    end;
     for i := N downTo 1 do
       Close(d[i]);
     Close(m);
