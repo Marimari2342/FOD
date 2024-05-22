@@ -164,6 +164,6 @@ cambio que se produzca en el archivo.***
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
-
+Examen 8 --> Para verlo completo ir a [*examen8.pas*](/parciales/archivos/examen8.pas)
 
 </details>
