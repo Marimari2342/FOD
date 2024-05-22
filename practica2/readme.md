@@ -451,6 +451,15 @@ end.
 >
 > Punto 5 --> Para ver el .pas completo ir a [*punto5.pas*](/practica2/punto5.pas).
 
+<p align=center>🟣</p>
+<p align=center>🟣</p>
+<p align=center>🟣</p>
+
+
+>[!NOTE]
+>
+> * ***Para descargar la practica (del 2024) en PDF, click [<code>AQUÍ</code>](https://drive.google.com/file/d/1eauEqRcOL4IuguWcrluV2LTto_VK3y78/view?usp=sharing).***
+
 <br>
 <br>
 <br>

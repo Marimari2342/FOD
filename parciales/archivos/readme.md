@@ -1,6 +1,6 @@
 # Fundamentos de la Organización de Datos <br> PARCIALES DE ARCHIVOS
 
-## 🟣 Examen 1 (2019 - 1F)
+## 🟠 Examen 1 (2019 - 1F)
 
 ***Una empresa que comercializa fármacos recibe de cada una de sus 30 sucursales un resumen mensual de las ventas y desea analizar la información para la toma de futuras decisiones. El formato de los archivos que recibe la empresa es: cod_farmaco, nombre, fecha, cantidad_vendida, forma_pago (campo String indicando contado o tarjeta).***
 
@@ -20,7 +20,7 @@ Examen 1 --> Para verlo completo ir a [*examen1.pas*](/parciales/archivos/examen
 
 </details>
 
-## 🟣 Examen 2 (2017 - 3F)
+## 🟠 Examen 2 (2017 - 3F)
 
 ***En la facultad de Ciencias Jurídicas existe un sistema a través del cual los alumnos del posgrado tienen la posibilidad de pagar las carreras en RapiPago. Cuando el alumno se inscribe a una carrera, se le imprime una chequera con seis códigos de barra para que pague las seis cuotas correspondientes. Existe un archivo que guarda la siguiente información de los alumnos inscriptos: dni_alumno, codigo_carrera y monto_total_pagado.***
 
@@ -46,7 +46,7 @@ Examen 2 --> Para verlo completo ir a [*examen2.pas*](/parciales/archivos/examen
 
 </details>
 
-## 🟣 Examen 3 (2017 - 2F)
+## 🟠 Examen 3 (2017 - 2F)
 
 ***Defina en no más de 5 renglones los conceptos de baja lógica y baja física. Enumere las ventajas y desventajas de la utilización de bajas físicas.***
 
@@ -70,7 +70,7 @@ Examen 2 --> Para verlo completo ir a [*examen2.pas*](/parciales/archivos/examen
 
 </details>
 
-## 🟣 Examen 4 (2017 - 1F)
+## 🟠 Examen 4 (2017 - 1F)
 
 ***Suponga que usted es administrador de un servidor de correo electrónico. Los logs del mismo (información guardada acerca de los movimientos que ocurren en el server) se encuentran en la ruta: /var/log/logsmall.dat, donde se guarda la siguiente información: número de usuario, nombre de usuario, nombre, apellido y cantidad de mails enviados. Diariamente el servidor de correo genera un archivo con la siguiente información: número de usuario, cuenta destino y cuerpo del mensaje. Este archivo representa todos los correos enviados por los usuarios de un día determinado.***
 
@@ -97,7 +97,7 @@ Examen 4 --> Para verlo completo ir a [*examen4.pas*](/parciales/archivos/examen
 
 </details>
 
-## 🟣 Examen 5 (2023 - 1F)
+## 🟠 Examen 5 (2023 - 1F)
 
 ***Suponga que tiene un archivo con información referente a los empleados que trabajan en una multinacional. De cada empleado se conoce el dni (único), nombre, apellido, edad, domicilio y fecha de nacimiento. Se solicita hacer el mantenimiento de este archivo utilizando la técnica de reutilización de espacio llamada lista invertida. Declare las estructuras de datos necesarias e implemente los siguientes módulos:***
 
@@ -114,7 +114,7 @@ cambio que se produzca en el archivo.***
 
 </details>
 
-## 🟣 Examen 6 (AComAC - Tema1)
+## 🟠 Examen 6 (AComAC - Tema1)
 
 ***Se cuenta con un archivo que almacena información sobre los tipos de dinosaurios que habitaron durante la era mesozoica, de cada tipo se almacena: código, tipo de dinosaurio, altura y peso promedio, descripción y zona geográfica. El archivo no está ordenado por ningún criterio. Realice un programa que elimine tipos de dinosaurios que estuvieron en el periodo jurásico de la era mesozoica. Para ello se recibe por teclado los códigos de los tipos a eliminar.***
 
@@ -130,7 +130,7 @@ cambio que se produzca en el archivo.***
 
 </details>
 
-## 🟣 Examen 7 (AComAC - Tema2)
+## 🟠 Examen 7 (AComAC - Tema2)
 
 ***Se cuenta con un archivo que almacena información sobre los tipos de dinosaurios que habitaron durante la era mesozoica, de cada tipo se almacena: código, tipo de dinosaurio, altura y peso promedio, descripción y zona geográfica. El archivo no está ordenado por ningún criterio. Realice un programa que elimine tipos de dinosaurios que estuvieron en el periodo jurásico de la era mesozoica. Para ello se recibe por teclado los códigos de los tipos a eliminar.***
 
@@ -148,7 +148,7 @@ cambio que se produzca en el archivo.***
 
 </details>
 
-## 🟣 Examen 8 (2023 - 3F)
+## 🟠 Examen 8 (2023 - 3F)
 
 ***Una empresa dedicada a la venta de golosinas posee un archivo que contiene información sobre los productos que tiene a la venta. De cada producto se registran los siguientes datos: código de producto, nombre comercial, precio de venta, stock actual y stock mínimo. La empresa cuenta con 20 sucursales. Diariamente se recibe un archivo detalle de cada una de las 20 sucursales de la empresa que indica las ventas diarias efectuadas por cada sucursal. De cada venta se registra código de producto y cantidad vendida. Se debe realizar un procedimiento que actualice el stock en el archivo maestro con la información disponible en los archivos detalles y que además informe en un archivo de texto aquellos productos cuyo monto total vendido en el día supere los $10000. En el archivo de texto a exportar, por cada producto incluido, se deben informar todos sus datos. Los datos de un producto se deben organizar en el archivo de texto para facilitar el uso eventual del mismo como un archivo de carga. El objetivo del ejercicio es escribir el procedimiento solicitado, junto con las estructuras de datos y módulos usados en el mismo.***
 
@@ -167,3 +167,15 @@ cambio que se produzca en el archivo.***
 Examen 8 --> Para verlo completo ir a [*examen8.pas*](/parciales/archivos/examen8.pas)
 
 </details>
+
+<p align=center>🟠</p>
+<p align=center>🟠</p>
+<p align=center>🟠</p>
+
+
+<br>
+<br>
+<br>
+
+
+<p><img align="center" src="https://github.com/Marimari2342/Marimari2342/blob/main/firmagith.png" alt="marigit"/></p>
