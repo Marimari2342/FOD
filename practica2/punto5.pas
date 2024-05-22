@@ -41,7 +41,7 @@ begin
         min := d[i];
         minInd := i;
       end;
-    read(d[minInd],p[minInd]);
+    leer(d[minInd],p[minInd]);
 end;
 
 procedure actualizar(var m:maestro; var d:vecDet);
