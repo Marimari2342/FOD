@@ -7,6 +7,15 @@ agregándole una opción para realizar bajas copiando el último registro del ar
 la posición del registro a borrar y luego truncando el archivo en la posición del último
 registro de forma tal de evitar duplicados.***
 
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+~~~
+
+~~~
+
+</details>
+
+
 <p align=center>🔵</p>
 <p align=center>🔵</p>
 <p align=center>🔵</p>
