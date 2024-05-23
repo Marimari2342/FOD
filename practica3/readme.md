@@ -10,10 +10,39 @@ registro de forma tal de evitar duplicados.***
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
 ~~~
-
+procedure baja(var arc_emp:empleado); 
+var
+    nro,aux:integer;
+    emp:empleR;
+    existe:boolean;
+begin
+    Reset(arc_emp);
+    read(arc_emp,emp);
+    WriteLn('Ingrese numero de empleado a eliminar');
+    read(nro);
+    existe:=false;
+    while(not Eof(arc_emp) or (not existe))do begin
+        read(arc_emp,emp);
+        if(nro<>emp.nro)then
+          existe:=true;
+    end;
+    if (existe) then begin
+      aux:=FilePos(arc_emp)-1; {me guardo la posición del registro a sobreescribir}
+      Seek(arc_emp,FilePos(arc_emp)-1); {voy a la posicion del ultimo registro en el archivo}
+      read(arc_emp,emp); {leo el ultimo registro del archivo}
+      Seek(arc_emp,aux); {vuelvo a la posicion del registro a sobreescribir}
+      Write(arc_emp,emp); {guardo el ultimo registro en esta posicion}
+      Seek(arc_emp,FilePos(arc_emp)-1); {apunto a la posicion del ultimo registro}
+      Truncate(arc_emp); {la trunco}
+    end;
+end;
 ~~~
 
 </details>
+
+>[!TIP]
+>
+> Punto 1 --> El procedimiento se encuenta en [*punto3y4.pas*](/practica1/punto3y4.pas).
 
 
 <p align=center>🔵</p>

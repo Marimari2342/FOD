@@ -173,13 +173,42 @@ begin
     close(txt);
 end;
 
+{PUNTO1 - PRACTICA3 --> realizar una baja en el archivo
+Voy a suponer que elimino el registro en base al nro de empleado}
+procedure baja(var arc_emp:empleado); 
+var
+    nro,aux:integer;
+    emp:empleR;
+    existe:boolean;
+begin
+    Reset(arc_emp);
+    read(arc_emp,emp);
+    WriteLn('Ingrese numero de empleado a eliminar');
+    read(nro);
+    existe:=false;
+    while(not Eof(arc_emp) or (not existe))do begin
+        read(arc_emp,emp);
+        if(nro<>emp.nro)then
+          existe:=true;
+    end;
+    if (existe) then begin
+      aux:=FilePos(arc_emp)-1; {me guardo la posición del registro a sobreescribir}
+      Seek(arc_emp,FilePos(arc_emp)-1); {voy a la posicion del ultimo registro en el archivo}
+      read(arc_emp,emp); {leo el ultimo registro del archivo}
+      Seek(arc_emp,aux); {vuelvo a la posicion del registro a sobreescribir}
+      Write(arc_emp,emp); {guardo el ultimo registro en esta posicion}
+      Seek(arc_emp,FilePos(arc_emp)-1); {apunto a la posicion del ultimo registro}
+      Truncate(arc_emp); {la trunco}
+    end;
+end;
+
 {menu}
 procedure menu(var arc_emp:empleado);
 var
     opMenu:integer;
 begin
     opMenu:=1;
-    while(opMenu > 0 and opMenu <=7 )do begin
+    while(opMenu > 0 and opMenu <=8 )do begin
       writeln('Ingrese la opcion que desea');
       writeln('1 --> Buscar empleado por nombre o apellido.');
       writeln('2 --> Mostrar todos los empleados.');
@@ -188,6 +217,7 @@ begin
       writeln('5 --> Cambiar la edad de un empleado'); {PUNTO4}
       writeln('6 --> Exportar archivo a un archivo de texto “todos_empleados.txt”.'); {PUNTO4}
       writeln('7 --> Exportar a un archivo empleados que no tengan cargado el DNI.'); {PUNTO4}
+      writeln('8 --> Realizar baja.');{PUNTO1 - PRACTICA3}
       writeln('Cualquier otro --> Salir.');
       read(opMenu);
       case opMenu of
@@ -198,6 +228,7 @@ begin
         5:cambioEdad(arc_emp); {PUNTO4 --> cambio la edad de un empleado}
         6:exportar(arc_emp); {PUNTO04 --> exportar a un archivo de texto}
         7:exportarSinDNI(arc_emp); {PUNTO04 --> exportar a un archivo de texto personas sin DNI}
+        8:baja(arc_emp); {PUNTO1 - PRACTICA3 --> realizar una baja en el archivo}
       end;
     end;
 end;
