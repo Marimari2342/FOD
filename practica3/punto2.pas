@@ -25,7 +25,7 @@ end;
 a un congreso a partir de la información obtenida por teclado.}
 procedure generar(var a:archivo);
 var
-    asistR = asistenteR;
+    asistR:asistenteR;
 begin
     Assign(a,'archivo_asistentes');
     Rewrite(a);
@@ -40,9 +40,18 @@ end;
 {elimine de forma lógica todos los asistentes con nro de asistente inferior a 1000}
 procedure eliminar_logico(var a:archivo);
 var
-    
+    asistR:asistenteR;
 begin
-  
+    Reset(a);
+    while (not Eof(a)) do begin
+      Read(a,asistR);
+      if(asistR.nroAsis<1000)then begin
+        asistR.apeNomb:=Concat('***',asistR.apeNomb);
+        Seek(a,FilePos(a)-1);
+        Write(a,asistR);
+      end;
+    end;
+    Close(a);
 end;
 
 {programa principal}
