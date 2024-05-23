@@ -41,6 +41,7 @@ begin
       Write(a,nov);
       leer_novela(nov);
     end;
+    Close(a);
 end;
 
 {programa principal}
