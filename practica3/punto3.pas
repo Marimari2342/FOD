@@ -118,7 +118,7 @@ begin
     Close(a);
 end;
 
-{punto c) iii --> dar de baja novela}
+{punto b) iii --> dar de baja novela}
 procedure baja_novela(var a:arc_novelas);
 var
     cod:integer;
@@ -149,9 +149,35 @@ begin
     Close(a);
 end;
 
+{punto c) --> listar novelas que representan la lista de espacio libre.}
+procedure listar (var a:arc_novelas;var txt:Text);
+var
+    n:novelaR;
+begin
+    Assign(txt,'novelas.txt');
+    Rewrite(txt);
+    Reset(a);
+    Seek(a,1); {salteo la cabecera}
+    Read(a,n);
+    while (not Eof(a)) do begin
+      if(n.cod>0)then 
+        WriteLn(txt,'Codigo: ',n.cod,', Nombre: ',n.nombre,', Genero: ',n.genero,' Duracion: ',n.duracion,', Director: ',n.director,' Precio: ',n.precio,'.')
+      else 
+        WriteLn('Espacio Libre.');
+      Read(a,n);
+    end;
+    Close(a);
+    Close(txt);
+end;
+
 {programa principal}
 var
     a:arc_novelas;
+    txt:Text;
 begin
     carga(a);
+    alta_novela(a);
+    modificar(a);
+    baja_novela(a);
+    listar(a,txt);
 end.
