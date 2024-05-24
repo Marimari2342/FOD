@@ -330,6 +330,10 @@ end.
 
 </details>
 
+>[!TIP]
+>
+> Punto 3 --> El procedimiento se encuenta en [*punto3.pas*](/practica3/punto3.pas).
+
 ## 🔵 Punto 4
 
 ***Dada la siguiente estructura:***
@@ -419,6 +423,10 @@ end.
 
 </details>
 
+>[!TIP]
+>
+> Punto 4 --> El procedimiento se encuenta en [*punto4y5.pas*](/practica3/punto4y5.pas).
+
 ## 🔵 Punto 5
 
 ***Dada la estructura planteada en el ejercicio anterior, implemente el siguiente módulo:***
@@ -459,6 +467,10 @@ end;
 ~~~
 
 </details>
+
+>[!TIP]
+>
+> Punto 5 --> El procedimiento se encuenta junto con el punto 4 en [*punto4y5.pas*](/practica3/punto4y5.pas).
 
 <p align=center>🔵</p>
 <p align=center>🔵</p>
