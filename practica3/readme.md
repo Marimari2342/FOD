@@ -489,6 +489,47 @@ end;
 >
 > Punto 6 --> El procedimiento se encuenta en [*punto6.pas*](/practica3/punto6.pas).
 
+## 🔵 Punto 7
+
+***Se cuenta con un archivo que almacena información sobre especies de aves en vía de extinción, para ello se almacena: código, nombre de la especie, familia de ave, descripción y zona geográfica. El archivo no está ordenado por ningún criterio. Realice un programa que elimine especies de aves, para ello se recibe por teclado las especies a eliminar. Deberá realizar todas las declaraciones necesarias, implementar todos los procedimientos que requiera y una alternativa para borrar los registros. Para ello deberá implementar dos procedimientos, uno que marque los registros a borrar y posteriormente otro procedimiento que compacte el archivo, quitando los registros marcados. Para quitar los registros se deberá copiar el último registro del archivo en la posición del registro a borrar y luego eliminar del archivo el último registro de forma tal de evitar registros duplicados.***
+
+***NOTA: Las bajas deben finalizar al recibir el código 500000.***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+~~~
+
+~~~
+
+</details>
+
+>[!TIP]
+>
+> Punto 7 --> El procedimiento se encuenta en [*punto7.pas*](/practica3/punto7.pas).
+
+## 🔵 Punto 8
+
+***Se cuenta con un archivo con información de las diferentes distribuciones de linux existentes. De cada distribución se conoce: nombre, año de lanzamiento, número de versión del kernel, cantidad de desarrolladores y descripción. El nombre de las distribuciones no puede repetirse. Este archivo debe ser mantenido realizando bajas lógicas y utilizando la técnica de reutilización de espacio libre llamada lista invertida. Escriba la definición de las estructuras de datos necesarias y los siguientes
+procedimientos:***
+
+* ***ExisteDistribucion: módulo que recibe por parámetro un nombre y devuelve verdadero si la distribución existe en el archivo o falso en caso contrario.***
+
+* ***AltaDistribución: módulo que lee por teclado los datos de una nueva distribución y la agrega al archivo reutilizando espacio disponible en caso de que exista. (El control de unicidad lo debe realizar utilizando el módulo anterior). En caso de que la distribución que se quiere agregar ya exista se debe informar “ya existe la distribución”.***
+
+* ***BajaDistribución: módulo que da de baja lógicamente una distribución cuyo nombre se lee por teclado. Para marcar una distribución como borrada se debe utilizar el campo cantidad de desarrolladores para mantener actualizada la lista invertida. Para verificar que la distribución a borrar exista debe utilizar el módulo ExisteDistribucion. En caso de no existir se debe informar “Distribución no existente”.***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+~~~
+
+~~~
+
+</details>
+
+>[!TIP]
+>
+> Punto 8 --> El procedimiento se encuenta en [*punto8.pas*](/practica3/punto8.pas).
+
 <p align=center>🔵</p>
 <p align=center>🔵</p>
 <p align=center>🔵</p>
