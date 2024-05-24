@@ -53,8 +53,23 @@ var
     aux:integer;
 begin
     aux:=1;
-    while (aux>0 and aux<=4) do begin
-      
+    while (aux>0 and aux<=5) do begin
+      WriteLn('Ingrese la opcion que desea modificar');
+      WriteLn('1 --> Modificar genero.');
+      WriteLn('2 --> Modificar nombre.');
+      WriteLn('3 --> Modificar duracion.');
+      WriteLn('4 --> Modificar director.');
+      WriteLn('5 --> Modificar precio.');
+      WriteLn('Cualquier otro para salir.');
+      Read(aux);
+      WriteLn('Ingrese modificacion: ');
+      case aux of
+        1: read (n.genero);
+        2: read (n.nombre);
+        3: read (n.duracion);
+        4: read (n.director);
+        5: read (n.precio);
+      end;
     end;
 end;
 
