@@ -50,7 +50,7 @@ begin
     Close(txt);
 end;
 
-{Abre el archivo y elimina la flor recibida como parámetro}
+{PUNTO5 --> Abre el archivo y elimina la flor recibida como parámetro}
 procedure eliminarFlor (var a: tArchFlores; flor:reg_flor);
 var
     cab,aux:reg_flor;

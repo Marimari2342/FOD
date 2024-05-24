@@ -431,7 +431,31 @@ procedure eliminarFlor (var a: tArchFlores; flor:reg_flor);
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
 ~~~
-
+procedure eliminarFlor (var a: tArchFlores; flor:reg_flor);
+var
+    cab,aux:reg_flor;
+    esta:boolean;
+begin
+    Reset(a);
+    Seek(a,cab);
+    read(a,aux);
+    esta:=false;
+    while((not Eof(a)) and (not esta))do 
+      if(aux.codigo=flor.codigo)then begin
+        esta:=true;
+        aux.codigo:=cab.codigo;
+        Seek(a,FilePos(a)-1);
+        cab.codigo:=FilePos(a)*-1;
+        Write(a,aux);
+        Seek(a,0);
+        Write(a,cab);
+      end
+      else 
+        read(a,aux);
+    if(not esta)then
+      WriteLn('La flor que se quiere eliminar no se encuentra en el archivo');
+    Close(a);
+end;
 ~~~
 
 </details>
