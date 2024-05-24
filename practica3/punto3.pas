@@ -45,10 +45,13 @@ begin
 end;
 
 {punto b) i --> dar de alta una novela (de ser posible)}
+procedure alta_novela(var a:arc_novelas);
 
 {punto b) ii --> modificar novela desde teclado (cod NO)}
+procedure modificar(var a:arc_novelas);
 
 {punto c) iii --> dar de baja novela}
+procedure baja_novela(var a:arc_novelas);
 
 {programa principal}
 var
