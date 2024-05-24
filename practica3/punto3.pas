@@ -48,7 +48,38 @@ end;
 procedure alta_novela(var a:arc_novelas);
 
 {punto b) ii --> modificar novela desde teclado (cod NO)}
+procedure realizar_modif(var n:novela);
+var
+    aux:integer;
+begin
+    aux:=1;
+    while (aux>0 and aux<=4) do begin
+      
+    end;
+end;
+
 procedure modificar(var a:arc_novelas);
+var
+    n:novelaR;
+    cod:integer;
+    esta:boolean;
+begin
+    WriteLn('Ingrese cod de novela a modificar: ');
+    read(cod);
+    esta:=false;
+    while ((not Eof(a)) and (not esta)) do begin
+      read(a,n);
+      if(n.cod=cod)then
+        esta:=true;
+    end;
+    if esta then begin
+      realizar_modif(n);
+      seek(a,FilePos(a)-1);
+      write(a,n);
+    end 
+    else 
+      WriteLn('No se encontró la novela.');
+end;
 
 {punto c) iii --> dar de baja novela}
 procedure baja_novela(var a:arc_novelas);
