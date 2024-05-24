@@ -1,5 +1,4 @@
 Program punto4y5;
-
 type
     reg_flor = record
         nombre: String[45];
@@ -83,8 +82,10 @@ var
     nom:string;
     cod:integer;
     txt:Text;
+    flor:reg_flor;
 begin
     {...codigo...}
     agregarFlor(a,nom,cod);
     listar(a,txt);
+    eliminarFlor(a,flor);
 end.

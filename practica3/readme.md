@@ -361,7 +361,6 @@ procedure agregarFlor (var a: tArchFlores ; nombre: string; codigo:integer);
 
 ~~~
 Program punto4;
-
 type
     reg_flor = record
         nombre: String[45];
