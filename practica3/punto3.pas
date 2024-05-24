@@ -46,6 +46,26 @@ end;
 
 {punto b) i --> dar de alta una novela (de ser posible)}
 procedure alta_novela(var a:arc_novelas);
+var 
+    nueva,nov,cab:novelaR;
+begin
+    Reset(a);
+    leer_novela(nueva);
+    read(a,nov);
+    if (nov.cod=0) then begin
+      Seek(a,FileSize(a));
+      Write(a,nueva);
+    end
+    else begin
+      Seek(a,abs(nov.cod)); {voy a la posicion en donde quiero guardar la nueva novela}
+      Read(a,cab); {leo el registro de esa posicion y me lo guardo en cab}
+      Seek(a,FilePos(a)-1); {vuelvo a apuntar donde tengo espacio}
+      Write(a,nueva); {guardo la novela nueva}
+      Seek(a,0); {voy a la posicion cabecera}
+      Write(a,cab); {guardo la variable cabecera que tiene otra posicion libre (o el 0)}
+    end;
+    Close(a);
+end;
 
 {punto b) ii --> modificar novela desde teclado (cod NO)}
 procedure realizar_modif(var n:novela);
@@ -79,6 +99,7 @@ var
     cod:integer;
     esta:boolean;
 begin
+    Reset(a);
     WriteLn('Ingrese cod de novela a modificar: ');
     read(cod);
     esta:=false;
@@ -94,6 +115,7 @@ begin
     end 
     else 
       WriteLn('No se encontró la novela.');
+    Close(a);
 end;
 
 {punto c) iii --> dar de baja novela}
