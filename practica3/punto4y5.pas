@@ -1,4 +1,4 @@
-Program punto4;
+Program punto4y5;
 
 type
     reg_flor = record
@@ -30,6 +30,7 @@ begin
       Seek(a,0); {vuelvo al inicio}
       Write(a,cab); {guardo cabecera nueva}
     end;
+    Close(a);
 end;
 
 {liste el contenido del archivo omitiendo las flores eliminadas.}
@@ -39,11 +40,41 @@ var
 begin
     Assing(txt,'archivo.txt');
     Rewrite(txt);
+    Reset(a);
     while (not Eof(a)) do begin
         read(a,reg);
         if(reg.codigo>0)then
           WriteLn(txt,'Nombre: ',reg.nombre,', Codigo: ',reg.codigo);
     end;
+    Close(a);
+    Close(txt);
+end;
+
+{Abre el archivo y elimina la flor recibida como parámetro}
+procedure eliminarFlor (var a: tArchFlores; flor:reg_flor);
+var
+    cab,aux:reg_flor;
+    esta:boolean;
+begin
+    Reset(a);
+    Seek(a,cab);
+    read(a,aux);
+    esta:=false;
+    while((not Eof(a)) and (not esta))do 
+      if(aux.codigo=flor.codigo)then begin
+        esta:=true;
+        aux.codigo:=cab.codigo;
+        Seek(a,FilePos(a)-1);
+        cab.codigo:=FilePos(a)*-1;
+        Write(a,aux);
+        Seek(a,0);
+        Write(a,cab);
+      end
+      else 
+        read(a,aux);
+    if(not esta)then
+      WriteLn('La flor que se quiere eliminar no se encuentra en el archivo');
+    Close(a);
 end;
 
 {programa principal}
