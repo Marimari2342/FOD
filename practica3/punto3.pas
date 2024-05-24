@@ -44,6 +44,12 @@ begin
     Close(a);
 end;
 
+{punto b) i --> dar de alta una novela (de ser posible)}
+
+{punto b) ii --> modificar novela desde teclado (cod NO)}
+
+{punto c) iii --> dar de baja novela}
+
 {programa principal}
 var
     a:arc_novelas;
