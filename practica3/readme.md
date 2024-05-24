@@ -471,10 +471,27 @@ end;
 >
 > Punto 5 --> El procedimiento se encuenta junto con el punto 4 en [*punto4y5.pas*](/practica3/punto4y5.pas).
 
-<p align=center>🔵</p>
-<p align=center>🔵</p>
-<p align=center>🔵</p>
+## 🔵 Punto 6
 
+***Una cadena de tiendas de indumentaria posee un archivo maestro no ordenado con la información correspondiente a las prendas que se encuentran a la venta. De cada prenda se registra: cod_prenda, descripción, colores, tipo_prenda, stock y precio_unitario. Ante un eventual cambio de temporada, se deben actualizar las prendas a la venta. Para ello reciben un archivo conteniendo: cod_prenda de las prendas que quedarán obsoletas. Deberá implementar un procedimiento que reciba ambos archivos y realice la baja lógica de las prendas, para ello deberá modificar el stock de la prenda correspondiente a valor negativo.***
+
+***Adicionalmente, deberá implementar otro procedimiento que se encargue de efectivizar las bajas lógicas que se realizaron sobre el archivo maestro con la información de las prendas a la venta. Para ello se deberá utilizar una estructura auxiliar (esto es, un archivo nuevo), en el cual se copien únicamente aquellas prendas que no están marcadas como borradas. Al finalizar este proceso de compactación del archivo, se deberá renombrar el archivo nuevo con el nombre del archivo maestro original.***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+~~~
+
+~~~
+
+</details>
+
+>[!TIP]
+>
+> Punto 6 --> El procedimiento se encuenta en [*punto6.pas*](/practica3/punto6.pas).
+
+<p align=center>🔵</p>
+<p align=center>🔵</p>
+<p align=center>🔵</p>
 
 >[!NOTE]
 >
