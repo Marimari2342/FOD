@@ -120,6 +120,34 @@ end;
 
 {punto c) iii --> dar de baja novela}
 procedure baja_novela(var a:arc_novelas);
+var
+    cod:integer;
+    cab,n:novelaR;
+    esta:boolean;
+begin
+    Reset(a);
+    WriteLn('Ingrese codigo de la novela a eliminar.');
+    read(cod);
+    esta:=false;
+    Read(a,cab);
+    Read(a,n);
+    while (not Eof(a)) do begin
+      if(n.cod=cod)then begin
+        esta:=true;
+        n.cod:=cab.cod; {guardo el codigo que tengo en cabecera en el lugar a eliminar}
+        Seek(a,FilePos(a)-1);   {vuelvo el puntero para atras}
+        cab.cod := FilePos(a)*-1; {pongo la posicion a eliminar en negativo y guardo en cabecera}
+        Write(a,n); {guardo en la posicion el archivo con el codigo negativo (elim logica)}
+        Seek(a,0); {vuelvo a cabecera}
+        Write(a,cab); {guardo cabecera modificada}
+      end
+      else 
+        Read(a,n);
+    end;
+    if(not esta)then
+      WriteLn('La novela que se quiere eliminar no esta en el archivo.');
+    Close(a);
+end;
 
 {programa principal}
 var
