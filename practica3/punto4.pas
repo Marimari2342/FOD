@@ -32,12 +32,28 @@ begin
     end;
 end;
 
+{liste el contenido del archivo omitiendo las flores eliminadas.}
+procedure listar (var a:tArchFlores; var txt:Text);
+var
+    reg:reg_flor;
+begin
+    Assing(txt,'archivo.txt');
+    Rewrite(txt);
+    while (not Eof(a)) do begin
+        read(a,reg);
+        if(reg.codigo>0)then
+          WriteLn(txt,'Nombre: ',reg.nombre,', Codigo: ',reg.codigo);
+    end;
+end;
+
 {programa principal}
 var
     a:tArchFlores;
     nom:string;
     cod:integer;
+    txt:Text;
 begin
     {...codigo...}
     agregarFlor(a,nom,cod);
+    listar(a,txt);
 end.
