@@ -22,7 +22,11 @@ realizar con ExisteDistribucion). Si la distribución a que se quiere agregar ya
 informar “ya existe la distribución”}
 procedure AltaDistribución(var m:maestro);
 
-
+{módulo que da de baja lógicamente una distribución cuyo nombre se lee por teclado. Para 
+marcar una distribución como borrada utilizar campo cantidad de desarrolladores para 
+mantener actualizada la lista invertida. Para verificar que la distribución a borrar
+exista utilizar módulo ExisteDistribucion. Si no existe informar “Distribución no existente”.}
+procedure BajaDistribución(var m:maestro);
 
 {programa principal}
 var
