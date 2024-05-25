@@ -2,7 +2,7 @@ program punto8;
 type
     distribucionR = record
         nombre:string[15];
-        año:integer;
+        anio:integer;
         numKernel:integer;
         cantDes:integer;
         descr:string[50];
@@ -29,6 +29,19 @@ begin
     Close(m);
     return := esta;
 end;
+
+{otros procesos necesarios}
+procedure leer(var dato:distribucionR);
+begin
+    WriteLn('Ingrese nombre, año lanzamiento, num del kernel, cantidad desarrolladores y descripción.');
+    Read(dato.nombre);
+    Read(dato.anio);
+    Read(dato.numKernel);
+    Read(dato.cantDes);
+    Read(dato.descr);
+end;
+
+procedure agregar(var m:maestro; var dato:distribucionR);
 
 {módulo que lee por teclado los datos de una nueva distribución y la agrega al archivo 
 reutilizando espacio disponible en caso de que exista. (El control de unicidad lo debe 
