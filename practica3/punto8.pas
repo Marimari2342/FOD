@@ -16,6 +16,12 @@ type
 existe en el archivo o falso en caso contrario.}
 function ExisteDistribucion(m:maestro;nom:nombre):boolean; {FUNCION --> Solo par por valor, puedo pasar el maestro así???}
 
+{módulo que lee por teclado los datos de una nueva distribución y la agrega al archivo 
+reutilizando espacio disponible en caso de que exista. (El control de unicidad lo debe 
+realizar con ExisteDistribucion). Si la distribución a que se quiere agregar ya existe 
+informar “ya existe la distribución”}
+procedure AltaDistribución(var m:maestro);
+
 
 
 {programa principal}
