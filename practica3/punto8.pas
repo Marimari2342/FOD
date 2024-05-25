@@ -42,6 +42,25 @@ begin
 end;
 
 procedure agregar(var m:maestro; var dato:distribucionR);
+var
+    cab:distribucionR;
+begin
+    Reset(m);
+    Read(m,cab);
+    if(cab.cantDes=0)then begin
+      Seek(m,FileSize(m));
+      Write(m,dato);
+    end
+    else begin  {s r s w s w}
+      Seek(m,Abs(cab.cantDes));
+      read(m,cab);
+      Seek(m,FilePos(m)-1);
+      Write(m,dato);
+      Seek(m,0);
+      Write(m,cab);
+    end;
+    Close(m);
+end;
 
 {módulo que lee por teclado los datos de una nueva distribución y la agrega al archivo 
 reutilizando espacio disponible en caso de que exista. (El control de unicidad lo debe 
@@ -54,7 +73,9 @@ begin
     Reset(a);
     leer(nuevo);
     if(not ExisteDistribucion(m,dato.nombre))then
-      agregar(m,dato);
+      agregar(m,dato)
+    else 
+      WriteLn('Ya existe la distribución.');
     Close(a);
 end;
 
