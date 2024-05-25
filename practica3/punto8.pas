@@ -14,7 +14,21 @@ type
 
 {módulo que recibe por parámetro un nombre y devuelve verdadero si la distribución 
 existe en el archivo o falso en caso contrario.}
-function ExisteDistribucion(m:maestro;nom:nombre):boolean; {FUNCION --> Solo par por valor, puedo pasar el maestro así???}
+function ExisteDistribucion(m:maestro;nom:string[15]):boolean; {FUNCION --> Solo par por valor, puedo pasar el maestro así???}
+var
+    dato:distribucionR;
+    esta:Boolean;
+begin
+    Reset(m);
+    esta:=false;
+    while (not Eof(m)) and (not esta) do begin
+      read (m,dato);
+      if (dato.nombre = nom) then 
+        esta:=true;
+    end;
+    Close(m);
+    return := esta;
+end;
 
 {módulo que lee por teclado los datos de una nueva distribución y la agrega al archivo 
 reutilizando espacio disponible en caso de que exista. (El control de unicidad lo debe 
