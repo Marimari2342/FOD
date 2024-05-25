@@ -92,16 +92,16 @@ begin
     Read(nom);
     Reset(m);
     Read(m,cab);
-    if (ExisteDistribucion(m,nom)) then begin
-      read(m,aux);
-      while (nom<>aux.nombre) do 
-        read(m,aux);
-      aux.cantDes:=cab.cantDes;
-      Seek(a,FilePos(a)-1);
-      cab.cantDes:=FilePos(a)*-1;
-      Write(a,aux);
-      Seek(a,0);
-      Write(a,cab);
+    if (ExisteDistribucion(m,nom)) then begin {si existe la distribucion a eliminar}
+      read(m,aux);  {leo primer registro (despues de cabecera)}
+      while (nom<>aux.nombre) do {mientras no encuentre el que quiero eliminar}
+        read(m,aux);    {leo otro registro --> hasta encontrar el que quiero eliminar}
+      aux.cantDes:=cab.cantDes; {guardo en aux la dir del proximo esp libre}
+      Seek(a,FilePos(a)-1); {vuelvo el puntero para atras}
+      cab.cantDes:=FilePos(a)*-1;   {guardo en cabecera la pos del registro a eliminar (neg)}
+      Write(a,aux); {guardo aux en el registro en la posicion del registro a eliminar}
+      Seek(a,0);    {vuelvo a la cabecera}
+      Write(a,cab); {guardo la nueva cabecera}
     end
     else 
         WriteLn('Distribución no existente.');
