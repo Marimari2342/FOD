@@ -35,6 +35,15 @@ reutilizando espacio disponible en caso de que exista. (El control de unicidad l
 realizar con ExisteDistribucion). Si la distribución a que se quiere agregar ya existe 
 informar “ya existe la distribución”}
 procedure AltaDistribución(var m:maestro);
+var
+    nuevo:distribucionR;
+begin
+    Reset(a);
+    leer(nuevo);
+    if(not ExisteDistribucion(m,dato.nombre))then
+      agregar(m,dato);
+    Close(a);
+end;
 
 {módulo que da de baja lógicamente una distribución cuyo nombre se lee por teclado. Para 
 marcar una distribución como borrada utilizar campo cantidad de desarrolladores para 
