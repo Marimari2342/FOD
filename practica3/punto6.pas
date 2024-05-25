@@ -16,7 +16,28 @@ quedan obsoletas --> ELIMINAR
 baja logica --> modificar el stock de la prenda correspondiente a valor negativo}
 procedure baja_prenda (var m:maestro; var d:detalle);
 var
+    cod:integer;
+    p,cab:prendaR;
 begin
+    Reset(m);
+    Reset(d);
+    read(m,cab);
+    while (not Eof(d)) do begin {archivo no ordenado}
+      read(d,cod);
+      while (not Eof(m)) do begin
+        read(m,p);
+        if(p.cod_prenda=cod)then begin
+          p.cod_prenda:=cab.cod_prenda; {baja logica}
+          Seek(m,FilePos(m)-1);
+          cab.cod_prenda:=Abs(FilePos(m))*-1;
+          Write(m,p);
+          Seek(m,0);
+          Write(m,cab);
+        end;
+      end;
+    end;
+    Close(d);
+    Close(m);
 end;
 
 {copiar las prendas que no están marcadas como borradas --> compactación del archivo 
@@ -31,6 +52,9 @@ var
     m,mN:maestro;
     d:detalle;
 begin
+    Assign(m,'maestro');
+    Assign(d,'detalle');
+    Assign(mN,'maestro_auxiliar');
     baja_prenda(m,d);
     compactar(m,mN);
 end.
