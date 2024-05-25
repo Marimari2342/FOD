@@ -66,7 +66,7 @@ end;
 reutilizando espacio disponible en caso de que exista. (El control de unicidad lo debe 
 realizar con ExisteDistribucion). Si la distribución a que se quiere agregar ya existe 
 informar “ya existe la distribución”}
-procedure AltaDistribución(var m:maestro);
+procedure AltaDistribucion(var m:maestro);
 var
     nuevo:distribucionR;
 begin
@@ -83,11 +83,17 @@ end;
 marcar una distribución como borrada utilizar campo cantidad de desarrolladores para 
 mantener actualizada la lista invertida. Para verificar que la distribución a borrar
 exista utilizar módulo ExisteDistribucion. Si no existe informar “Distribución no existente”.}
-procedure BajaDistribución(var m:maestro);
+procedure BajaDistribucion(var m:maestro);
+var
+begin
+end;
 
 {programa principal}
 var
-
+    m:maestro;
 begin
-  
+    Assign(m,'maestro');
+    {supongo que el archivo ya tiene previamente registros de distribuciones cargados}
+    AltaDistribucion(m);
+    BajaDistribucion(m);
 end.
