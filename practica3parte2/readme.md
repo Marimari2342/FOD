@@ -53,6 +53,14 @@ Total General de Votos:    ...............................
 
 ## 🔵 Punto 3
 
+***Suponga que trabaja en una oficina donde está montada una LAN (red local). La misma fue construida sobre una topología de red que conecta 5 máquinas entre sí y todas las máquinas se conectan con un servidor central. Semanalmente cada máquina genera un archivo de logs informando las sesiones abiertas por cada usuario en cada terminal y por cuánto tiempo estuvo abierta. Cada archivo detalle contiene los siguientes campos: cod_usuario, fecha, tiempo_sesion. Debe realizar un procedimiento que reciba los archivos detalle y genere un archivo maestro con los siguientes datos: cod_usuario, fecha, tiempo_total_de_sesiones_abiertas.***
+
+***NOTAS***
+
+* ***Los archivos detalle no están ordenados por ningún criterio.***
+
+* ***Un usuario puede iniciar más de una sesión el mismo día en la misma máquina, o inclusive, en diferentes máquinas.***
+
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
 ~~~
@@ -60,3 +68,19 @@ Total General de Votos:    ...............................
 ~~~
 
 </details>
+
+<p align=center>🔵</p>
+<p align=center>🔵</p>
+<p align=center>🔵</p>
+
+>[!NOTE]
+>
+> * ***Para descargar la practica (del 2024) en PDF, click [<code>AQUÍ</code>](https://drive.google.com/file/d/1SQitB1Q9bsS3azl4tFKMQryw7hZCEiFR/view?usp=sharing).***
+
+
+<br>
+<br>
+<br>
+
+
+<p><img align="center" src="https://github.com/Marimari2342/Marimari2342/blob/main/firmagith.png" alt="marigit"/></p>
