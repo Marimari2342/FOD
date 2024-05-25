@@ -44,7 +44,20 @@ end;
 renombrar el archivo nuevo con el nombre del archivo maestro original}
 procedure compactar (var m,mN:maestro);
 var
+    p:prendaR;
 begin
+    Reset(m);
+    Rewrite(mN);
+    Seek(m,1); {salteo cabecera}
+    while (not Eof(m)) do begin
+        Read(m,p);
+        if(p.cod_prenda>0)then
+          Write(mN,p);
+    end;
+    Close(mN);
+    Close(m);
+    Erase(m);
+    Rename(mN,'maestro');
 end;
 
 {programa principal}
