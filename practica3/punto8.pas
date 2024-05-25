@@ -85,7 +85,17 @@ mantener actualizada la lista invertida. Para verificar que la distribución a b
 exista utilizar módulo ExisteDistribucion. Si no existe informar “Distribución no existente”.}
 procedure BajaDistribucion(var m:maestro);
 var
+    nom:string[15];
 begin
+    WriteLn('Ingrese nombre de la distribucion a eliminar.');
+    Read(nom);
+    Reset(m);
+    if (ExisteDistribucion(m,nom)) then begin
+      
+    end
+    else 
+        WriteLn('Distribución no existente.');
+    Close(m);
 end;
 
 {programa principal}
