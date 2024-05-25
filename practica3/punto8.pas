@@ -86,12 +86,22 @@ exista utilizar módulo ExisteDistribucion. Si no existe informar “Distribuci�
 procedure BajaDistribucion(var m:maestro);
 var
     nom:string[15];
+    cab,aux:distribucionR;
 begin
     WriteLn('Ingrese nombre de la distribucion a eliminar.');
     Read(nom);
     Reset(m);
+    Read(m,cab);
     if (ExisteDistribucion(m,nom)) then begin
-      
+      read(m,aux);
+      while (nom<>aux.nombre) do 
+        read(m,aux);
+      aux.cantDes:=cab.cantDes;
+      Seek(a,FilePos(a)-1);
+      cab.cantDes:=FilePos(a)*-1;
+      Write(a,aux);
+      Seek(a,0);
+      Write(a,cab);
     end
     else 
         WriteLn('Distribución no existente.');
