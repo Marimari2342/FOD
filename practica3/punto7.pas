@@ -8,7 +8,7 @@ type
         zona:string[15];
     end;
     maestro = file of aveR;
-    
+
 {-->elimine especies de aves, se recibe por teclado las especies a eliminar<--}
 {procedimiento que marque los registros a borrar}
 procedure marcar(var m:maestro);
@@ -36,6 +36,7 @@ begin
     end;
     Close(m);
 end;
+
 {procedimiento que compacte el archivo, quitando los registros marcados (copia el último
 registro del archivo en la posición del registro a borrar y luego elimina del archivo el 
 último registro para evitar registros duplicados}
