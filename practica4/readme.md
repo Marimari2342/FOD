@@ -62,7 +62,7 @@ RTA. El orden del árbol B en este caso sería de M = 8
 
 >[!NOTE]
 >
-> * ***Para descargar la practica (del 2024) en PDF, click [<code>AQUÍ</code>](https://drive.google.com/file/d/1SQitB1Q9bsS3azl4tFKMQryw7hZCEiFR/view?usp=sharing).***
+> * ***Para descargar la practica (del 2024) en PDF, click [<code>AQUÍ</code>](https://drive.google.com/file/d/1ByjnQMO8Wgwq-xfp93bbTx7Fqd7yWdW2/view?usp=sharing).***
 
 
 <br>
