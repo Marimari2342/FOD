@@ -36,8 +36,11 @@ type
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
 N = tamaño del nodo en bytes ......... 512 bytes
+
 A = tamaño del registro en bytes ..... 64 bytes
+
 B = tamaño del enlace ................ 4 bytes
+
 C = tamaño que ocupa cant_claves ..... (M-1-1) * 4 bytes = (M-2) * 4 bytes
 
 FORMULA --> N = (M - 1) * A + M * B + C
