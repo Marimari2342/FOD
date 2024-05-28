@@ -42,9 +42,17 @@ C = tamaño que ocupa cant_claves ..... (M-1-1) * 4 bytes = (M-2) * 4 bytes
 
 FORMULA --> N = (M - 1) * A + M * B + C
 
+~~~
             512 bytes = (M - 1) * 64 bytes + M * 4 bytes + (M - 2) * 4 bytes
 
             512 bytes + 64 bytes + 8 bytes = M * (64 bytes + 4 bytes + 4 bytes)
+
+            M = 584 bytes / 72 bytes
+
+            M = 8
+~~~
+
+RTA. El orden del árbol B en este caso sería de M = 8
 
 </details>
 
