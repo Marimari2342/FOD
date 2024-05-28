@@ -53,9 +53,9 @@ FORMULA --> N = (M - 1) * A + M * B + C
             M = 584 bytes / 72 bytes
 
             M = 8
-~~~
 
 RTA. El orden del árbol B en este caso sería de M = 8
+~~~
 
 </details>
 
