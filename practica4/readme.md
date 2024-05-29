@@ -89,8 +89,6 @@ Podría ser el DNI o el legajo.
 
 * ***Defina los siguientes conceptos:***
 
-En los dos últimos casos, ¿cuándo se aplica cada uno?
-
 * **Overflow:** sucede cuando un nodo en un árbol B excede su capacidad máxima de  almacenamiento de claves. Cuando esto ocurre, se divide el nodo desbordado y se redistribuyen las claves entre los nodos resultantes para mantener el árbol balanceado.
 
 * **Underflow:** sucede cuando un nodo en un árbol B tiene menos claves que el mínimo requerido. Esto puede ocurrir después de una eliminación, cuando el número de claves en un nodo cae por debajo del límite mínimo. Para corregir un subdesbordamiento, se puede realizar una redistribución de claves desde los nodos vecinos o fusionar el nodo subdesbordado con uno de sus vecinos.
