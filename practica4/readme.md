@@ -81,6 +81,30 @@ En resumen, organizar el archivo como un árbol B puede mejorar la eficiencia de
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
+Podría ser el DNI o el legajo.
+
+</details>
+
+## ⚪ Punto 4
+
+* ***Defina los siguientes conceptos:***
+
+En los dos últimos casos, ¿cuándo se aplica cada uno?
+
+* **Overflow**
+
+* **Underflow**
+
+* **Redistribución** 
+
+* **Fusión o concatenación**
+
+</details>
+
+
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
 </details>
 
 
