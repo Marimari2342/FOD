@@ -85,23 +85,25 @@ Podría ser el DNI o el legajo.
 
 </details>
 
-## ⚪ Punto 4
+## ⚪ Punto 5
 
 * ***Defina los siguientes conceptos:***
 
 En los dos últimos casos, ¿cuándo se aplica cada uno?
 
-* **Overflow**
+* **Overflow:** sucede cuando un nodo en un árbol B excede su capacidad máxima de  almacenamiento de claves. Cuando esto ocurre, se divide el nodo desbordado y se redistribuyen las claves entre los nodos resultantes para mantener el árbol balanceado.
 
-* **Underflow**
+* **Underflow:** sucede cuando un nodo en un árbol B tiene menos claves que el mínimo requerido. Esto puede ocurrir después de una eliminación, cuando el número de claves en un nodo cae por debajo del límite mínimo. Para corregir un subdesbordamiento, se puede realizar una redistribución de claves desde los nodos vecinos o fusionar el nodo subdesbordado con uno de sus vecinos.
 
-* **Redistribución** 
+* **Redistribución:** es un proceso en el que las claves se redistribuyen entre nodos contiguos para corregir un desbordamiento (overflow) o un subdesbordamiento (underflow). En el caso de un desbordamiento, algunas claves se mueven a un nuevo nodo creado, mientras que en el caso de un subdesbordamiento, algunas claves se transfieren desde un nodo vecino para equilibrar el número de claves entre los nodos.
 
-* **Fusión o concatenación**
+* **Fusión o concatenación:** en el contexto de los árboles B, la fusión o concatenación ocurre cuando dos nodos contiguos tienen un número insuficiente de claves y se combinan en un solo nodo. Durante este proceso, se elimina una clave del padre común de los nodos fusionados y se ajustan los punteros. Esto ayuda a mantener la estructura del árbol balanceada y eficiente.
 
 </details>
 
+## ⚪ Punto 6
 
+***Suponga que se tiene un archivo que contiene información de los empleados de una empresa. De cada empleado se mantiene la siguiente información: DNI, legajo, nombre completo y salario. Considere que se mantiene además un índice, organizado como árbol B de orden 4, que provee acceso indizado a los empleados por su DNI. Grafique como queda el archivo de empleados (archivo de datos) y el archivo índice (árbol B) tras la inserción de los registros dados.***
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
