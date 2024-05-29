@@ -59,6 +59,17 @@ RTA. El orden del árbol B en este caso sería de M = 8
 
 </details>
 
+* ***¿Qué impacto tiene sobre el valor de M organizar el archivo con toda la información de los alumnos como un árbol B?***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+~~~
+
+~~~
+
+</details>
+
+
 <p align=center>⚪</p>
 <p align=center>⚪</p>
 <p align=center>⚪</p>
