@@ -77,6 +77,12 @@ En resumen, organizar el archivo como un árbol B puede mejorar la eficiencia de
 
 </details>
 
+* ***¿Qué dato seleccionaría como clave de identificación para organizar los elementos (alumnos) en el árbol B? ¿Hay más de una opción?***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+</details>
+
 
 <p align=center>⚪</p>
 <p align=center>⚪</p>
