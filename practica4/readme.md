@@ -105,6 +105,8 @@ Podría ser el DNI o el legajo.
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
+Click [<code>AQUI</code>](/practica4/ejercicio06.pdf) para ver el árbol graficado.
+
 </details>
 
 
