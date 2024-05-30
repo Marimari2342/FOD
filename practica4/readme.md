@@ -109,6 +109,18 @@ Click [<code>AQUI</code>](/practica4/ejercicio06.pdf) para ver el árbol grafica
 
 </details>
 
+## ⚪ Punto 7
+
+***Dado el siguiente árbol B de orden 5, mostrar cómo quedaría el mismo luego de realizar las siguientes operaciones: +320, -390, -400, -533. Justificar detalladamente cada operación indicando lecturas y escrituras en orden de ocurrencia. Para la resolución de underflow debe utilizar política a izquierda. Graficar cada operación por separado.***
+
+![imagen](/recursos/img01.png)
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+Click [<code>AQUI</code>](/practica4/ejercicio07.pdf) para ver el árbol graficado.
+
+</details>
+
 
 <p align=center>⚪</p>
 <p align=center>⚪</p>
