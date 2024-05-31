@@ -121,6 +121,18 @@ Click [<code>AQUI</code>](/practica4/ejercicio07.pdf) para ver el árbol grafica
 
 </details>
 
+## ⚪ Punto 8
+
+***Dado el siguiente árbol B de orden 4, mostrar cómo quedaría el mismo luego de realizar las siguientes operaciones: +5, +9, +80, +51, -50, -92. Política de resolución de underflows: derecha.***
+
+![imagen](/recursos/img02.png)
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+Click [<code>AQUI</code>](/practica4/ejercicio08.pdf) para ver el árbol graficado.
+
+</details>
+
 
 <p align=center>⚪</p>
 <p align=center>⚪</p>
