@@ -133,6 +133,15 @@ Click [<code>AQUI</code>](/practica4/ejercicio08.pdf) para ver el árbol grafica
 
 </details>
 
+## ⚪ Punto 8
+
+***Dado el siguiente árbol B de orden 6, mostrar cómo quedaría el mismo luego de realizar las siguientes operaciones: +15, +71, +3, +48, -56, -71. Política de resolución de underflows: derecha o izquierda.***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+Click [<code>AQUI</code>](/practica4/ejercicio09.pdf) para ver el árbol graficado.
+
+</details>
 
 <p align=center>⚪</p>
 <p align=center>⚪</p>
