@@ -199,6 +199,47 @@ Click [<code>AQUI</code>](/practica4/ejercicio17.pdf) para ver el árbol grafica
 
 </details>
 
+## ⚪ Punto 18
+
+***Dada las siguientes operaciones, mostrar la construcción paso a paso de un árbol B+ de orden 4: +67, +56, +96, +10, +28, +95, +16, +46, +23, +36, +120, +130, +60, +57, -96, -67, -95, -60, -120, -57, -56. Política de resolución de underflows: derecha o izquierda.***
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+Arbol B+ - Orden 4 - Política de resolución de underflows: derecha o izquierda.
+
+* **+67 +56 +96**
+
+L/E[+67]= E0
+
+L/E[+56]= L0 E0
+
+L/E[+96]= L0 E0 
+
+~~~
+0:(56)(67)(96)
+~~~
+
+* **+10** --> OVERFLOW en nodo 0. Se genera nodo 1, promoción de clave 67 y nueva raiz (se genera nodo 2). Se incrementa la altura del arbol.
+
+L/E[+10]= L0 E0 E1 E2
+
+~~~
+            2: 0 (67) 1
+0: (10)(56) 1       1: (67)(96) 1
+~~~
+
+* **+28 +95**
+
+L/E[+28]= L2 L0 E0
+
+L/E[+95]= L2 L0 E1
+
+~~~
+            2: 0 (67) 1
+0: (10)(28)(56) 1       1: (67)(95)(96) 1
+~~~
+
+</details>
 
 <p align=center>⚪</p>
 <p align=center>⚪</p>
