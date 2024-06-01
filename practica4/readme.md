@@ -209,11 +209,11 @@ Arbol B+ - Orden 4 - Política de resolución de underflows: derecha o izquierda
 
 * **+67 +56 +96**
 
-L/E[+67]= E0
+L/E [+67]= E0
 
-L/E[+56]= L0 E0
+L/E [+56]= L0 E0
 
-L/E[+96]= L0 E0 
+L/E [+96]= L0 E0 
 
 ~~~
 0:(56)(67)(96)
@@ -221,7 +221,7 @@ L/E[+96]= L0 E0
 
 * **+10** --> OVERFLOW en nodo 0. Se genera nodo 1, promoción de clave 67 y nueva raiz (se genera nodo 2). Se incrementa la altura del arbol.
 
-L/E[+10]= L0 E0 E1 E2
+L/E [+10]= L0 E0 E1 E2
 
 ~~~
             2: 0 (67) 1
@@ -230,13 +230,13 @@ L/E[+10]= L0 E0 E1 E2
 
 * **+28 +95**
 
-L/E[+28]= L2 L0 E0
+L/E [+28]= L2 L0 E0
 
-L/E[+95]= L2 L0 E1
+L/E [+95]= L2 L0 E1
 
 ~~~
             2: 0 (67) 1
-0: (10)(28)(56) 1       1: (67)(95)(96) 1
+0: (10)(28)(56)       1: (67)(95)(96)
 ~~~
 
 </details>
