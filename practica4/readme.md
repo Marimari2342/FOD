@@ -175,6 +175,18 @@ Click [<code>AQUI</code>](/practica4/ejercicio11.pdf) para ver el árbol grafica
 
 </details>
 
+## ⚪ Punto 16
+
+***Dado el siguiente árbol B + de orden 4 y con política de resolución de underflows a derecha, realice las siguientes operaciones indicando lecturas y escrituras en el orden de ocurrencia. Además, debe describir detalladamente lo que sucede en cada operación. +80, -400.***
+
+![imagen](/recursos/img04.png)
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+Click [<code>AQUI</code>](/practica4/ejercicio16.pdf) para ver el árbol graficado.
+
+</details>
+
 <p align=center>⚪</p>
 <p align=center>⚪</p>
 <p align=center>⚪</p>
