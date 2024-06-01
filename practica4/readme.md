@@ -187,6 +187,19 @@ Click [<code>AQUI</code>](/practica4/ejercicio16.pdf) para ver el árbol grafica
 
 </details>
 
+## ⚪ Punto 17
+
+***Dado el siguiente árbol B+ de orden 4, mostrar como quedaría el mismo luego de realizar las siguientes operaciones: +120, +110, +52, +70, +15, -45, -52, +22, +19, -66, -22, -19, - 23, -89. Política de resolución de underflows: derecha.***
+
+![imagen](/recursos/img05.png)
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+Click [<code>AQUI</code>](/practica4/ejercicio17.pdf) para ver el árbol graficado.
+
+</details>
+
+
 <p align=center>⚪</p>
 <p align=center>⚪</p>
 <p align=center>⚪</p>
