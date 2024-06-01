@@ -338,8 +338,18 @@ L/E [-120]= L7 L6 L1 L5 E1 L2 E2 E6 E7
 
 ~~~
                                     7:2(57)6
-                 2:0(28)3(46)4                    6:8(130)1
+                 2:0(28)3(46)4                    6:8(67)1
 0:(10)(16)(23)3   3:(28)(36)4   4:(46)(56)8   8:(57)1   1:(130)-1
+~~~
+
+* **-57** --> UNDERFLOW en nodo 8. Se Busca redistribuir por izquierda y por derecha pero no se puede pues el nodo hermano derecho tiene el minimo de claves y no hay nodo hermano izquierdo. Se fusiona liberando el nodo 1. Se propaga el UNDERFLOW a nodo 6. Redistribución entre nodo 2 6 y 7, promoción de clave 46 como nueva raiz.
+
+L/E [-57]= L7 L6 L8 L1 E8 L2 E2 E6 E7
+
+~~~
+                         7:2(46)6
+            2:0(28)3                    6:4(57)8
+0:(10)(16)(23)3   3:(28)(36)4   4:(46)(56)8   8:(130)-1
 ~~~
 
 
