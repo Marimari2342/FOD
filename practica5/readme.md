@@ -29,9 +29,13 @@ En el contexto de archivos, el hashing se utiliza para generar un valor único q
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
-~~~
+El concepto de **SINÓNIMO** se refiere a dos o más claves diferentes que tienen el mismo valor de dispersión. Esto puede ocurrir cuando la función de dispersión utilizada para mapear las claves a ubicaciones en una tabla hash produce el mismo resultado para múltiples claves diferentes.
 
-~~~
+La **COLISIÓN** es una situación en la que un registro es asignado, por función de dispersión, a una dirección que ya posee uno o más registros. Las colisiones son inevitables en las tablas hash, especialmente cuando el espacio de claves es más grande que el espacio de valores hash posible.
+
+El **DESBORDE** se da cuando una clave carece de lugar en la dirección asignada por la función de dispersion. 
+
+Para que ocurra una colisión en lugar de un desbordamiento en un archivo directo, es necesario que la ubicación calculada para el nuevo registro esté disponible, pero haya otro registro existente con el mismo valor de dispersión que ya ocupa esa ubicación. En otras palabras, la colisión implica que hay múltiples registros que se mapean a la misma ubicación, mientras que el desbordamiento ocurre cuando un solo registro no puede caber en una ubicación determinada debido a la falta de espacio.
 
 </details>
 
