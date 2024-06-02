@@ -89,9 +89,15 @@ En general, una menor densidad de empaquetamiento en un archivo directo puede ll
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
-~~~
+Los métodos aplicables para resolver colisiones con desbordes en dispersión estática son:
 
-~~~
+* **Saturación Progresiva**: En esta técnica, cuando se produce un desbordamiento en una posición de la tabla hash, se busca la siguiente posición disponible en la tabla hasta que se encuentra una vacía. Esto implica que cada celda de la tabla hash se verifica secuencialmente en busca de espacio adicional cuando ocurre un desbordamiento. Si se llega al final de la tabla sin encontrar espacio, el desbordamiento no se puede manejar y se produce un error de "tabla llena".
+
+* **Saturación Progresiva Encadenada**: En este enfoque, cada celda de la tabla hash contiene una lista enlazada de elementos que han sido mapeados a esa posición. Cuando se produce un desbordamiento, el nuevo elemento se agrega a la lista enlazada correspondiente a esa celda. Esto permite manejar colisiones sin límite de tamaño de la tabla hash, ya que se pueden agregar elementos adicionales a las listas enlazadas según sea necesario.
+
+* **Saturación Progresiva Encadenada con Área de Desborde Separada**: Esta técnica es similar a la saturación progresiva encadenada, pero con una diferencia importante: cuando una celda de la tabla hash se llena y ya no puede contener más elementos, se utiliza una "área de desborde separada" para almacenar los elementos adicionales que causaron la colisión. Esto garantiza que las colisiones se puedan manejar de manera más eficiente sin afectar el rendimiento de las operaciones de búsqueda.
+
+* **Dispersión Doble**: En este método, cuando ocurre una colisión, se utiliza una segunda función de hash para calcular una nueva ubicación en la tabla hash donde se puede almacenar el elemento. Esta segunda función de hash se utiliza como un "paso" adicional cuando se encuentra una colisión, lo que ayuda a distribuir los elementos de manera más uniforme en la tabla hash y reduce la probabilidad de colisiones.
 
 </details>
 
