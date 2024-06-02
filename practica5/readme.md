@@ -53,9 +53,13 @@ En el contexto de archivos, el hashing se utiliza para generar un valor único q
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
-~~~
+La **DENSIDAD DE EMPAQUETAMIENTO** es la relación entre el espacio disponible para el archivo de datos y la cantidad de registros que integran el mismo. La fórmula de la densidad de empaquetamiento es:
 
 ~~~
+DE = num_registros / espacio_total
+~~~
+
+En general, una menor densidad de empaquetamiento en un archivo directo puede llevar a un uso ineficiente de recursos de almacenamiento y una degradación del rendimiento en términos de acceso y transferencia de datos. Por lo tanto, es importante optimizar la densidad de empaquetamiento al diseñar y trabajar con archivos para maximizar la eficiencia y el rendimiento del sistema.
 
 </details>
 
