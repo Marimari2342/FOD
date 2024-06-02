@@ -9,6 +9,8 @@
 
 El **HASHING** es una técnica para generar una dirección base única para una clave dada. Lo que hace es convertir la clave en un número aleatorio, que luego sirve para determinar donde se almacena la clave. Para esto, utiliza una función de dispersión que lo que hace es mapear cada clave con una dirección física de almacenamiento. Es utilizada cuando se requiere acceso rápido por clave.
 
+En el contexto de archivos, el hashing se utiliza para generar un valor único que representa el contenido del archivo. Esto es útil para varias aplicaciones, incluida la verificación de la integridad de los datos, la detección de duplicados, la identificación rápida de archivos idénticos y la seguridad.
+
 </details>
 
 ## 🟠 Punto 2
@@ -17,9 +19,7 @@ El **HASHING** es una técnica para generar una dirección base única para una 
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
-~~~
-
-~~~
+**FUNCIÓN DE DISPERSIÓN:** caja negra que a partir de una clave genera la dirección física donde debe almacenarse el registro. La función de dispersión o hash lo que hace es tomar una entrada y generar un valor de hash único, que se utiliza para identificar o verificar la integridad de los datos. La elección de la función de hash depende de los requisitos específicos de seguridad y rendimiento de la aplicación.
 
 </details>
 
