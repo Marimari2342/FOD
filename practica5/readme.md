@@ -45,9 +45,17 @@ Para que ocurra una colisión en lugar de un desbordamiento en un archivo direct
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
-~~~
+Hay varias estrategias que se pueden utilizar para reducir el número de colisiones en un archivo organizado mediante la técnica de hashing:
 
-~~~
+* Utilizar funciones de hash bien diseñadas para minimizar las colisiones al producir valores de dispersión que están distribuidos de manera más uniforme.
+
+* Ajustar el tamaño de la tabla hash de manera adecuada puede ayudar a reducir las colisiones. Si la tabla hash es demasiado pequeña en relación con el número de elementos que se espera almacenar, aumenta la probabilidad de colisiones. Por otro lado, si es demasiado grande, puede haber un desperdicio de memoria.
+
+* Utilizar técnicas de resolución de colisiones efectivas para mitigar los efectos de las colisiones.
+
+* Hashing dinámico: Implementar una estrategia de dispersión dinámica puede ser útil para ajustar dinámicamente el tamaño de la tabla hash en función del número de elementos y la tasa de colisiones. Esto implica volver a calcular la función de hash y reorganizar los elementos en una tabla hash más grande cuando la tasa de colisiones supera un umbral predefinido.
+
+* Diseño de la función de hash específica para los datos: En algunos casos, diseñar una función de hash específica para los datos en cuestión puede ayudar a reducir las colisiones.
 
 </details>
 
