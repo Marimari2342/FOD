@@ -7,9 +7,7 @@
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
-~~~
-
-~~~
+El **HASHING** es una técnica para generar una dirección base única para una clave dada. Lo que hace es convertir la clave en un número aleatorio, que luego sirve para determinar donde se almacena la clave. Para esto, utiliza una función de dispersión que lo que hace es mapear cada clave con una dirección física de almacenamiento. Es utilizada cuando se requiere acceso rápido por clave.
 
 </details>
 
