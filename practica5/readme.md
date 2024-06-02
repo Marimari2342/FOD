@@ -101,6 +101,30 @@ Los métodos aplicables para resolver colisiones con desbordes en dispersión es
 
 </details>
 
+## 🟠 Punto 7
+
+***Para las siguientes claves, realice el proceso de dispersión mediante el método de hashing extensible, sabiendo que cada nodo tiene capacidad para dos registros. El número natural indica el orden de llegada de las claves. Se debe mostrar el estado del archivo para cada operación. Justifique brevemente ante colisión y desborde los pasos que realiza.***
+
+![imagen](/recursos/img06.png)
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+Click [<code>AQUI</code>](/practica5/ejercicio07.pdf) para ver el ejercicio resuelto.
+
+</details>
+
+## 🟠 Punto 8
+
+***Realice el proceso de dispersión mediante el método de hashing extensible, sabiendo que cada registro tiene capacidad para dos claves. El número natural indica el orden de llegada de las mismas. Se debe mostrar el estado del archivo para cada operación. Justifique brevemente ante colisión y desborde los pasos que realiza.***
+
+![imagen](/recursos/img07.png)
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+Click [<code>AQUI</code>](/practica5/ejercicio08.pdf) para ver el ejercicio resuelto.
+
+</details>
+
 <p align=center>🟠</p>
 <p align=center>🟠</p>
 <p align=center>🟠</p>
