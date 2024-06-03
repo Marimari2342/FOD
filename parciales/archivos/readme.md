@@ -52,7 +52,8 @@ Examen 2 --> Para verlo completo ir a [*examen2.pas*](/parciales/archivos/examen
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
-
+**BAJA LÓGICA**: borro un registro del archivo sin recuperar espacio en disco. Para esto utilizo una marca (por ejemplo, un * adelante de un campo determinado). 
+**BAJA FÍSICA**: borra un registro del archivo, recuperando el espacio físico, y decrementando la cantidad de elementos de mi archivo. 
 
 </details>
 
