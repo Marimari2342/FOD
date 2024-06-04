@@ -22,6 +22,7 @@ begin
       c.cod:=valorAlto;
 end;
 
+{procedimiento que genera el reporte de ventas pedido}
 procedure generar_reporte(var m:maestro);
 var
     codAct,anioAct,mesAct:integer;
