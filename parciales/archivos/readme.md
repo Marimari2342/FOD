@@ -169,6 +169,16 @@ Examen 8 --> Para verlo completo ir a [*examen8.pas*](/parciales/archivos/examen
 
 </details>
 
+## 🟠 Examen 9 (2023 - 2F)
+
+![imagen_de_examen](/recursos/img09.png)
+
+<details><summary> <code> Respuesta 🖱 </code></summary><br>
+
+Examen 9 --> Para verlo completo ir a [*examen9.pdf*](/parciales/archivos/examen9.pdf)
+
+</details>
+
 <p align=center>🟠</p>
 <p align=center>🟠</p>
 <p align=center>🟠</p>
