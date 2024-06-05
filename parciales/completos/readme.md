@@ -14,7 +14,7 @@ Examen 1 --> Resolucion en [*examen1.pas*](/parciales/completos/examen01.pdf)
 
 ## 🟠 Examen 2 --> 1F 2024 
 
-Click [<code>AQUI</code<>](/parciales/completos/enunciado1F_2024.pdf) para ver el enunciado.
+Click [<code>AQUI</code>](/parciales/completos/enunciado1F_2024.pdf) para ver el enunciado.
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
