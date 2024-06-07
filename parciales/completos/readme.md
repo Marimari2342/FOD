@@ -18,6 +18,6 @@ Click [<code>AQUI</code>](/parciales/completos/enunciado1F_2024.pdf) para ver el
 
 <details><summary> <code> Respuesta 🖱 </code></summary><br>
 
-Examen que me tomaron en la primera fecha. Subiré la corrección del mismo luego de la muestra.
+Examen que me tomaron en la primera fecha. Subiré la corrección del mismo, luego de la muestra.
 
 </details>
