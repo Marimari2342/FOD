@@ -51,3 +51,15 @@
 * (c) Es menos eficiente hacer una baja lógica que una baja física.
 
 * ***(d) ✔️ Ninguna de las anteriores.***
+
+<br>
+
+***4. Un archivo con registros de longitud variable***
+
+* (a) Ocupa más espacio que el mismo archivo con registros de longitud física.
+
+* (b) Ocupa el mismo espacio que el mismo archivo con registros de longitud física.
+
+* (c) Ocupa menos espacio que el mismo archivo con registros de longitud física.
+
+* ***(d) ✔️ No tengo datos suficientes para contestar.***
