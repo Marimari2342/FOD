@@ -236,6 +236,8 @@ No es ni un árbol binario ni un árbol AVL y "no necesariamente" es un árbol B
 
 <details><summary> <code> Nota 🖱 </code></summary><br>
 
+En un hash estático, las operaciones de inserción no son simplemente agregar un nuevo registro al archivo de datos. Requieren al menos una lectura para determinar la ubicación adecuada del nuevo registro en el archivo y al menos una escritura para agregar el nuevo registro en esa posición determinada. Si la inserción provoca que la tabla de dispersión o cualquier estructura de índice se vea afectada, puede ser necesario realizar operaciones adicionales, como la reorganización de la tabla de dispersión o la reubicación de registros en el archivo de datos para mantener la eficiencia del acceso (por eso es "al menos", siempre hay al menos una operación de L y otra de E, pero no necesariamente es una sola operación de L/E).
+
 </details><br>
 
 ***15. En Hashing extensible, cuando la densidad de empaquetamiento tiende a 1***
@@ -251,5 +253,7 @@ No es ni un árbol binario ni un árbol AVL y "no necesariamente" es un árbol B
 * ***(e) ✔️ Ninguna de las anteriores.***
 
 <details><summary> <code> Nota 🖱 </code></summary><br>
+
+Cuando la densidad de empaquetamiento tiende a 1 en Hashing extensible, las colisiones se vuelven más frecuentes y el tiempo de acceso a los elementos puede aumentar, lo que reduce la eficiencia de la tabla de Hash.
 
 </details><br>
