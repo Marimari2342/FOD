@@ -81,3 +81,49 @@
 * ***(f) ✔️ Algunas de las anteriores son válidas.***
 
 * (g) Ninguna de las anteriores son válidas.
+
+<br>
+
+***6. Una clave secundaria***
+
+* (a) Identifica unívocamente un elemento del archivo.
+
+* (b) Identifica unívocamente varios elementos de un archivo.
+
+* ***(c) ✔️ Está constituida por al menos un atributo del archivo donde está definida.***
+
+* (d) Todas las anteriores son válidas.
+
+* (e) Algunas de las anteriores son válidas.
+
+* (f) Ninguna de las anteriores son válidas.
+
+<br>
+
+***7. Un índice***
+
+* (a) Se implementa con un vector.
+
+* (b) Se implementa con un árbol primario.
+
+* (c) Se implementa con un árbol B.
+
+* (d) Se implementa con un árbol B+.
+
+* (e) Todas las anteriores son válidas.
+
+* (f) Algunas de las anteriores son válidas.
+
+* ***(g) ✔️ Ninguna de las anteriores son válidas.***
+
+<details><summary> <code> Nota 🖱 </code></summary><br>
+
+Pues "se implementa" ≠ "se puede implementar" (es decir, no siempre se implementa, pero puede implementarse). 
+
+</details>
+
+
+
+<details><summary> <code> Nota 🖱 </code></summary><br>
+
+</details>
