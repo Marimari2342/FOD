@@ -205,3 +205,51 @@ No es ni un árbol binario ni un árbol AVL y "no necesariamente" es un árbol B
 <details><summary> <code> Nota 🖱 </code></summary><br>
 
 </details><br>
+
+***13. La densidad de empaquetamiento***
+
+* (a) Mide la relación entre espacio disponible y espacio utilizado.
+
+* (b) Mide la relación entre la capacidad de registros que tiene un archivo y la capacidad de almacenamiento disponible para el mismo.
+
+* (c) Es el cociente entre el número de registros del archivo y el espacio disponible
+
+* ***(d) ✔️ Todas las anteriores son válidas.***
+
+* (e) Algunas de las anteriores son válidas.
+
+* (f) Ninguna de las anteriores son válidas.
+
+<details><summary> <code> Nota 🖱 </code></summary><br>
+
+</details><br>
+
+***14. Cuando se produce una inserción en Hash estático, sobre el archivo de datos***
+
+* (a) Se realiza una operación de escritura y una de lectura.
+
+* ***(b) ✔️ Se realiza al menos una operación de escritura y al menos una de lectura.***
+
+* (c) Se realiza una operación de lectura y al menos una de escritura.
+
+* (d) Se realiza una operación de escritura y al menos una de lectura.
+
+<details><summary> <code> Nota 🖱 </code></summary><br>
+
+</details><br>
+
+***15. En Hashing extensible, cuando la densidad de empaquetamiento tiende a 1***
+
+* (a) Se debe pasar de Hash estático a dinámico.
+
+* (b) Se debe reformular el tamaño del nodo.
+
+* (c) Se deben aumentar la cantidad de registros por nodo.
+
+* (d) Algunas de las anteriores
+
+* ***(e) ✔️ Ninguna de las anteriores.***
+
+<details><summary> <code> Nota 🖱 </code></summary><br>
+
+</details><br>
