@@ -243,6 +243,8 @@ La fórmula es --> DE = r/n*RPN
 
 (Berthone, Thomas - pp161)
 
+<p align="center">__________</p>
+
 </details><br>
 
 ***14. Cuando se produce una inserción en Hash estático, sobre el archivo de datos***
@@ -258,6 +260,8 @@ La fórmula es --> DE = r/n*RPN
 <details><summary> <code> Nota 🖱 </code></summary><br>
 
 En un hash estático, las operaciones de inserción no son simplemente agregar un nuevo registro al archivo de datos. Requieren al menos una lectura para determinar la ubicación adecuada del nuevo registro en el archivo y al menos una escritura para agregar el nuevo registro en esa posición determinada. Si la inserción provoca que la tabla de dispersión o cualquier estructura de índice se vea afectada, puede ser necesario realizar operaciones adicionales, como la reorganización de la tabla de dispersión o la reubicación de registros en el archivo de datos para mantener la eficiencia del acceso (por eso es "al menos", siempre hay al menos una operación de L y otra de E, pero no necesariamente es una sola operación de L/E).
+
+<p align="center">__________</p>
 
 </details><br>
 
@@ -278,6 +282,8 @@ En un hash estático, las operaciones de inserción no son simplemente agregar u
 **Cuanto mayor sea la DE, mayor será la posibilidad de colisiones, dado que en ese caso se dispone de menos espacio para esparcir registros.** (Berthone, Thomas - pp161)
 
 Por eso, cuando la densidad de empaquetamiento tiende a 1 en Hashing extensible, las colisiones se vuelven más frecuentes y el tiempo de acceso a los elementos puede aumentar, lo que reduce la eficiencia de la tabla de Hash.
+
+<p align="center">__________</p>
 
 </details><br>
 
