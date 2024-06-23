@@ -173,3 +173,35 @@ Pues "se implementa" ≠ "se puede implementar" (es decir, no siempre se impleme
 No es ni un árbol binario ni un árbol AVL y "no necesariamente" es un árbol B+.
 
 </details><br>
+
+***11. El acceso directo a un elemento de datos es***
+
+* (a) Más eficiente que el acceso secuencial.
+
+* (b) Más eficiente que el acceso secuencial indizado.
+
+* (c) Más eficiente que utilizar un árbol B+.
+
+* ***(d) ✔️ Todas las anteriores son válidas.***
+
+* (e) Algunas de las anteriores son válidas.
+
+* (f) Ninguna de las anteriores son válidas.
+
+<details><summary> <code> Nota 🖱 </code></summary><br>
+
+</details><br>
+
+***12. Una función de Hash en teoría debe ser***
+
+* ***(a) ✔️ Uniforme y aleatoria.***
+
+* (b) Uniforme pero no aleatoria.
+
+* (c) Aleatoria pero no uniforme.
+
+* (d) No debe ser ni uniforme ni aleatoria.
+
+<details><summary> <code> Nota 🖱 </code></summary><br>
+
+</details><br>
