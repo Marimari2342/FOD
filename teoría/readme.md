@@ -240,7 +240,7 @@ No es ni un árbol binario ni un árbol AVL y "no necesariamente" es un árbol B
 
 La fórmula es --> DE = r/n*RPN
 
-(Berthone, Thomas - pp161)
+(Bertone, Thomas - pp161)
 
 <p align="center">__________</p>
 
@@ -278,7 +278,7 @@ La fórmula es --> DE = r/n*RPN
 
 <details><summary> <code> Nota 🖱 </code></summary><br>
 
-<p align="justify">**Cuanto mayor sea la DE, mayor será la posibilidad de colisiones, dado que en ese caso se dispone de menos espacio para esparcir registros** (Berthone, Thomas - pp161).</p>
+<p align="justify">**Cuanto mayor sea la DE, mayor será la posibilidad de colisiones, dado que en ese caso se dispone de menos espacio para esparcir registros** (Bertone, Thomas - pp161).</p>
 
 <p align="justify">Por eso, cuando la densidad de empaquetamiento tiende a 1 en Hashing extensible, las colisiones se vuelven más frecuentes y el tiempo de acceso a los elementos puede aumentar, lo que reduce la eficiencia de la tabla de Hash.</p>
 
