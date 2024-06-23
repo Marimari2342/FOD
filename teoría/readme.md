@@ -1,4 +1,4 @@
-# REPASO PARA EL EXAMEN TEÓRICO PARA LA PROMOCIÓN
+# Repaso para el examen teórico para la promoción
 
 ## Primer Simulacro del Examen 2024
 
