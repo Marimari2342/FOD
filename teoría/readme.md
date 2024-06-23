@@ -234,10 +234,9 @@ No es ni un árbol binario ni un árbol AVL y "no necesariamente" es un árbol B
 
 <details><summary> <code> Nota 🖱 </code></summary><br>
 
-**Se define la Densidad de Empaquetamiento (DE) como la relación entre el espacio disponible para el archivo de datos y la cantidad de registros que integran dicho archivo.** 
+<p align="justify">**Se define la Densidad de Empaquetamiento (DE) como la relación entre el espacio disponible para el archivo de datos y la cantidad de registros que integran dicho archivo.**</p>
 
-La DE es la razón entre la cantidad de registros que componen un archivo (r) y el espacio disponible para almacenar ese archivo. El espacio disponible se define como la cantidad de nodos direccionables (n) por la función de hash, y la cantidad de registros que cada
-nodo puede almacenar, Registros por Nodo (RPN).
+<p align="justify">La DE es la razón entre la cantidad de registros que componen un archivo (r) y el espacio disponible para almacenar ese archivo. El espacio disponible se define como la cantidad de nodos direccionables (n) por la función de hash, y la cantidad de registros que cada nodo puede almacenar, Registros por Nodo (RPN).</p>
 
 La fórmula es --> DE = r/n*RPN
 
@@ -259,7 +258,7 @@ La fórmula es --> DE = r/n*RPN
 
 <details><summary> <code> Nota 🖱 </code></summary><br>
 
-En un hash estático, las operaciones de inserción no son simplemente agregar un nuevo registro al archivo de datos. Requieren al menos una lectura para determinar la ubicación adecuada del nuevo registro en el archivo y al menos una escritura para agregar el nuevo registro en esa posición determinada. Si la inserción provoca que la tabla de dispersión o cualquier estructura de índice se vea afectada, puede ser necesario realizar operaciones adicionales, como la reorganización de la tabla de dispersión o la reubicación de registros en el archivo de datos para mantener la eficiencia del acceso (por eso es "al menos", siempre hay al menos una operación de L y otra de E, pero no necesariamente es una sola operación de L/E).
+<p align="justify">En un hash estático, las operaciones de inserción no son simplemente agregar un nuevo registro al archivo de datos. Requieren al menos una lectura para determinar la ubicación adecuada del nuevo registro en el archivo y al menos una escritura para agregar el nuevo registro en esa posición determinada. Si la inserción provoca que la tabla de dispersión o cualquier estructura de índice se vea afectada, puede ser necesario realizar operaciones adicionales, como la reorganización de la tabla de dispersión o la reubicación de registros en el archivo de datos para mantener la eficiencia del acceso (por eso es "al menos", siempre hay al menos una operación de L y otra de E, pero no necesariamente es una sola operación de L/E).</p>
 
 <p align="center">__________</p>
 
