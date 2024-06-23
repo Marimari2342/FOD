@@ -22,7 +22,9 @@
 
 * (g) Ninguna de las anteriores.
 
-<br>
+<details><summary> <code> Nota 🖱 </code></summary><br>
+
+</details><br>
 
 ***2. Un proceso de actualización de un archivo con n archivos***
 
@@ -40,7 +42,9 @@
 
 * (g) Ninguna de las anteriores son válidas.
 
-<br>
+<details><summary> <code> Nota 🖱 </code></summary><br>
+
+</details><br>
 
 ***3. Si se realiza la baja de un registro en un archivo secuencial indizado***
 
@@ -52,7 +56,9 @@
 
 * ***(d) ✔️ Ninguna de las anteriores.***
 
-<br>
+<details><summary> <code> Nota 🖱 </code></summary><br>
+
+</details><br>
 
 ***4. Un archivo con registros de longitud variable***
 
@@ -64,7 +70,9 @@
 
 * ***(d) ✔️ No tengo datos suficientes para contestar.***
 
-<br>
+<details><summary> <code> Nota 🖱 </code></summary><br>
+
+</details><br>
 
 ***5. Para poder realizar un algoritmo de corte de control sobre un archivo***
 
@@ -82,7 +90,9 @@
 
 * (g) Ninguna de las anteriores son válidas.
 
-<br>
+<details><summary> <code> Nota 🖱 </code></summary><br>
+
+</details><br>
 
 ***6. Una clave secundaria***
 
@@ -98,7 +108,9 @@
 
 * (f) Ninguna de las anteriores son válidas.
 
-<br>
+<details><summary> <code> Nota 🖱 </code></summary><br>
+
+</details><br>
 
 ***7. Un índice***
 
@@ -222,6 +234,15 @@ No es ni un árbol binario ni un árbol AVL y "no necesariamente" es un árbol B
 
 <details><summary> <code> Nota 🖱 </code></summary><br>
 
+**Se define la Densidad de Empaquetamiento (DE) como la relación entre el espacio disponible para el archivo de datos y la cantidad de registros que integran dicho archivo.** 
+
+La DE es la razón entre la cantidad de registros que componen un archivo (r) y el espacio disponible para almacenar ese archivo. El espacio disponible se define como la cantidad de nodos direccionables (n) por la función de hash, y la cantidad de registros que cada
+nodo puede almacenar, Registros por Nodo (RPN).
+
+La fórmula es --> DE = r/n*RPN
+
+(Berthone, Thomas - pp161)
+
 </details><br>
 
 ***14. Cuando se produce una inserción en Hash estático, sobre el archivo de datos***
@@ -257,3 +278,5 @@ En un hash estático, las operaciones de inserción no son simplemente agregar u
 Cuando la densidad de empaquetamiento tiende a 1 en Hashing extensible, las colisiones se vuelven más frecuentes y el tiempo de acceso a los elementos puede aumentar, lo que reduce la eficiencia de la tabla de Hash.
 
 </details><br>
+
+<p align="center">🔵🔵🔵🔵🔵🔵</p>
