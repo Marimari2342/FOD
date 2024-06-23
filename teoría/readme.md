@@ -150,4 +150,26 @@ Pues "se implementa" ≠ "se puede implementar" (es decir, no siempre se impleme
 
 * ***(d) ✔️ No tengo datos suficientes para responder.***
 
+<details><summary> <code> Nota 🖱 </code></summary><br>
 
+</details><br>
+
+***10. Un árbol multicambio***
+
+* (a) Es un árbol binario.
+
+* (b) Es un árbol AVL.
+
+* (c) Es un árbol B+.
+
+* (d) Todas las anteriores son válidas.
+
+* (e) Algunas de las anteriores son válidas.
+
+* ***(f) ✔️ Ninguna de las anteriores son válidas.***
+
+<details><summary> <code> Nota 🖱 </code></summary><br>
+
+No es ni un árbol binario ni un árbol AVL y "no necesariamente" es un árbol B+.
+
+</details><br>
