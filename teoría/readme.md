@@ -120,10 +120,34 @@
 
 Pues "se implementa" ≠ "se puede implementar" (es decir, no siempre se implementa, pero puede implementarse). 
 
-</details>
+</details><br>
 
+***8. Un árbol binario paginado***
 
+* (a) Puede desbalancearse.
+
+* (b) Puede estar balanceado.
+
+* (c) Puede no estar balanceado.
+
+* ***(d) ✔️ Todas las anteriores son válidas.***
+
+* (e) Algunas de las anteriores son válidas.
+
+* (f) Ninguna de las anteriores son válidas.
 
 <details><summary> <code> Nota 🖱 </code></summary><br>
 
-</details>
+</details><br>
+
+***9. Dado un índice de un archivo. Para un momento determinado***
+
+* (a) Si se implementó con árbol B tiene mayor altura que si se implementó con un árbol B+.
+
+* (b) Si se implementó con árbol B tiene igual altura que si se implementó con un árbol B+.
+
+* (c) Si se implementó con árbol B tiene menor altura que si se implementó con un árbol B+.
+
+* ***(d) ✔️ No tengo datos suficientes para responder.***
+
+
