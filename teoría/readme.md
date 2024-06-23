@@ -4,6 +4,8 @@
 
 ***Las respuestas correctas suman un punto, las incorrectas restan 0,5. Sin responder es neutro. Cada ejercicio tiene un y solo un inciso correcto.***
 
+<br>
+
 ***1. Un archivo serie***
 
 * ***(a) ✔️ Tiene acceso secuencial y orden de búsqueda lineal.***
@@ -20,6 +22,7 @@
 
 * (g) Ninguna de las anteriores.
 
+<br>
 
 ***2. Un proceso de actualización de un archivo con n archivos***
 
@@ -37,6 +40,7 @@
 
 * (g) Ninguna de las anteriores son válidas.
 
+<br>
 
 ***3. Si se realiza la baja de un registro en un archivo secuencial indizado***
 
