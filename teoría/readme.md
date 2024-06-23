@@ -20,6 +20,7 @@
 
 * (g) Ninguna de las anteriores.
 
+
 ***2. Un proceso de actualización de un archivo con n archivos***
 
 * (a) Se puede aplicar con todos los archivos ordenados por algún criterio.
@@ -35,3 +36,14 @@
 * (f) Algunas de las anteriores son válidas.
 
 * (g) Ninguna de las anteriores son válidas.
+
+
+***3. Si se realiza la baja de un registro en un archivo secuencial indizado***
+
+* (a) Es igual de eficiente hacer una baja lógica que una baja física.
+
+* (b) Es más eficiente hacer una baja lógica que una baja física.
+
+* (c) Es menos eficiente hacer una baja lógica que una baja física.
+
+* ***(d) ✔️ Ninguna de las anteriores.***
