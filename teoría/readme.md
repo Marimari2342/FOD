@@ -8,7 +8,7 @@
 
 * ***(a) ✔️ Tiene acceso secuencial y orden de búsqueda lineal.***
 
-* ***(b) Tiene acceso secuencial indizado y orden de búsqueda logarítmico.***
+* (b) Tiene acceso secuencial indizado y orden de búsqueda logarítmico.
 
 * ***(c) Tiene acceso secuencial y orden de búsqueda constante.***
 
