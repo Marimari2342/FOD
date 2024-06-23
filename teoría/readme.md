@@ -63,3 +63,21 @@
 * (c) Ocupa menos espacio que el mismo archivo con registros de longitud física.
 
 * ***(d) ✔️ No tengo datos suficientes para contestar.***
+
+<br>
+
+***5. Para poder realizar un algoritmo de corte de control sobre un archivo***
+
+* (a) Es suficiente que el archivo este ordenado por al menos un criterio.
+
+* (b) Es necesario que el archivo este ordenado por al menos un criterio.
+
+* (c) Es suficiente que el archivo este ordenado por al menos dos criterios.
+
+* (d) Es necesario que el archivo este ordenado por al menos dos criterios.
+
+* (e) Todas las anteriores son válidas.
+
+* ***(f) ✔️ Algunas de las anteriores son válidas.***
+
+* (g) Ninguna de las anteriores son válidas.
