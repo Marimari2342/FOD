@@ -24,6 +24,8 @@
 
 <details><summary> <code> Nota 🖱 </code></summary><br>
 
+<p align="center">__________</p>
+
 </details><br>
 
 ***2. Un proceso de actualización de un archivo con n archivos***
@@ -44,6 +46,8 @@
 
 <details><summary> <code> Nota 🖱 </code></summary><br>
 
+<p align="center">__________</p>
+
 </details><br>
 
 ***3. Si se realiza la baja de un registro en un archivo secuencial indizado***
@@ -58,6 +62,8 @@
 
 <details><summary> <code> Nota 🖱 </code></summary><br>
 
+<p align="center">__________</p>
+
 </details><br>
 
 ***4. Un archivo con registros de longitud variable***
@@ -71,6 +77,8 @@
 * ***(d) ✔️ No tengo datos suficientes para contestar.***
 
 <details><summary> <code> Nota 🖱 </code></summary><br>
+
+<p align="center">__________</p>
 
 </details><br>
 
@@ -92,6 +100,8 @@
 
 <details><summary> <code> Nota 🖱 </code></summary><br>
 
+<p align="center">__________</p>
+
 </details><br>
 
 ***6. Una clave secundaria***
@@ -109,6 +119,8 @@
 * (f) Ninguna de las anteriores son válidas.
 
 <details><summary> <code> Nota 🖱 </code></summary><br>
+
+<p align="center">__________</p>
 
 </details><br>
 
@@ -130,7 +142,9 @@
 
 <details><summary> <code> Nota 🖱 </code></summary><br>
 
-Pues "se implementa" ≠ "se puede implementar" (es decir, no siempre se implementa, pero puede implementarse). 
+<p align="justify">Pues "se implementa" ≠ "se puede implementar" (es decir, no siempre se implementa, pero puede implementarse).</p>
+
+<p align="center">__________</p>
 
 </details><br>
 
@@ -150,6 +164,8 @@ Pues "se implementa" ≠ "se puede implementar" (es decir, no siempre se impleme
 
 <details><summary> <code> Nota 🖱 </code></summary><br>
 
+<p align="center">__________</p>
+
 </details><br>
 
 ***9. Dado un índice de un archivo. Para un momento determinado***
@@ -163,6 +179,8 @@ Pues "se implementa" ≠ "se puede implementar" (es decir, no siempre se impleme
 * ***(d) ✔️ No tengo datos suficientes para responder.***
 
 <details><summary> <code> Nota 🖱 </code></summary><br>
+
+<p align="center">__________</p>
 
 </details><br>
 
@@ -182,7 +200,9 @@ Pues "se implementa" ≠ "se puede implementar" (es decir, no siempre se impleme
 
 <details><summary> <code> Nota 🖱 </code></summary><br>
 
-No es ni un árbol binario ni un árbol AVL y "no necesariamente" es un árbol B+.
+<p align="justify">No es ni un árbol binario ni un árbol AVL y "no necesariamente" es un árbol B+.</p>
+
+<p align="center">__________</p>
 
 </details><br>
 
@@ -202,6 +222,8 @@ No es ni un árbol binario ni un árbol AVL y "no necesariamente" es un árbol B
 
 <details><summary> <code> Nota 🖱 </code></summary><br>
 
+<p align="center">__________</p>
+
 </details><br>
 
 ***12. Una función de Hash en teoría debe ser***
@@ -215,6 +237,8 @@ No es ni un árbol binario ni un árbol AVL y "no necesariamente" es un árbol B
 * (d) No debe ser ni uniforme ni aleatoria.
 
 <details><summary> <code> Nota 🖱 </code></summary><br>
+
+<p align="center">__________</p>
 
 </details><br>
 
