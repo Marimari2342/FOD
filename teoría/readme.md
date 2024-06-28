@@ -248,7 +248,7 @@
 
 * (b) Mide la relación entre la capacidad de registros que tiene un archivo y la capacidad de almacenamiento disponible para el mismo.
 
-* (c) Es el cociente entre el número de registros del archivo y el espacio disponible
+* (c) Es el cociente entre el número de registros del archivo y el espacio disponible.
 
 * ***(d) ✔️ Todas las anteriores son válidas.***
 
@@ -296,7 +296,7 @@ La fórmula es --> DE = r/n*RPN
 
 * (c) Se deben aumentar la cantidad de registros por nodo.
 
-* (d) Algunas de las anteriores
+* (d) Algunas de las anteriores.
 
 * ***(e) ✔️ Ninguna de las anteriores.***
 
@@ -311,3 +311,35 @@ La fórmula es --> DE = r/n*RPN
 </details><br>
 
 <p align="center">🔵🔵🔵🔵🔵🔵</p>
+
+## Segundo Simulacro del Examen 2024
+
+***Las respuestas correctas suman un punto, las incorrectas restan 0,5. Sin responder es neutro. Cada ejercicio tiene un y solo un inciso correcto.***
+
+<br>
+
+***1. Un archivo directo***
+
+* (a) Tiene acceso Directo y orden de búsqueda lineal.
+
+* (b) Tiene acceso Directo y orden de búsqueda logarítmico.
+
+* (c) Tiene acceso Directo y orden de búsqueda exponencial.
+
+* (d) Todas las anteriores.
+
+* (e) Algunas de las anteriores.
+
+* ***(f) ✔️ Ninguna de las anteriores.***
+
+<details><summary> <code> Nota 🖱 </code></summary><br>
+
+<p align="center">__________</p>
+
+</details><br>
+
+<p align="center">🔵🔵🔵🔵🔵🔵</p>
+
+>[!NOTE]
+>Se aprueba con 5 (necesito 7.5 puntos como mínimo).
+>
