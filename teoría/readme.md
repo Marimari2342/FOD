@@ -338,7 +338,7 @@ La fórmula es --> DE = r/n*RPN
 
 </details><br>
 
-***1. Un proceso de merge de n archivos, para que sea lo más eficiente posible en términos de rendimiento / performance***
+***2. Un proceso de merge de n archivos, para que sea lo más eficiente posible en términos de rendimiento / performance***
 
 * (a) Se debe aplicar con todos los archivos ordenados por algún criterio.
 
