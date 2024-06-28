@@ -338,6 +338,28 @@ La fórmula es --> DE = r/n*RPN
 
 </details><br>
 
+***1. Un proceso de merge de n archivos, para que sea lo más eficiente posible en términos de rendimiento / performance***
+
+* (a) Se debe aplicar con todos los archivos ordenados por algún criterio.
+
+* (b) Se debe aplicar con todos los archivos desordenados.
+
+* (c) Se debe aplicar con algunos de los archivos ordenados por algún criterio y el resto desordenados.
+
+* (d) Se debe aplicar con cada uno de los archivos ordenados por diferentes criterios.
+
+* (e) Todas las anteriores.
+
+* (f) Algunas de las anteriores.
+
+* ***(g) ✔️ Ninguna de las anteriores.***
+
+<details><summary> <code> Nota 🖱 </code></summary><br>
+
+<p align="center">__________</p>
+
+</details><br>
+
 <p align="center">🔵🔵🔵🔵🔵🔵</p>
 
 >[!NOTE]
