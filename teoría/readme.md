@@ -434,6 +434,30 @@ La fórmula es --> DE = r/n*RPN
 
 </details><br>
 
+***7. Un índice secundario implementado con un árbol binario***
+
+* (a) Puede desbalancearse.
+
+* (b) Puede estar desbalanceado.
+
+* (c) Puede balancearse.
+
+* (d) Se desbalancea facilmente.
+
+* (e) Todas las anteriores son válidas.
+
+* (f) Algunas de las anteriores son válidas.
+
+* ***(g) ✔️ Ninguna de las anteriores son válidas.***
+
+<details><summary> <code> Nota 🖱 </code></summary><br>
+
+<p align="center">__________</p>
+
+</details><br>
+
+
+
 <p align="center">🔵🔵🔵🔵🔵🔵</p>
 
 >[!NOTE]
