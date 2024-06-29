@@ -377,6 +377,23 @@ La fórmula es --> DE = r/n*RPN
 </details><br>
 
 
+***4. Un archivo directo con registros de longitud variable***
+
+(a) Puede ocupar más espacio que el mismo archivo con registros de longitud física.
+
+(b) Puede ocupar el mismo espacio que el mismo archivo con registros de longitud física.
+
+(c) Ocupa menos espacio que el mismo archivo con registros de longitud física.
+
+* ***(d) ✔️ Ninguna de las anteriores.***
+
+<details><summary> <code> Nota 🖱 </code></summary><br>
+
+<p align="center">__________</p>
+
+</details><br>
+
+
 
 
 <p align="center">🔵🔵🔵🔵🔵🔵</p>
