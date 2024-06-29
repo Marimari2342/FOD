@@ -414,7 +414,25 @@ La fórmula es --> DE = r/n*RPN
 
 </details><br>
 
+***6. Una clave***
 
+* (a) Identifica unívocamente un elemento del archivo.
+
+* (b) Identifica varios elementos de un archivo.
+
+* (c) Está constituída por al menos dos atributos del archivo donde está definida.
+
+* (d) Todas las anteriores son válidas.
+
+* (e) Algunas de las anteriores son válidas.
+
+* ***(f) ✔️ Ninguna de las anteriores son válidas.***
+
+<details><summary> <code> Nota 🖱 </code></summary><br>
+
+<p align="center">__________</p>
+
+</details><br>
 
 <p align="center">🔵🔵🔵🔵🔵🔵</p>
 
