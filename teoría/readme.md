@@ -362,11 +362,11 @@ La fórmula es --> DE = r/n*RPN
 
 ***3. Si se realiza la baja de un registro en un archivo directo***
 
-(a) Es igual de eficiente hacer una baja lógica que una baja física.
+* (a) Es igual de eficiente hacer una baja lógica que una baja física.
 
-(b) Es más de eficiente hacer una baja lógica que una baja física considerando el espacio ocupado.
+* (b) Es más de eficiente hacer una baja lógica que una baja física considerando el espacio ocupado.
 
-(c) Es menos de eficiente hacer una baja lógica que una baja física considerando el rendimiento / performance.
+* (c) Es menos de eficiente hacer una baja lógica que una baja física considerando el rendimiento / performance.
 
 * ***(d) ✔️ Ninguna de las anteriores.***
 
@@ -375,15 +375,14 @@ La fórmula es --> DE = r/n*RPN
 <p align="center">__________</p>
 
 </details><br>
-
 
 ***4. Un archivo directo con registros de longitud variable***
 
-(a) Puede ocupar más espacio que el mismo archivo con registros de longitud física.
+* (a) Puede ocupar más espacio que el mismo archivo con registros de longitud física.
 
-(b) Puede ocupar el mismo espacio que el mismo archivo con registros de longitud física.
+* (b) Puede ocupar el mismo espacio que el mismo archivo con registros de longitud física.
 
-(c) Ocupa menos espacio que el mismo archivo con registros de longitud física.
+* (c) Ocupa menos espacio que el mismo archivo con registros de longitud física.
 
 * ***(d) ✔️ Ninguna de las anteriores.***
 
@@ -393,6 +392,27 @@ La fórmula es --> DE = r/n*RPN
 
 </details><br>
 
+***5. Para poder realizar un algoritmo de bajas sobre un archivo***
+
+* (a) Es suficiente que el archivo este ordenado por al menos un criterio.
+
+* (b) Es necesario que el archivo este ordenado por al menos un criterio.
+
+* (c) Es suficiente que el archivo este ordenado por al menos dos criterios.
+
+* (d) Es necesario que el archivo este ordenado por al menos dos criterios.
+
+* (e) Todas las anteriores son válidas.
+
+* ***(f) ✔️ Algunas de las anteriores son válidas.***
+
+* (g) Ninguna de las anteriores son válidas.
+
+<details><summary> <code> Nota 🖱 </code></summary><br>
+
+<p align="center">__________</p>
+
+</details><br>
 
 
 
