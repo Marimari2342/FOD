@@ -438,7 +438,7 @@ La fórmula es --> DE = r/n*RPN
 
 * (a) Puede desbalancearse.
 
-* (b) Puede estar desbalanceado.
+* (b) Puede estar balanceado.
 
 * (c) Puede balancearse.
 
