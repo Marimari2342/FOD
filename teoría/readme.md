@@ -360,6 +360,25 @@ La fórmula es --> DE = r/n*RPN
 
 </details><br>
 
+***3. Si se realiza la baja de un registro en un archivo directo***
+
+(a) Es igual de eficiente hacer una baja lógica que una baja física.
+
+(b) Es más de eficiente hacer una baja lógica que una baja física considerando el espacio ocupado.
+
+(c) Es menos de eficiente hacer una baja lógica que una baja física considerando el rendimiento / performance.
+
+* ***(d) ✔️ Ninguna de las anteriores.***
+
+<details><summary> <code> Nota 🖱 </code></summary><br>
+
+<p align="center">__________</p>
+
+</details><br>
+
+
+
+
 <p align="center">🔵🔵🔵🔵🔵🔵</p>
 
 >[!NOTE]
