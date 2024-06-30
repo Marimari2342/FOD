@@ -456,6 +456,158 @@ La fórmula es --> DE = r/n*RPN
 
 </details><br>
 
+***8. Un árbol***
+
+* (a) Puede desbalancearse.
+
+* (b) Puede estar balanceado.
+
+* (c) Está balanceado en altura.
+
+* (d) Puede no estar balanceado.
+
+* (e) Todas las anteriores son válidas.
+
+* ***(f) ✔️ Algunas de las anteriores son válidas.***
+
+* (g) Ninguna de las anteriores son válidas.
+
+<details><summary> <code> Nota 🖱 </code></summary><br>
+
+<p align="center">__________</p>
+
+</details><br>
+
+***9. Dado un índice de un archivo con registros de longitud variable***
+
+* (a) Sus registros pueden ser de longitud variable.
+
+* (b) Sus registros deben ser de longitud variable.
+
+* (c) Sus registros pueden ser de longitud fija.
+
+* ***(d) ✔️ Sus registros son de longitud fija.***
+
+<details><summary> <code> Nota 🖱 </code></summary><br>
+
+<p align="center">__________</p>
+
+</details><br>
+
+***10. Un árbol***
+
+* ***(a) ✔️ Puede ser árbol binario y AVL.***
+
+* (b) Puede ser B* y B+.
+
+* (c) Puede ser B y B+.
+
+* (d) Todas las anteriores son válidas.
+
+* (e) Algunas de las anteriores son válidas.
+
+* (f) Ninguna de las anteriores son válidas.
+
+<details><summary> <code> Nota 🖱 </code></summary><br>
+
+<p align="center">__________</p>
+
+</details><br>
+
+***11. La saturación progresiva encadenada***
+
+* (a) Se usa en caso de coalisión.
+
+* (b) Se usa en caso de coalisión y saturación.
+
+* (c) Se usa en caso de saturación.
+
+* (d) Se puede usar en caso de saturación.
+
+* (e) Todas las anteriores son válidas.
+
+* (f) Algunas de las anteriores son válidas.
+
+* (g) Ninguna de las anteriores son válidas.
+
+<details><summary> <code> Nota 🖱 </code></summary><br>
+
+<p align="center">__________</p>
+
+</details><br>
+
+***12. Una función de hash uniforme y aleatoria***
+
+* ***(a) ✔️ Tiene un promedio 1, de acceso a registros.***
+
+* (b) Tiene un promedio entre 1 y 2, de acceso a registros.
+
+* (c) Tiene un promedio menor a 1, de acceso a registros.
+
+* (d) Ninguna de las anteriores son válidas.
+
+<details><summary> <code> Nota 🖱 </code></summary><br>
+
+<p align="center">__________</p>
+
+</details><br>
+
+***13. La densidad de empaquetamiento***
+
+* (a) Se modifica con cada alta o baja, utilizando hashing extensible.
+
+* (b) Se modifica con cada alta, utilizando hashing extensible.
+
+* (c) Se modifica con cada baja, utilizando hashing extensible.
+
+* (d) No se modifica con altas o bajas, utilizando hashing extensible.
+
+* (e) Todas las anteriores son válidas.
+
+* (f) Algunas de las anteriores son válidas.
+
+* ***(g) ✔️ Ninguna de las anteriores son válidas.***
+
+<details><summary> <code> Nota 🖱 </code></summary><br>
+
+<p align="center">__________</p>
+
+</details><br>
+
+***14. Cuando se produce una inserción en hash estático, sobre el archivo de datos***
+
+* (a) Se realiza una operación de escritura y una de lectura.
+
+* ***(b) ✔️ Se realiza al menos una operación de escritura y al menos una de lectura.***
+
+* (c) Se realiza una operación de lectura y al menos una de escritura.
+
+* (d) Se realiza una operación de escritura y al menos una de lectura.
+
+<details><summary> <code> Nota 🖱 </code></summary><br>
+
+<p align="center">__________</p>
+
+</details><br>
+
+***15. Si hubo coalisión con hashing dinámico***
+
+* (a) Ocurre Overflow.
+
+* (b) No ocurre Overflow.
+
+* (c) Se trata con un regimen específico de tratamiento de coalisiones.
+
+* (d) Algunas de las anteriores.
+
+* ***(e) ✔️ Ninguna de las anteriores.***
+
+<details><summary> <code> Nota 🖱 </code></summary><br>
+
+<p align="center">__________</p>
+
+</details><br>
+
 
 
 <p align="center">🔵🔵🔵🔵🔵🔵</p>
