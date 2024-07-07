@@ -24,6 +24,8 @@
 
 <details><summary> <code> Nota 🖱 </code></summary><br>
 
+<p align="justify">Un archivo serie no tiene ningún orden preestablecido más que el físico, donde, para acceder a un registro determinado, se deben visitar todos los registros previos en el orden en que estos fueron almacenados. Aquí, la búsqueda de un dato específico es lineal, puesto que se detiene en el registro que contiene ese dato (previo acceso a todos los registros anteriores), o en el final del archivo si el resultado no es exitoso (el dato no se encuentra).</p>
+
 <p align="center">__________</p>
 
 </details><br>
