@@ -48,6 +48,8 @@
 
 <details><summary> <code> Nota 🖱 </code></summary><br>
 
+<p align="justify">Se puede aplicar con todos los archivos ordenados por algún criterio: no es estrictamente necesario que esto se cumpla pero si los archivos detalles estan ordenados puedo aplicar un proceso de actualización del archivo. Por esto mismo es que podemos decir que, ya que no siempre es necesario que los detalles estén ordenados, podemos aplicar un proceso de actualización de un archivo en caso de que todos los detalles esten desordenados, puesto que algunos algoritmos de merge pueden funcionar eficientemente con detalles desordenados, aunque la ordenación puede mejorar la eficiencia del proceso en ciertos casos.</p>
+
 <p align="center">__________</p>
 
 </details><br>
@@ -63,6 +65,10 @@
 * ***(d) ✔️ Ninguna de las anteriores.***
 
 <details><summary> <code> Nota 🖱 </code></summary><br>
+
+<p align="justify">Se denomina archivo con acceso secuencial indizado a aquel que permite dos formas para visualizar la información --> <n>Indizada:</n> el archivo puede verse como un conjunto de registros ordenados por una clave o llave. <n>Secuencial:</n> se puede acceder secuencialmente al archivo, con registros físicamente contiguos y ordenados nuevamente por una clave o llave.</p>
+
+<p align="justify">En términos de espacio ocupado, baja física es más eficiente porque libera el espacio inmediatamente. La baja lógica puede ser más eficiente en términos de tiempo y simplicidad de implementación, pero a costa de un mayor espacio ocupado y posible fragmentación lógica a lo largo del tiempo. La elección entre baja lógica y baja física depende del contexto y de las prioridades específicas de rendimiento y gestión de espacio de tu aplicación. Por lo tanto no podemos determinar cuándo será más eficiente una baja física que una lógica con la información dada.</p>
 
 <p align="center">__________</p>
 
